@@ -1,0 +1,111 @@
+{
+  "schema_version": "2026.02",
+  "title": "Tattoo Knowledge Base - Styles, Techniques, Application, Placement",
+  "description": "Consolidated and de-duplicated from style.txt, klasyfikacja.txt, and technics.txt. This is the craft reference the agent draws on for style alignment (flow phase 3), technique selection, and image-prompt vocabulary. Each style/technique carries render_tags: short keywords to drop into an image prompt.",
+
+  "styles": {
+    "traditional_family": {
+      "american_traditional": { "description": "Bold black outlines, a limited but vibrant palette, iconic imagery: eagles, hearts, anchors, roses, pin-ups, nautical themes.", "history": "Emerged in 1930s USA from sailor and military culture.", "render_tags": ["american traditional tattoo", "bold outlines", "limited palette", "flat color", "iconic imagery"] },
+      "neo_traditional": { "description": "Evolution of American Traditional: richer detail, broader palette, decorative motifs, more dimensional shading.", "history": "Late 20th century, blending traditional roots with modern illustration.", "render_tags": ["neo-traditional tattoo", "decorative detail", "rich palette", "dimensional shading"] },
+      "old_school": { "description": "Simple, iconic designs, thick lines, minimal shading, restricted color.", "history": "Early-20th-century Western tattooing; predecessor to American Traditional.", "render_tags": ["old school tattoo", "thick lines", "simple bold shapes"] },
+      "new_school": { "description": "Cartoonish, exaggerated forms, bright saturated color, graffiti and hip-hop influence.", "history": "Late 1980s-early 1990s.", "render_tags": ["new school tattoo", "cartoon style", "exaggerated forms", "saturated color"] }
+    },
+    "realism_family": {
+      "black_and_grey_realism": { "description": "Lifelike rendering in grayscale, emphasis on shadow, contrast, and fine detail.", "render_tags": ["black and grey realism tattoo", "smooth gradients", "photorealistic shading"] },
+      "color_realism": { "description": "Full-color lifelike depiction; demands advanced blending and technique.", "render_tags": ["color realism tattoo", "lifelike color", "photorealistic"] },
+      "portrait": { "description": "Realistic faces of people or animals; captures expression and nuance.", "render_tags": ["portrait tattoo", "realistic face", "fine detail"] },
+      "micro_realism": { "description": "Miniature yet highly detailed realism; needs fine needles and a steady hand.", "render_tags": ["micro realism tattoo", "tiny detailed", "single-needle realism"] }
+    },
+    "blackwork_family": {
+      "blackwork": { "description": "Solid black ink used for bold, graphic, often abstract or ornamental designs.", "render_tags": ["blackwork tattoo", "solid black", "high contrast graphic"] },
+      "dotwork": { "description": "Image built from thousands of dots; density controls shade and depth. Meditative, rhythmic.", "render_tags": ["dotwork tattoo", "stippling", "pointillism shading"] },
+      "geometric": { "description": "Lines, circles, triangles, and symmetrical patterns; sacred-geometry influence.", "render_tags": ["geometric tattoo", "symmetry", "sacred geometry", "clean linework"] },
+      "solid_black_blackout": { "description": "Large areas fully saturated in black, often for dramatic coverage or cover-ups.", "render_tags": ["blackout tattoo", "solid black fill"] },
+      "linework": { "description": "Design carried entirely by line; can be intricate or minimal.", "render_tags": ["linework tattoo", "continuous line", "clean lines"] }
+    },
+    "cultural_family": {
+      "japanese_irezumi": { "description": "Large, flowing, colorful compositions with mythological creatures, koi, dragons, waves, and florals; strict traditional rules and deep symbolism.", "history": "Developed in the Edo period; deeply tied to Japanese culture.", "render_tags": ["irezumi", "japanese traditional tattoo", "bold outlines", "wind and wave background", "koi", "dragon"], "cultural_note": "Style is widely practiced, but certain motifs carry specific meaning - respect symbolism." },
+      "tribal": { "description": "Bold black symmetrical patterns from various Indigenous traditions.", "render_tags": ["tribal tattoo", "bold black pattern", "symmetry"], "cultural_note": "Generic 'tribal' borrows from living cultures - check origin before copying." },
+      "maori": { "description": "Ta moko: spirals and koru patterns encoding heritage, genealogy, and status.", "cultural_note": "RESTRICTED / sacred. Ta moko is a closed cultural practice - do not copy. Offer respectful, inspired abstraction only.", "render_tags": ["maori-inspired pattern (non-copied)", "koru spiral motif"] },
+      "polynesian_samoan": { "description": "Intricate motifs (waves, turtles, tiki, spearheads) telling stories of status and lineage.", "cultural_note": "Culturally significant. Approach with respect; inspired abstraction preferred over literal traditional marks.", "render_tags": ["polynesian-inspired pattern", "wave and spearhead motif"] },
+      "haida": { "description": "Pacific Northwest formline: black geometric forms and animal motifs.", "cultural_note": "Indigenous closed practice - inspired abstraction only.", "render_tags": ["formline-inspired motif (non-copied)"] },
+      "chicano": { "description": "Mexican-American culture: fine black-and-grey line, lettering, religious and portrait motifs.", "history": "Chicano communities, 1940s-50s.", "render_tags": ["chicano tattoo", "fine black and grey", "script lettering", "religious motif"] },
+      "aztec_mayan_egyptian": { "description": "Ancient-civilization iconography, glyphs, and deities rendered graphically.", "render_tags": ["aztec motif", "mayan glyph", "egyptian iconography", "graphic linework"] }
+    },
+    "contemporary_family": {
+      "watercolor": { "description": "Soft, fluid washes and splashes mimicking watercolor painting; often paired with a line or ink 'anchor'.", "render_tags": ["watercolor tattoo", "paint splashes", "soft color bleed", "no black outline"] },
+      "sketch_style": { "description": "Raw, hand-drawn look with visible construction lines and loose shading.", "render_tags": ["sketch style tattoo", "pencil sketch look", "construction lines"] },
+      "trash_polka": { "description": "Chaotic collage of realism and abstraction, typically black and red.", "history": "Germany, late 1990s.", "render_tags": ["trash polka tattoo", "black and red", "collage composition", "realism plus abstraction"] },
+      "biomechanical": { "description": "Fusion of organic anatomy and machinery; sci-fi, cybernetic, Giger-influenced.", "render_tags": ["biomechanical tattoo", "organic machinery", "cybernetic", "3D depth"] },
+      "surrealist": { "description": "Dream-logic imagery, imperfect symmetry, imaginative juxtaposition.", "render_tags": ["surrealist tattoo", "dreamlike", "melting forms", "imaginative composition"] },
+      "graffiti": { "description": "Street-art influence: bold color, stylized lettering, spray-paint texture.", "render_tags": ["graffiti tattoo", "spray paint texture", "wildstyle lettering"] },
+      "horror": { "description": "Dark, macabre imagery from horror and gothic aesthetics.", "render_tags": ["horror tattoo", "macabre", "dark gothic"] },
+      "three_d": { "description": "Illusion of depth via shading and perspective; the piece appears to lift off or sink into the skin.", "render_tags": ["3D tattoo", "trompe l'oeil", "depth illusion", "cast shadow on skin"] },
+      "minimalist": { "description": "Clean, understated designs; few lines, restrained detail.", "render_tags": ["minimalist tattoo", "single line", "negative space", "delicate"] },
+      "fine_line": { "description": "Delicate, precise thin linework; subtle shading; ideal for small, personal, elegant pieces.", "render_tags": ["fine line tattoo", "thin delicate lines", "single needle", "subtle shading"] },
+      "illustrative": { "description": "Storybook / editorial illustration crossed with tattoo craft.", "render_tags": ["illustrative tattoo", "storybook illustration", "engraved linework"] },
+      "lettering_script": { "description": "Typographic art from elegant script to bold graffiti fonts.", "render_tags": ["lettering tattoo", "script calligraphy", "custom typography"] },
+      "ornamental_mandala": { "description": "Symmetrical decorative patterning, lace, mandalas, filigree.", "render_tags": ["ornamental tattoo", "mandala", "filigree", "lace pattern", "symmetry"] },
+      "abstract_brazilian_fusion": { "description": "Non-linear shapes, flamboyant color, high contrast - Alexei's Rio-influenced signature.", "render_tags": ["abstract color tattoo", "non-linear shapes", "vivid contrast", "expressive brushwork"] }
+    },
+    "special_effect_styles": {
+      "uv_blacklight": { "description": "Ink visible mainly under UV/blacklight.", "render_tags": ["UV reactive ink", "blacklight glow"] },
+      "white_ink": { "description": "Subtle, light designs in white ink; scar-like, understated.", "render_tags": ["white ink tattoo", "subtle low-contrast"] },
+      "glitch": { "description": "Digital-distortion aesthetic, RGB shift, datamosh feel.", "render_tags": ["glitch tattoo", "RGB shift", "digital distortion"] },
+      "marble_smoke_fire": { "description": "Effect-driven renders: marble veining, wispy smoke, dynamic flame.", "render_tags": ["smoke effect", "fire effect", "marble effect"] },
+      "negative_space": { "description": "Untouched skin becomes part of the image; the design is defined by what is NOT inked.", "render_tags": ["negative space tattoo", "skin as highlight"] }
+    }
+  },
+
+  "techniques": {
+    "shading": {
+      "soft_shading": "Gradual, blurred shadow transitions for smooth gradients.",
+      "hard_shading": "Bold, defined shadow with strong contrast edges.",
+      "whip_shading": "Fast, tapering flicks of the machine for dynamic, grainy texture."
+    },
+    "linework": {
+      "fine_line": "Thin, delicate lines for subtle, detailed designs.",
+      "bold_line": "Thick, strong outlines for high-impact, long-lasting designs.",
+      "broken_line": "Interrupted lines for an artistic, sketch-like or unstable effect.",
+      "continuous_line": "A single flowing, uninterrupted line - minimal and elegant."
+    },
+    "color": {
+      "color_packing": "Dense, saturated solid color fills.",
+      "color_shading": "Blended color gradients and transitions.",
+      "black_and_grey": "Monochrome shading using diluted black ('grey wash') and pure black."
+    },
+    "texture_and_effect": {
+      "dotwork_pointillism": "Image built from dots; density = shade.",
+      "brush_stroke": "Painterly strokes emulating a loaded brush.",
+      "etching_engraving": "Cross-hatched, carved look reminiscent of engraving.",
+      "silhouette": "Solid filled shapes defining a subject by outline.",
+      "stippling": "Fine dotted texture for gradients.",
+      "optical_illusion": "Perspective tricks for mind-bending effects."
+    },
+    "application_methods": {
+      "machine": "Standard coil or rotary machine tattooing.",
+      "hand_poked_stick_and_poke": "Manual needle-and-ink, no machine; slow, textured, intimate.",
+      "tebori": "Traditional Japanese hand-poking with a rod of needles; associated with Irezumi."
+    }
+  },
+
+  "classification_axes": {
+    "note": "Tattoos have no single universal taxonomy. Useful axes for reasoning about a request:",
+    "by_style": "Traditional, Realism, Abstract, Biomechanical, Cultural, etc.",
+    "by_technique": "Linework, Shading, Color Packing, Dotwork, Freehand.",
+    "by_purpose": "Symbolic, Decorative, Narrative.",
+    "by_application": "Machine, Hand-poke (stick and poke), Tebori.",
+    "by_culture_region": "Maori, Samoan, Aztec, Japanese, etc. (mind closed/sacred practices)."
+  },
+
+  "placement_reference": {
+    "forearm": { "pain": "low-moderate", "visibility": "high", "notes": "Great flow along the arm; sun exposure fades color over time." },
+    "upper_arm_shoulder": { "pain": "low-moderate", "visibility": "medium (coverable)", "notes": "Large muscle canvas; ages well; good for bold work." },
+    "ribcage": { "pain": "high", "visibility": "low (intimate)", "notes": "Emotional placement; breathing movement; needs steady sessions." },
+    "back": { "pain": "moderate", "visibility": "low unless shown", "notes": "Largest canvas; epic multi-session storytelling; healing logistics." },
+    "sternum_chest": { "pain": "high", "visibility": "medium", "notes": "Symmetrical designs read well; intimate/self-directed meaning." },
+    "hand_fingers": { "pain": "high", "visibility": "very high", "notes": "Fades and blurs fastest; fine detail is risky long-term; career-visibility conversation." },
+    "calf_thigh": { "pain": "low-moderate", "visibility": "medium", "notes": "Good for large or fine work; thigh ages well." },
+    "neck_throat": { "pain": "high", "visibility": "very high", "notes": "Strong social/career implications - discuss honestly before committing." }
+  }
+}
