@@ -7,7 +7,7 @@ Ink Master (InkTelligence) is an AI tattoo design consultant built around the Al
 ## Removed from the server on archiving
 
 - The app files, `node_modules`, the `.next` build and `.env.local` (OpenAI key, owner password, session secret). No backup was kept.
-- The project's 31 tables and 5 views in the shared `t1000` database. The `gr_*`, `office_vertex_*`, `panel_*` and `tc_*` tables belong to other tools and were left untouched. Consultation sessions and prompt builds stored there were not kept.
+- The project's 32 tables and 5 views in the shared `t1000` database. The `gr_*`, `office_vertex_*`, `panel_*` and `tc_*` tables belong to other tools and were left untouched. Consultation sessions and prompt builds stored there were not kept.
 - The T1000 project card (`/var/www/admin-panel/projects/tatoo`) and the T1001 workspace bridge (`/var/www/tatoo`).
 
 ## Resuming work
