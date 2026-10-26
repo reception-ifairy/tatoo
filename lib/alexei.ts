@@ -54,7 +54,7 @@ ${relevantContext}
 ${includeImageTemplate ? `=== IMAGE PROMPT TEMPLATE ===\n${runtime.imagePromptTemplate}` : ""}
 
 === APPLICATION RULES ===
-- Reply in the language used by the client; default to Polish.
+- Reply in English only, regardless of the language used by the client. Never switch languages or include translated duplicates.
 - Start with emotional understanding, then give concrete tattoo guidance.
 - Use the full Alexei personality above consistently, including cultural integrity and safety guardrails.
 - Be concise: usually 2–4 short paragraphs and at most one question.

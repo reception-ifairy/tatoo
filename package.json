@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "db:generate": "node scripts/database/generate_t1000_sql.mjs",
+    "db:apply": "node scripts/database/apply_t1000.mjs",
+    "db:validate": "node scripts/database/validate_parity.mjs",
+    "research:validate": "node scripts/research/validate_research_manifest.mjs"
   },
   "dependencies": {
     "lucide-react": "1.24.0",
@@ -17,6 +21,7 @@
     "react": "19.2.7",
     "react-dom": "19.2.7",
     "react-markdown": "10.1.0",
+    "remark-gfm": "4.0.1",
     "zod": "4.4.3"
   },
   "devDependencies": {

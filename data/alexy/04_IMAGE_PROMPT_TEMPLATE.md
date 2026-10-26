@@ -156,6 +156,7 @@ A professional studio photograph of a finished fine-line tattoo on a person's in
 
 ### Example B — Irezumi-inspired protection dragon, upper arm (cultural check applied)
 
+
 From this `design_spec`:
 ```
 subject: a coiling dragon among wind bars and a single peony
@@ -183,3 +184,63 @@ blurry, muddy lines, color bleed, extra limbs, deformed dragon, watermark, signa
 professional photograph of a Japanese Irezumi-inspired tattoo on a right upper arm and shoulder, a coiling dragon among wind bars and a single peony, bold outlines with whip shading and color packing in indigo, muted red and black, wind rendered as negative space, wrapping the deltoid and flowing down the arm, healed ink, soft studio lighting, realistic skin texture --ar 2:3 --style raw --stylize 250 --no flat sticker, clan crest, text
 ```
 Agent's spoken note to client: "I'm shaping this *in the spirit* of Irezumi — its rhythm and respect — but as your own dragon, not a copied sacred crest. The ink must be honest."
+
+---
+
+## 7. The prompt build system (how this file is executed)
+
+Sections 1–6 describe the craft. This section describes the machinery that applies it, so the
+templates above stay a single source of truth instead of being retyped by hand each session.
+
+**The path a design takes**
+
+```
+ design_spec (Phase 5)
+        │  parsed from Alexei's reply — lib/prompt/parse.ts
+        ▼
+ composition ──► reads the T1000 compendium + 02_KNOWLEDGE_BASE render_tags
+        │        resolves style ids, technique ids, motifs, placement → aspect ratio
+        ▼
+ PromptIR  (one model-independent representation of the design)
+        │
+        ├─► Stable Diffusion XL   tags + weights + real negative prompt + width/height
+        ├─► Stable Diffusion 3.5  same, longer phrasing, lighter weighting
+        ├─► Flux.1 dev            prose template, negatives expressed positively
+        ├─► Midjourney v7         tags + trailing --no / --style / --stylize / --ar
+        └─► Nano Banana           conversational prose + a follow-up edit hint
+        │
+        ▼
+ prompt_builds + prompt_build_renders   (every build is stored and can be read back)
+```
+
+**Why there is one IR.** The spec is resolved against the database once. Every generator then
+renders from the same representation, so switching target changes the dialect, never the
+design. A prompt that says something different on SDXL than on Flux is a bug.
+
+**Adding a generator.** Insert a row into `image_models` — `syntax_profile` describes the
+dialect (tag or prose form, slot order, weighting syntax, how negatives and parameters are
+expressed, aspect handling, and prose templates), `capabilities` describes the limits. No
+application code changes. Deprecated models stay in the table with `status = 'deprecated'`
+and drop out of the registry view, so old builds remain readable.
+
+**Editing the vocabulary.** Surface, quality, lighting, longevity, cultural and negative
+fragments live in `prompt_blocks`, keyed by render mode and model family. Changing how every
+flash sheet is phrased is an UPDATE, not a deploy.
+
+**Rules the engine enforces so the craft rules above are not optional**
+
+1. **Surface is never ambiguous** — `render_mode` selects the surface and negative blocks.
+2. **Aspect mirrors placement** — forearm/calf 2:3, back/chest 4:5, sleeve 9:16, hand/neck 1:1.
+3. **Longevity** — fine linework on a high-movement placement adds the thickened-outline block
+   and returns a warning naming the placement.
+4. **Cultural check travels with the prompt** — `inspired-not-copied` appends the
+   inspired-not-a-replica clause; `flagged` refuses to build at all (HTTP 409).
+5. **The catalog lends style, not subject matter** — a style's motifs are only inherited when
+   the client's subject already names them, so Irezumi does not quietly add a koi.
+
+**API.** `GET /api/prompt` returns the registry; `GET /api/prompt?buildId=…` reads a stored
+build back; `POST /api/prompt` builds from a spec (`{ spec, sessionId?, models? }`). A chat
+turn containing a `design_spec` block builds automatically and returns `promptBuild`.
+
+**Not included:** the engine writes prompts, it does not call generators. Image generation is
+still behind the `image_generation` feature flag.

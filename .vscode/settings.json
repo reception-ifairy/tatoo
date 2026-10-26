@@ -1,13 +1,13 @@
 {
-  "git.enabled": true,
-  "git.autoRepositoryDetection": true,
-  "scm.alwaysShowRepositories": true,
+  "git.enabled": false,
+  "git.autoRepositoryDetection": false,
+  "scm.alwaysShowRepositories": false,
   "workbench.startupEditor": "none",
   "editor.minimap.enabled": false,
   "explorer.compactFolders": false,
   "breadcrumbs.enabled": true,
   "files.exclude": {
-    "**/.git": false,
+    "**/.git": true,
     "**/node_modules": true,
     "**/dist": true,
     "**/build": true

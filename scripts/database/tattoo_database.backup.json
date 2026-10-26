@@ -1,0 +1,4344 @@
+{
+  "meta": {
+    "name": "Master Tattoo Classification Database",
+    "version": "1.2",
+    "date": "2026-07-20",
+    "language": "en",
+    "sources": [
+      "style.txt",
+      "technics.txt",
+      "klasyfikacja.txt",
+      "extended taxonomy",
+      "InkTelligence research corpus (30 papers)"
+    ],
+    "counts": {
+      "styleCategories": 12,
+      "styles": 66,
+      "techniqueCategories": 8,
+      "techniques": 44,
+      "historyPeriods": 6,
+      "anthropologyLenses": 4,
+      "articles": 30
+    }
+  },
+  "styleCategories": [
+    {
+      "id": "traditional",
+      "name": "Traditional & Old School",
+      "description": "The codified Western idiom of the bold, readable badge — heavy black outlines, a restricted saturated palette, and flat fills descended from maritime folk marks and 20th-century American flash. Its descendants split into faithful revival and illustrative reinvention (neo- and new school). Its governing law is 'bold will hold': everything here is built for the ten-year read."
+    },
+    {
+      "id": "realism",
+      "name": "Realism",
+      "description": "Lifelike representation carried from photography and painting into living skin, from 1970s Chicano single-needle black-and-grey to full-color hyperrealism. It is the most time-sensitive family in the atlas — fine detail and micro-scale must be compressed and spaced for the pigment spread the years will bring."
+    },
+    {
+      "id": "blackwork",
+      "name": "Blackwork & Geometric",
+      "description": "Styles built on black ink as structure rather than color: solid fill, dot density, mathematical repetition, ornament, and negative skin. It spans ancient tribal and folk roots and a contemporary geometric-and-dotwork revival, and it holds contrast longer than almost anything else on the body."
+    },
+    {
+      "id": "cultural",
+      "name": "Cultural & Tribal",
+      "description": "Indigenous and heritage tattoo systems — Māori tā moko, Sāmoan tatau, Marquesan, Haida, Celtic, Mesoamerican — each a distinct language of genealogy, rank, and belonging, never a single generic 'tribal' aesthetic. Many marks are held under community authority; some are restricted, and are honored through inspiration, not copying."
+    },
+    {
+      "id": "japanese",
+      "name": "Japanese",
+      "description": "The Irezumi tradition and its descendants: large-scale, flowing, mythological compositions organized as a whole-body narrative and applied historically by hand (tebori). It carries a continuous iconography and a long history of legal stigma, distinct from the surface imitation of neo-Japanese and anime work."
+    },
+    {
+      "id": "illustrative",
+      "name": "Illustrative & Artistic",
+      "description": "Styles that borrow the marks of other media — etching and engraving, loose sketch, watercolor wash, abstraction, comic and Pop Art — and rebuild them in skin. The craft here is translation: what a brush or pen does easily, the needle must reconstruct in a medium that moves and ages."
+    },
+    {
+      "id": "modern",
+      "name": "Modern & Experimental",
+      "description": "Contemporary, avant-garde, and digital-culture-driven styles — Trash Polka, biomechanical, cyber sigilism, embroidery, glitch, sticker and patchwork — many named only in the last few years, often on social platforms. This is the atlas's living edge, where new dialects arrive faster than the vocabulary to describe them."
+    },
+    {
+      "id": "fineline",
+      "name": "Minimalist & Fine Line",
+      "description": "Delicate, understated work built from the thinnest practical lines, minimal scale, and restraint — fine-line, pure linework, and single continuous line. Its elegance is real, but so is its cost: the less pigment a mark deposits, the more it asks of time. Placement and honest aftercare matter most here."
+    },
+    {
+      "id": "lettering",
+      "name": "Lettering & Script",
+      "description": "The art of tattooed typography — from Chicano Old English and gothic blackletter to calligraphy and graffiti-derived calligraffiti. Letterforms demand their own discipline: consistent weight, controlled spacing, and flourish, with legibility that must survive years of skin movement."
+    },
+    {
+      "id": "dark",
+      "name": "Dark Art & Horror",
+      "description": "Macabre, gothic, occult, and horror imagery — fear, mortality, transgression, and the sublime rendered on skin, often through realist or blackwork execution. Subject and technique are separate here: the darkness is in what is depicted, not necessarily in how it is made."
+    },
+    {
+      "id": "chicano_urban",
+      "name": "Chicano & Urban",
+      "description": "Styles born from street, prison, and urban art cultures — Chicano fine-line and lettering out of 1960s–70s East Los Angeles, and graffiti translated from New York subway and hip-hop aesthetics. These are visual languages of identity and place, with histories that deserve to be named, not borrowed blindly."
+    },
+    {
+      "id": "special",
+      "name": "Special Purpose & Novelty",
+      "description": "Styles defined not by motif but by material and purpose — UV-reactive and white ink, negative-space and silhouette design, handpoke, and paramedical work such as areola and scar restoration. Here honesty is the craft: which pieces are art, which are healing, and which carry real, evidence-based risk."
+    }
+  ],
+  "styles": [
+    {
+      "id": "american_traditional",
+      "name": "American Traditional",
+      "category": "traditional",
+      "description": "Bright, bold colors with iconic imagery like eagles, hearts, roses, daggers and nautical themes.",
+      "history": "Originated in the 1930s USA, shaped by sailor and military culture; codified by Sailor Jerry Collins.",
+      "distinctFeatures": "Bold black outlines, limited vibrant palette (red, yellow, green, blue), heavy black shading, flat two-dimensional look.",
+      "commonMotifs": [
+        "eagle",
+        "anchor",
+        "swallow",
+        "rose",
+        "dagger",
+        "pin-up",
+        "ship"
+      ],
+      "relatedTechniques": [
+        "bold_line",
+        "color_packing",
+        "hard_shading"
+      ],
+      "relatedStyles": [
+        "old_school",
+        "neo_traditional"
+      ],
+      "sourcePaper": "STY-01",
+      "fieldNote": "The mother tongue of Western ink — say little, say it boldly, and it will still be speaking on your skin in forty years.",
+      "keyFacts": [
+        {
+          "text": "A U.S. lineage of bold, flash-based tattooing was codified c. 1900–1950 by Coleman, Dietzel, Grimm, Rogers, and Collins.",
+          "evidence": "synthesized"
+        },
+        {
+          "text": "Its palette is a restricted set of black, red, green, yellow, and limited blue, applied as flat fills within heavy black outlines.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "old_school",
+      "name": "Old School",
+      "category": "traditional",
+      "description": "Predecessor of American Traditional: simpler designs, minimal shading, very limited bold palette.",
+      "history": "Early 20th-century Western tattooing, rooted in maritime and circus culture.",
+      "distinctFeatures": "Simple iconic symbols, little to no depth or gradient, thick outlines.",
+      "commonMotifs": [
+        "anchor",
+        "heart",
+        "banner",
+        "swallow"
+      ],
+      "relatedTechniques": [
+        "bold_line",
+        "color_packing"
+      ],
+      "relatedStyles": [
+        "american_traditional"
+      ],
+      "sourcePaper": "STY-01",
+      "fieldNote": "The same heavy grammar as American Traditional, worn as heritage; when someone says a piece will 'hold,' this is the promise they mean.",
+      "keyFacts": [
+        {
+          "text": "\"Old School\" denotes the early-to-mid-20th-century Western idiom and functions as the antonym of \"New School.\"",
+          "evidence": "direct"
+        },
+        {
+          "text": "It is near-synonymous with American Traditional, differing mainly in emphasis (era vs. national lineage).",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "neo_traditional",
+      "name": "Neo-Traditional",
+      "category": "traditional",
+      "description": "Evolution of American Traditional with more complex imagery, expanded color schemes and modern aesthetics.",
+      "history": "Emerged late 20th century, blending traditional foundations with Art Nouveau and illustration influences.",
+      "distinctFeatures": "Varied line weights, richer palettes, decorative detail, dimensional shading while keeping strong outlines.",
+      "commonMotifs": [
+        "animal portraits",
+        "female faces",
+        "flowers",
+        "ornamental frames"
+      ],
+      "relatedTechniques": [
+        "bold_line",
+        "fine_line",
+        "color_shading",
+        "color_packing"
+      ],
+      "relatedStyles": [
+        "american_traditional",
+        "new_school",
+        "illustrative"
+      ],
+      "sourcePaper": "STY-01",
+      "fieldNote": "Tradition that learned to breathe — the bold barrier stays, but the palette opens and the image gains depth.",
+      "keyFacts": [
+        {
+          "text": "Retains bold black outlines and color-holding black barrier while adding variable line weight, expanded palette, and depth.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Draws on Art Nouveau, Art Deco, and Japanese ukiyo-e.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Emerged in the late 20th century; exact dating contested (1970s–80s vs. late 1980s–90s).",
+          "evidence": "contested"
+        }
+      ]
+    },
+    {
+      "id": "new_school",
+      "name": "New School",
+      "category": "traditional",
+      "description": "Cartoon-like aesthetics with dynamic, exaggerated forms and bright colors.",
+      "history": "Late 1980s–1990s, influenced by graffiti, hip-hop, comics and skate culture.",
+      "distinctFeatures": "Exaggerated proportions, caricature, extreme color saturation, bubble-like 3D forms.",
+      "commonMotifs": [
+        "cartoon characters",
+        "graffiti elements",
+        "caricatures"
+      ],
+      "relatedTechniques": [
+        "bold_line",
+        "color_packing",
+        "color_shading"
+      ],
+      "relatedStyles": [
+        "neo_traditional",
+        "graffiti",
+        "cartoon"
+      ],
+      "sourcePaper": "STY-01",
+      "fieldNote": "Volume turned all the way up: cartoon proportion, acid color, and a joy that refuses to sit still.",
+      "keyFacts": [
+        {
+          "text": "Characterized by heavy outlines, vivid unrestricted color, and exaggerated/cartoonish proportions.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Subject matter draws on comics, animation, video games, graffiti, and hip-hop culture.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Origins contested: 1970s West Coast vs. late 1980s–90s emergence with 1990s boom.",
+          "evidence": "contested"
+        }
+      ]
+    },
+    {
+      "id": "realism_bg",
+      "name": "Black & Grey Realism",
+      "category": "realism",
+      "description": "Lifelike grayscale representation emphasizing shadow, contrast and fine detail.",
+      "history": "Grew from portraiture and photography traditions; refined in 1970s California prison and street culture.",
+      "distinctFeatures": "No outlines, smooth grey wash gradients, high detail and depth.",
+      "commonMotifs": [
+        "portraits",
+        "animals",
+        "statues",
+        "nature scenes"
+      ],
+      "relatedTechniques": [
+        "black_and_grey_wash",
+        "soft_shading",
+        "layering"
+      ],
+      "relatedStyles": [
+        "realism_color",
+        "portrait",
+        "chicano"
+      ],
+      "sourcePaper": "STY-02",
+      "fieldNote": "Born in California prisons from a single needle and diluted black — restraint became its own kind of beauty.",
+      "keyFacts": [
+        {
+          "text": "Black & grey realism originated in 1960s–70s California prisons among Chicano inmates using homemade single-needle machines and diluted black ink.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Good Time Charlie's Tattooland, opened 1975 on Whittier Blvd, East LA, by Charlie Cartwright with Jack Rudy, was the first professional shop to commit fully to single-needle black-and-grey custom work.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "realism_color",
+      "name": "Color Realism",
+      "category": "realism",
+      "description": "Full-color, lifelike depiction of subjects with photographic accuracy.",
+      "history": "Enabled by advances in pigments and machines from the 1990s onward.",
+      "distinctFeatures": "Lifelike coloration, subtle color transitions, no visible outlines, painterly layering.",
+      "commonMotifs": [
+        "portraits",
+        "flowers",
+        "animals",
+        "film characters"
+      ],
+      "relatedTechniques": [
+        "color_blending",
+        "layering",
+        "white_highlights",
+        "soft_shading"
+      ],
+      "relatedStyles": [
+        "realism_bg",
+        "hyperrealism"
+      ],
+      "sourcePaper": "STY-02",
+      "fieldNote": "The full spectrum of a photograph laid into skin; wait for the machines and pigments that make it possible, then respect what fades.",
+      "keyFacts": [
+        {
+          "text": "Color realism emerged after black-and-grey, enabled by 1990s–2000s advances in rotary machines, fine needle cartridges, and pigment chemistry.",
+          "evidence": "synthesized"
+        },
+        {
+          "text": "Nikko Hurtado (b. 1981) is widely credited in trade sources as a pioneer of color realism/portraiture, beginning tattooing in 2002.",
+          "evidence": "community_attested"
+        }
+      ]
+    },
+    {
+      "id": "portrait",
+      "name": "Portrait",
+      "category": "realism",
+      "description": "Realistic depiction of human or animal faces capturing likeness and expression.",
+      "history": "Gained popularity with the rise of photorealism in the late 20th century.",
+      "distinctFeatures": "Extreme attention to facial nuance, eyes and skin texture; usually from photo reference.",
+      "commonMotifs": [
+        "family members",
+        "celebrities",
+        "pets",
+        "memorial portraits"
+      ],
+      "relatedTechniques": [
+        "soft_shading",
+        "black_and_grey_wash",
+        "layering",
+        "white_highlights"
+      ],
+      "relatedStyles": [
+        "realism_bg",
+        "realism_color",
+        "micro_realism"
+      ],
+      "sourcePaper": "STY-02",
+      "fieldNote": "A face is a promise to time — carve it so it is still that face when the years have softened every line.",
+      "keyFacts": [
+        {
+          "text": "Portrait tattooing is a subject-matter specialization practiced within both black-and-grey and color-realism technique.",
+          "evidence": "synthesized"
+        },
+        {
+          "text": "Bob Tyrrell began tattooing at 29, completed apprenticeship at 34, and is known primarily for black-and-grey portrait realism.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "micro_realism",
+      "name": "Micro Realism",
+      "category": "realism",
+      "description": "Realistic subjects rendered at very small scale with intricate detail work.",
+      "history": "2010s trend driven by single-needle cartridges and social media aesthetics.",
+      "distinctFeatures": "Miniaturized yet detailed depictions, fine needles, delicate greywash.",
+      "commonMotifs": [
+        "tiny portraits",
+        "miniature landscapes",
+        "small objects"
+      ],
+      "relatedTechniques": [
+        "single_needle",
+        "fine_line",
+        "soft_shading"
+      ],
+      "relatedStyles": [
+        "portrait",
+        "fineline_style",
+        "minimalist"
+      ],
+      "sourcePaper": "STY-02",
+      "fieldNote": "A whole scene the size of a coin; leave it room to spread, because the skin will insist.",
+      "keyFacts": [
+        {
+          "text": "Micro-realism's technical roots trace to 1970s single-needle tattooing; its emergence as a named mainstream trend is a 2010s–2020s, social-media-driven phenomenon.",
+          "evidence": "synthesized"
+        },
+        {
+          "text": "Micro-realism uses single-needle/very fine needle configurations (#3 round liner and smaller) and requires deliberate tonal compression and spacing calibrated for future pigment spread.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "hyperrealism",
+      "name": "Hyperrealism",
+      "category": "realism",
+      "description": "Realism pushed beyond photographic accuracy — texture, moisture and light rendered in extreme detail.",
+      "history": "2000s evolution of realism paralleling the hyperrealist art movement.",
+      "distinctFeatures": "Illusion of three-dimensionality, extreme micro-contrast, painstaking texture work.",
+      "commonMotifs": [
+        "eyes",
+        "water drops",
+        "torn-skin effects",
+        "metallic surfaces"
+      ],
+      "relatedTechniques": [
+        "layering",
+        "depth_effects",
+        "white_highlights",
+        "soft_shading"
+      ],
+      "relatedStyles": [
+        "realism_color",
+        "3d_style"
+      ],
+      "sourcePaper": "STY-02",
+      "fieldNote": "Realism that outshouts the photograph — impossible contrast and depth, dazzling now, demanding of the future.",
+      "keyFacts": [
+        {
+          "text": "Hyperrealism is defined in trade sources as realism pushed beyond photographic accuracy toward intensified contrast, impossible depth of field, and exaggerated reflective/textural effects.",
+          "evidence": "direct"
+        },
+        {
+          "text": "A Russian/Eastern European wave (Dmitriy Samohin, Valentina Ryabova) is associated with pushing realism toward hyperrealism and softer, higher-fidelity gradients.",
+          "evidence": "community_attested"
+        }
+      ]
+    },
+    {
+      "id": "surrealism",
+      "name": "Surrealism",
+      "category": "realism",
+      "description": "Dream-like imagery blending realistic rendering with abstract or fantastical elements.",
+      "history": "Inspired by the Surrealist art movement of the early 20th century (Dalí, Magritte).",
+      "distinctFeatures": "Impossible juxtapositions, morphing objects, realistic technique applied to unreal scenes.",
+      "commonMotifs": [
+        "melting objects",
+        "floating elements",
+        "hybrid creatures"
+      ],
+      "relatedTechniques": [
+        "soft_shading",
+        "color_blending",
+        "smoke_effect"
+      ],
+      "relatedStyles": [
+        "realism_color",
+        "trash_polka",
+        "abstract"
+      ],
+      "sourcePaper": "STY-02",
+      "fieldNote": "Dream logic rendered with a realist's hand, so the impossible arrives looking true.",
+      "keyFacts": [
+        {
+          "text": "Surrealism as a tattoo style derives directly from the early-20th-century Surrealist art movement (Dalí, Magritte, Ernst), formally launched by Breton's 1924 Manifesto.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Surrealist tattoos typically render dreamlike/impossible content (melting clocks, morphing forms, hybrid creatures) using realist technique to heighten the effect.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "trash_polka",
+      "name": "Trash Polka",
+      "category": "modern",
+      "description": "Chaotic collage combining realism with graphic 'trash' elements, almost always in black and red.",
+      "history": "Created in the late 1990s by Simone Pfaff and Volko Merschky at Buena Vista Tattoo Club, Germany.",
+      "distinctFeatures": "Black + red palette, mix of photorealism, smears, brush strokes, typography and geometric chaos.",
+      "commonMotifs": [
+        "realistic faces",
+        "lettering fragments",
+        "ink splatters",
+        "crosses"
+      ],
+      "relatedTechniques": [
+        "brush_stroke",
+        "soft_shading",
+        "color_packing",
+        "bold_line"
+      ],
+      "relatedStyles": [
+        "realism_bg",
+        "abstract",
+        "sketch"
+      ],
+      "sourcePaper": "STY-07",
+      "fieldNote": "Red, black, and controlled chaos — collage that feels torn from a life rather than composed for one.",
+      "keyFacts": [
+        {
+          "text": "Trash Polka was created in 1998 by Volker Merschky and Simone Pfaff at the Buena Vista Tattoo Club, Würzburg, Germany.",
+          "evidence": "direct"
+        },
+        {
+          "text": "\"TRASH POLKA®\" is a registered trademark of its creators.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "biomechanical",
+      "name": "Biomechanical",
+      "category": "modern",
+      "description": "Fuses organic anatomy with mechanical elements — pistons, gears and cables under torn skin.",
+      "history": "Popularized in the 1980s–90s, heavily influenced by H.R. Giger's Alien aesthetics.",
+      "distinctFeatures": "Flowing fusion of muscle, bone and machine; strong 3D depth; usually follows body contours.",
+      "commonMotifs": [
+        "gears",
+        "pistons",
+        "torn skin",
+        "cybernetic limbs"
+      ],
+      "relatedTechniques": [
+        "depth_effects",
+        "soft_shading",
+        "layering"
+      ],
+      "relatedStyles": [
+        "bioorganic",
+        "3d_style",
+        "horror"
+      ],
+      "sourcePaper": "STY-07",
+      "fieldNote": "Giger's machine-flesh, wrapped to the muscle so the metal seems to move when you do.",
+      "keyFacts": [
+        {
+          "text": "H.R. Giger (1940–2014) designed the creatures for Alien (1979); his 1977 book Necronomicon became foundational biomech reference material.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Guy Aitchison, alongside Aaron Cain, adapted Giger's aesthetic into an original tattoo-specific style from the late 1980s–early 1990s, introducing color and 3D illusion techniques absent from Giger's monochrome painting.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "bioorganic",
+      "name": "Bio-organic",
+      "category": "modern",
+      "description": "Like biomechanical but purely organic: bone, sinew, alien flora and natural textures.",
+      "history": "Offshoot of biomech from the 1990s, moving away from machinery toward natural forms.",
+      "distinctFeatures": "Flowing organic shapes fitted to musculature, no mechanical parts.",
+      "commonMotifs": [
+        "bone structures",
+        "tendrils",
+        "shells",
+        "alien plants"
+      ],
+      "relatedTechniques": [
+        "depth_effects",
+        "soft_shading"
+      ],
+      "relatedStyles": [
+        "biomechanical",
+        "abstract"
+      ],
+      "sourcePaper": "STY-07",
+      "fieldNote": "Biomechanical's softer cousin — the same flowing depth, but grown rather than built.",
+      "keyFacts": [
+        {
+          "text": "Bio-organic is an offshoot of biomechanical substituting organic forms for mechanical ones, with no specific named originator identified in sources reviewed.",
+          "evidence": "hypothesis"
+        }
+      ]
+    },
+    {
+      "id": "chicano",
+      "name": "Chicano",
+      "category": "chicano_urban",
+      "description": "Fine-line black and grey rooted in Mexican-American culture: script, religious icons and portraits.",
+      "history": "Originated in Chicano communities and prisons of the 1940s–50s American Southwest; the Pachuco cross and single-needle style.",
+      "distinctFeatures": "Smooth grey shading, fine single-needle lines, script lettering, religious and street iconography.",
+      "commonMotifs": [
+        "Virgin Mary",
+        "payasas (clown girls)",
+        "lowriders",
+        "rosaries",
+        "script"
+      ],
+      "relatedTechniques": [
+        "single_needle",
+        "fine_line",
+        "black_and_grey_wash",
+        "script_lettering"
+      ],
+      "relatedStyles": [
+        "realism_bg",
+        "lettering_script",
+        "religious"
+      ],
+      "sourcePaper": "STY-08",
+      "fieldNote": "Fine grey line out of East L.A. — devotion, lettering, and loyalty written in the quietest possible stroke.",
+      "keyFacts": [
+        {
+          "text": "Chicano tattooing's fine-line, single-needle Old English/blackletter script tradition originated in 1960s–70s East Los Angeles Chicano prison and street culture (full sourcing in Skin as Image: Realism to Surreal Transformation/Black as Structure).",
+          "evidence": "direct"
+        },
+        {
+          "text": "This lettering tradition is a direct, documented historical source feeding the contemporary international calligraffiti movement via artists such as Big Sleeps.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "graffiti",
+      "name": "Graffiti",
+      "category": "chicano_urban",
+      "description": "Street-art inspired style with bold colors, wildstyle lettering and urban themes.",
+      "history": "Evolved from urban graffiti culture, entering tattooing in the late 20th century.",
+      "distinctFeatures": "Spray-paint effects, drips, wildstyle typography, high saturation.",
+      "commonMotifs": [
+        "tags",
+        "bubble letters",
+        "spray cans",
+        "urban scenes"
+      ],
+      "relatedTechniques": [
+        "color_packing",
+        "bold_line",
+        "brush_stroke"
+      ],
+      "relatedStyles": [
+        "new_school",
+        "lettering_script",
+        "ignorant"
+      ],
+      "sourcePaper": "STY-08",
+      "fieldNote": "The subway wall brought to skin; keep the piece bold, because spray-paint delicacy will not survive the years.",
+      "keyFacts": [
+        {
+          "text": "Graffiti-style tattooing translates 1970s–80s New York subway/hip-hop street culture's spray-paint aesthetics into tattoo form, sharing letterform DNA with lettering_script and calligraphy while retaining a distinct transmission history.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "tribal",
+      "name": "Tribal (Modern)",
+      "category": "cultural",
+      "description": "Bold, symmetrical black patterns inspired by indigenous art, abstracted for modern tastes.",
+      "history": "1990s Western adaptation of Polynesian and Bornean motifs ('neotribal wave').",
+      "distinctFeatures": "Solid black fills, sharp spikes and curves, symmetry, flow along muscle lines.",
+      "commonMotifs": [
+        "abstract spikes",
+        "armbands",
+        "sun symbols"
+      ],
+      "relatedTechniques": [
+        "color_packing",
+        "bold_line",
+        "tribal_blackfill"
+      ],
+      "relatedStyles": [
+        "polynesian",
+        "maori",
+        "neotribal",
+        "blackwork_style"
+      ],
+      "sourcePaper": "STY-04",
+      "fieldNote": "A Western abstraction of borrowed Pacific vocabulary — beautiful, but know it is a translation, not a lineage.",
+      "keyFacts": [
+        {
+          "text": "Modern Western \"tribal\" tattooing is a late-20th-century abstraction of Polynesian/Bornean visual vocabulary for a non-Indigenous market, distinct from the living source traditions.",
+          "evidence": "synthesized"
+        },
+        {
+          "text": "The style's promotional framing (e.g., in blackout marketing) as drawing on Polynesian tradition should not be read as replicating that tradition's ritual/status function.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "maori",
+      "name": "Māori / Tā Moko",
+      "category": "cultural",
+      "description": "Complex spirals and patterns traditionally representing Māori genealogy, status and identity.",
+      "history": "Indigenous art form of the Māori people of New Zealand; traditionally carved with uhi chisels.",
+      "distinctFeatures": "Koru spirals, facial moko, flowing lines mapped to anatomy, deep cultural protocol.",
+      "commonMotifs": [
+        "koru (spiral)",
+        "manaia",
+        "facial moko"
+      ],
+      "relatedTechniques": [
+        "hand_tapped",
+        "bold_line",
+        "tribal_blackfill"
+      ],
+      "relatedStyles": [
+        "polynesian",
+        "tribal"
+      ],
+      "sourcePaper": "STY-04",
+      "fieldNote": "Tā moko is whakapapa cut into the face under sacred authority; I can honor its rhythm, never reproduce its marks.",
+      "keyFacts": [
+        {
+          "text": "Tā moko is applied traditionally with uhi (chisels) under tohunga-tā-moko authority and tapu (sacred) protocol, encoding whakapapa and rank.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Colonial contact included the toi moko trade in preserved tattooed Māori heads, a significant disruption/commodification of the practice.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Views on whether/how non-Māori may appropriately receive adapted tā moko vary within the Māori community; this is an active, contested conversation.",
+          "evidence": "contested"
+        }
+      ]
+    },
+    {
+      "id": "polynesian",
+      "name": "Polynesian",
+      "category": "cultural",
+      "description": "Intricate geometric patterns telling stories of ancestry, protection and social status.",
+      "history": "Ancient traditions of Samoa, Tahiti, Marquesas, Hawaii and Tonga; each island has a distinct visual language. Source of the word 'tattoo' (tatau).",
+      "distinctFeatures": "Dense band compositions of repeated symbols (shark teeth, waves, spearheads), solid black.",
+      "commonMotifs": [
+        "enata (people)",
+        "shark teeth",
+        "ocean waves",
+        "turtles",
+        "tiki"
+      ],
+      "relatedTechniques": [
+        "hand_tapped",
+        "tribal_blackfill",
+        "bold_line"
+      ],
+      "relatedStyles": [
+        "maori",
+        "samoan",
+        "marquesan",
+        "tribal"
+      ],
+      "sourcePaper": "STY-04",
+      "fieldNote": "The very word 'tattoo' sailed to us from tatau — the ocean's own way of writing rank and belonging.",
+      "keyFacts": [
+        {
+          "text": "The English word \"tattoo\" derives from Tahitian/Samoan tatau (Marquesan tatu), first recorded in English via Joseph Banks's journal and Captain Cook's 1769 voyage account.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Omai (Mai), a Tahitian/Raiatean traveler, sailed to England with Cook's second voyage (1774) and was portrayed tattooed by Joshua Reynolds.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "samoan",
+      "name": "Samoan (Pe'a / Malu)",
+      "category": "cultural",
+      "description": "Traditional Samoan tattooing: the male pe'a (waist to knee) and female malu.",
+      "history": "Unbroken hand-tapped tradition performed by tufuga tā tatau master artists.",
+      "distinctFeatures": "Dense geometric coverage applied in ritual sessions with hand-made combs.",
+      "commonMotifs": [
+        "geometric bands",
+        "canoe motifs",
+        "flying fox"
+      ],
+      "relatedTechniques": [
+        "hand_tapped",
+        "tribal_blackfill"
+      ],
+      "relatedStyles": [
+        "polynesian",
+        "maori"
+      ],
+      "sourcePaper": "STY-04",
+      "fieldNote": "The pe'a and malu are given by a tufuga under hereditary authority — earned, not ordered from a menu.",
+      "keyFacts": [
+        {
+          "text": "Samoan tatau (pe'a for men, malu for women) has been practiced with Indigenous technique continuously since before European contact — one of the few Pacific traditions with this unbroken continuity.",
+          "evidence": "direct"
+        },
+        {
+          "text": "The tufuga tā tatau role is hereditary, held primarily by the Sā Su'a and Sā Tulou'ena family lines.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "marquesan",
+      "name": "Marquesan",
+      "category": "cultural",
+      "description": "Marquesas Islands patterns — among the most complex in Polynesia, once covering the whole body.",
+      "history": "Ancient Marquesan practice documented by early European voyagers; revived in the 20th century.",
+      "distinctFeatures": "Checkerboards, tiki faces, ipu motifs, dense symbolic grammar.",
+      "commonMotifs": [
+        "tiki",
+        "mata hoata (eyes)",
+        "checkerboard"
+      ],
+      "relatedTechniques": [
+        "hand_tapped",
+        "tribal_blackfill"
+      ],
+      "relatedStyles": [
+        "polynesian"
+      ],
+      "sourcePaper": "STY-04",
+      "fieldNote": "Dense geometric skin-cover documented by 18th-century voyagers — a full-body script of identity.",
+      "keyFacts": [
+        {
+          "text": "Marquesan tattooing (patutiki) was documented by 18th-century voyagers (Georg Forster, 1777; Étienne Marchand, 1791) as covering the body extensively in geometric and figurative motifs.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Tattooing was outlawed by colonial church and state authorities in the Marquesas in the early 20th century, compounding a population collapse to roughly 2,000 survivors (about 97% loss) by 1920.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "celtic",
+      "name": "Celtic",
+      "category": "cultural",
+      "description": "Interlaced knotwork, spirals and crosses from Insular Celtic art.",
+      "history": "Based on early medieval manuscript and stone art (Book of Kells); revived in 20th-century tattooing.",
+      "distinctFeatures": "Endless knots, plaits, triskelions, usually blackwork or green-accented.",
+      "commonMotifs": [
+        "Celtic knot",
+        "triskelion",
+        "Celtic cross",
+        "tree of life"
+      ],
+      "relatedTechniques": [
+        "bold_line",
+        "fine_line",
+        "tribal_blackfill"
+      ],
+      "relatedStyles": [
+        "blackwork_style",
+        "ornamental"
+      ],
+      "sourcePaper": "STY-04",
+      "fieldNote": "Interlace out of Insular manuscript art; its knots are medieval and Christian, not a generic 'ancient' pattern.",
+      "keyFacts": [
+        {
+          "text": "Celtic interlace knotwork first appears in Insular Christian manuscript art of the 7th century CE (Book of Kells, c. 800 CE), not in the Iron Age Celtic period (c. 800 BCE–100 CE) popularly associated with the style.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Evidence for ancient (pre-Christian) Celtic tattooing is sparse and rests mainly on secondhand Roman accounts (Caesar, Herodian) of body paint/possible tattooing, not direct evidence of the specific knotwork patterns.",
+          "evidence": "contested"
+        }
+      ]
+    },
+    {
+      "id": "aztec_maya",
+      "name": "Aztec / Maya",
+      "category": "cultural",
+      "description": "Pre-Columbian Mesoamerican iconography: gods, calendars, warriors and glyphs.",
+      "history": "Draws on Aztec and Maya stone carving and codices; strong in Chicano-adjacent culture.",
+      "distinctFeatures": "Stone-relief texture, sun calendars, feathered serpents, often black and grey.",
+      "commonMotifs": [
+        "Quetzalcoatl",
+        "sun stone",
+        "eagle warrior",
+        "glyphs"
+      ],
+      "relatedTechniques": [
+        "black_and_grey_wash",
+        "etching_technique",
+        "soft_shading"
+      ],
+      "relatedStyles": [
+        "chicano",
+        "realism_bg",
+        "tribal"
+      ],
+      "sourcePaper": "STY-04",
+      "fieldNote": "Mesoamerican marks known mostly through colonial chronicles — hold the gaps in the record honestly.",
+      "keyFacts": [
+        {
+          "text": "Friar Diego de Landa's 1566 *Relación de las cosas de Yucatán* provides key documentary evidence of Maya tattooing practice, describing its painful application and status significance.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Archaeological/iconographic evidence (Jaina Island, Palenque figurines) shows Maya facial tattooing/scarification tied to individual identity, sometimes incorporating hieroglyphic birth-date signs.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Evidence for Aztec/Mexica tattooing specifically is markedly weaker and disputed; the Florentine Codex references tattoo-like marking among the neighboring Huastec rather than confirming widespread Aztec practice.",
+          "evidence": "contested"
+        }
+      ]
+    },
+    {
+      "id": "haida",
+      "name": "Haida / Pacific Northwest",
+      "category": "cultural",
+      "description": "Formline art of the Pacific Northwest Coast peoples: ovoids, U-forms and split representations of animals.",
+      "history": "Traditional crest art of Haida, Tlingit and neighboring nations, adapted to skin.",
+      "distinctFeatures": "Black and red formline, bilateral symmetry, stylized ravens, orcas and bears.",
+      "commonMotifs": [
+        "raven",
+        "orca",
+        "bear",
+        "thunderbird"
+      ],
+      "relatedTechniques": [
+        "bold_line",
+        "color_packing"
+      ],
+      "relatedStyles": [
+        "tribal",
+        "blackwork_style"
+      ],
+      "sourcePaper": "STY-04",
+      "fieldNote": "Crest tattoos that name hereditary clan and house — ownership worn on the body under Northwest Coast authority.",
+      "keyFacts": [
+        {
+          "text": "Haida/Tlingit crest tattooing marked hereditary moiety/clan/house crest ownership, historically applied at potlatch ceremonies.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Colonial-era potlatch bans disrupted transmission of this practice; precise ban dates are inconsistently reported across sources reviewed.",
+          "evidence": "contested"
+        }
+      ]
+    },
+    {
+      "id": "irezumi",
+      "name": "Japanese Irezumi",
+      "category": "japanese",
+      "description": "Large-scale, colorful designs of mythological creatures, flowers, waves and warriors.",
+      "history": "Developed during the Edo period (1603–1868), tied to ukiyo-e woodblock prints and firemen/laborer culture.",
+      "distinctFeatures": "Full-body composition (bodysuit), background of wind/waves/clouds, strict motif symbolism and seasonal pairing.",
+      "commonMotifs": [
+        "koi",
+        "dragon",
+        "hannya mask",
+        "peony",
+        "cherry blossom",
+        "tiger",
+        "waves"
+      ],
+      "relatedTechniques": [
+        "bold_line",
+        "color_packing",
+        "color_shading",
+        "black_and_grey_wash"
+      ],
+      "relatedStyles": [
+        "tebori_style",
+        "neo_japanese"
+      ],
+      "sourcePaper": "STY-05",
+      "fieldNote": "A river of myth read across the whole body — begun, in Edo, as punishment, now carried as devotion.",
+      "keyFacts": [
+        {
+          "text": "Edo-period Japan (1603–1868) used tattooing (irezumi kei) as a penal marking system for criminals, the direct root of irezumi's enduring stigma.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Ukiyo-e artist Kuniyoshi's Suikoden (Water Margin) print series is credited with driving mass public enthusiasm for large-scale figurative tattoo art.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "tebori_style",
+      "name": "Tebori (Hand-carved Japanese)",
+      "category": "japanese",
+      "description": "Traditional Japanese hand-poked method and the aesthetic associated with it.",
+      "history": "Manual technique predating machines, still practiced by horishi masters.",
+      "distinctFeatures": "Distinctive soft color gradation achievable by hand, slower ritual process.",
+      "commonMotifs": [
+        "same as Irezumi"
+      ],
+      "relatedTechniques": [
+        "tebori_technique",
+        "color_shading"
+      ],
+      "relatedStyles": [
+        "irezumi"
+      ],
+      "sourcePaper": "STY-05",
+      "fieldNote": "The hand-poked look no machine quite equals; you feel the patience in every shaded pass.",
+      "keyFacts": [
+        {
+          "text": "Tebori uses a bundle of needles on a bamboo/metal rod worked by hand, historically the sole method of executing irezumi.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Tebori mastery is reported to take longer to achieve than machine competency due to the number of simultaneously controlled variables (angle, speed, strength, timing, intervals).",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "neo_japanese",
+      "name": "Neo-Japanese",
+      "category": "japanese",
+      "description": "Modern reinterpretation of Irezumi with Western realism, new-school color or illustrative twists.",
+      "history": "Late 20th–21st century fusion as Japanese imagery globalized.",
+      "distinctFeatures": "Traditional motifs with modern shading, brighter palettes and looser composition rules.",
+      "commonMotifs": [
+        "dragons",
+        "masks",
+        "koi",
+        "samurai"
+      ],
+      "relatedTechniques": [
+        "color_blending",
+        "bold_line",
+        "soft_shading"
+      ],
+      "relatedStyles": [
+        "irezumi",
+        "neo_traditional",
+        "illustrative"
+      ],
+      "sourcePaper": "STY-05",
+      "fieldNote": "Japanese iconography rendered by Western hands — the imagery of irezumi without its lineage of authority.",
+      "keyFacts": [
+        {
+          "text": "Neo-Japanese tattooing emerged in the 1990s–2000s as Western artists began applying Japanese iconography with expanded color and contemporary shading, discarding irezumi's structural rules.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Neo-Japanese incorporates cross-influence from Art Nouveau and Art Deco ornament, paralleling Western Neo-Traditional's borrowings.",
+          "evidence": "direct"
+        },
+        {
+          "text": "No single founding artist or moment is consistently credited for neo-Japanese's emergence; it is better characterized as a multi-artist international trend.",
+          "evidence": "hypothesis"
+        }
+      ]
+    },
+    {
+      "id": "anime",
+      "name": "Anime / Manga",
+      "category": "japanese",
+      "description": "Faithful or stylized renditions of anime, manga and gaming characters.",
+      "history": "2010s boom driven by global anime fandom and color realism techniques.",
+      "distinctFeatures": "Cel-shading look, vivid flat colors with realistic highlights, screen-accurate likeness.",
+      "commonMotifs": [
+        "anime characters",
+        "chibi figures",
+        "game icons"
+      ],
+      "relatedTechniques": [
+        "color_packing",
+        "fine_line",
+        "white_highlights"
+      ],
+      "relatedStyles": [
+        "new_school",
+        "cartoon",
+        "realism_color"
+      ],
+      "sourcePaper": "STY-05",
+      "fieldNote": "Fandom brought to skin by television and the internet, not by any master's lineage — keep the icon bold so it lasts.",
+      "keyFacts": [
+        {
+          "text": "Cartoon Network's Toonami programming block (Dragon Ball Z, Sailor Moon, Outlaw Star, Gundam Wing) is credited as a key channel introducing anime to Western audiences who later became tattoo clients/artists.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Anime/manga tattoo influence contributed to the visual development of the Western New School tattoo style alongside Art Nouveau and Neo-Traditional influences.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "blackwork_style",
+      "name": "Blackwork",
+      "category": "blackwork",
+      "description": "Bold and intricate designs using only black ink — from solid fills to detailed patterns.",
+      "history": "Rooted in ancient tribal tattooing; modern resurgence for its graphic, minimalist power.",
+      "distinctFeatures": "Exclusive use of black, high contrast, strong silhouettes and pattern density.",
+      "commonMotifs": [
+        "patterns",
+        "botanical silhouettes",
+        "occult symbols",
+        "abstract shapes"
+      ],
+      "relatedTechniques": [
+        "color_packing",
+        "bold_line",
+        "negative_space",
+        "dotwork_technique"
+      ],
+      "relatedStyles": [
+        "dotwork_style",
+        "geometric",
+        "blackout_style",
+        "tribal"
+      ],
+      "sourcePaper": "STY-03",
+      "fieldNote": "Black ink as the whole language — ancient in root, and the most faithful to time of anything we make.",
+      "keyFacts": [
+        {
+          "text": "Blackwork is a broad, material-defined category (black ink only) rooted in ancient tribal/folk tattooing, undergoing a Western revival in the 1970s–90s driven by the neo-tribal movement.",
+          "evidence": "synthesized"
+        },
+        {
+          "text": "Leo Zulueta is credited in trade sources as \"the father of modern tribal tattooing,\" publishing a design collection in the 1990s.",
+          "evidence": "community_attested"
+        }
+      ]
+    },
+    {
+      "id": "dotwork_style",
+      "name": "Dotwork",
+      "category": "blackwork",
+      "description": "Entire designs created from individual dots, producing soft texture and gradients.",
+      "history": "Modern style evolved alongside geometric and sacred-geometry trends; echoes pointillism.",
+      "distinctFeatures": "Stippled shading, meditative gradients, often combined with mandalas and geometry.",
+      "commonMotifs": [
+        "mandalas",
+        "gradients",
+        "celestial bodies"
+      ],
+      "relatedTechniques": [
+        "dotwork_technique",
+        "stippling",
+        "hand_poke"
+      ],
+      "relatedStyles": [
+        "geometric",
+        "mandala",
+        "ornamental",
+        "blackwork_style"
+      ],
+      "sourcePaper": "STY-03",
+      "fieldNote": "Shadow assembled point by point; the Dotfather taught the needle to whisper instead of shout.",
+      "keyFacts": [
+        {
+          "text": "Modern tattoo dotwork is credited to UK artist Xed LeHead (\"The Dotfather\"), who experimented with dot impressionism from around 1980.",
+          "evidence": "community_attested"
+        },
+        {
+          "text": "LeHead was not the first to use dots in tattooing generally, but is credited with discovering new dot-gradient/patterning techniques that spread through the UK and internationally.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "geometric",
+      "name": "Geometric",
+      "category": "blackwork",
+      "description": "Designs built from precise shapes and repeating patterns, often symmetrical.",
+      "history": "Influenced by ancient spiritual symbols and modern graphic design.",
+      "distinctFeatures": "Mathematical precision, symmetry, clean lines, pattern repetition.",
+      "commonMotifs": [
+        "polygons",
+        "fractals",
+        "sacred geometry",
+        "tessellations"
+      ],
+      "relatedTechniques": [
+        "fine_line",
+        "bold_line",
+        "dotwork_technique",
+        "geometric_technique"
+      ],
+      "relatedStyles": [
+        "dotwork_style",
+        "sacred_geometry",
+        "mandala",
+        "blackwork_style"
+      ],
+      "sourcePaper": "STY-03",
+      "fieldNote": "Precision drawn to follow the body's own contours — line as structure, mapped to muscle.",
+      "keyFacts": [
+        {
+          "text": "Chaim Machlev (b. Nov. 7, 1980), known as DotsToLines, began tattooing in Berlin in 2012 with no prior formal fine-art training, after leaving an IT career.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Machlev's background in computer science and psychology is cited as an influence on the precision/structure of his line-based, body-contour-following designs.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "sacred_geometry",
+      "name": "Sacred Geometry",
+      "category": "blackwork",
+      "description": "Geometric style using symbolic figures: flower of life, Metatron's cube, platonic solids.",
+      "history": "Draws on spiritual mathematics of ancient cultures; popular from the 2000s.",
+      "distinctFeatures": "Symbolic precision figures, mandala integration, dotwork shading.",
+      "commonMotifs": [
+        "flower of life",
+        "Metatron's cube",
+        "sri yantra"
+      ],
+      "relatedTechniques": [
+        "fine_line",
+        "dotwork_technique",
+        "geometric_technique"
+      ],
+      "relatedStyles": [
+        "geometric",
+        "mandala",
+        "dotwork_style"
+      ],
+      "sourcePaper": "STY-03",
+      "fieldNote": "The Flower of Life and Metatron's Cube; carry their symmetry, but do not oversell their ancient claims.",
+      "keyFacts": [
+        {
+          "text": "Sacred geometry tattoos are built from named figures including the Flower of Life, Metatron's Cube, and Sri Yantra, frequently combined with dotwork and mandala framing.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Chaim Machlev and Dr. Woo are cited in trade sources as popularizers of sacred-geometry tattooing via social media.",
+          "evidence": "community_attested"
+        },
+        {
+          "text": "Claims that ancient Egyptians and Greeks used sacred-geometric figures in spiritual practice are common in trade/New Age literature but not rigorously sourced in materials reviewed.",
+          "evidence": "contested"
+        }
+      ]
+    },
+    {
+      "id": "mandala",
+      "name": "Mandala / Ornamental",
+      "category": "blackwork",
+      "description": "Radially symmetric ornamental compositions inspired by mehndi, lace and sacred art.",
+      "history": "Fusion of South Asian mandala and henna traditions with European ornament.",
+      "distinctFeatures": "Radial symmetry, lace-like detail, dotwork accents, jewelry-like placement.",
+      "commonMotifs": [
+        "mandala",
+        "lace",
+        "henna patterns",
+        "chandelier ornaments"
+      ],
+      "relatedTechniques": [
+        "fine_line",
+        "dotwork_technique",
+        "stippling"
+      ],
+      "relatedStyles": [
+        "ornamental",
+        "dotwork_style",
+        "geometric"
+      ],
+      "sourcePaper": "STY-03",
+      "fieldNote": "'Circle,' in Sanskrit — a meditative diagram; wear it knowing the devotion it comes from.",
+      "keyFacts": [
+        {
+          "text": "\"Mandala\" is Sanskrit for \"circle,\" a cosmic/meditative diagram central to Hindu and Buddhist practice, including Tibetan Buddhist sand mandalas.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Contemporary mandala tattooing draws heavily on South Asian Mehndi (henna) pattern vocabulary, a temporary body-art tradition thousands of years old.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "ornamental",
+      "name": "Ornamental",
+      "category": "blackwork",
+      "description": "Decorative, jewelry-like designs that adorn the body rather than depict subjects.",
+      "history": "Contemporary style drawing on filigree, baroque ornament and body-jewelry aesthetics.",
+      "distinctFeatures": "Flowing decorative lines fitted to anatomy, pendants and chains, symmetry.",
+      "commonMotifs": [
+        "filigree",
+        "gems",
+        "chains",
+        "arches"
+      ],
+      "relatedTechniques": [
+        "fine_line",
+        "dotwork_technique",
+        "single_needle"
+      ],
+      "relatedStyles": [
+        "mandala",
+        "fineline_style",
+        "geometric"
+      ],
+      "sourcePaper": "STY-03",
+      "fieldNote": "Jewelry made of ink — filigree and lace fitted to the body as if it were always meant to be worn there.",
+      "keyFacts": [
+        {
+          "text": "Ornamental tattooing encompasses mandala-adjacent and broader jewelry-like, filigree, and pattern-grid compositions fitted to body contours.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Named contemporary practitioners include Alex Binnie, Thomas Hooper, Roxx, Raimundo Ramirez, and Johno.",
+          "evidence": "community_attested"
+        }
+      ]
+    },
+    {
+      "id": "blackout_style",
+      "name": "Blackout / Heavy Blackwork",
+      "category": "blackwork",
+      "description": "Large areas of skin saturated in solid black, often as bold negative-space compositions or cover-ups.",
+      "history": "2010s movement growing out of blackwork and cover-up practice.",
+      "distinctFeatures": "Massive solid black fields, negative-space designs carved out of black.",
+      "commonMotifs": [
+        "solid sleeves",
+        "negative-space patterns"
+      ],
+      "relatedTechniques": [
+        "blackout_technique",
+        "negative_space",
+        "color_packing"
+      ],
+      "relatedStyles": [
+        "blackwork_style",
+        "tribal"
+      ],
+      "sourcePaper": "STY-03",
+      "fieldNote": "Whole limbs turned to solid black — striking, heavy, and a decision to make slowly, never on a dare.",
+      "keyFacts": [
+        {
+          "text": "Blackout tattoos are credited to Singaporean artist Chester Lee (Oracle Tattoo), practicing from around 2011.",
+          "evidence": "contested"
+        },
+        {
+          "text": "The style's global visibility surge is dated to 2016, driven by Chester Lee's viral Instagram exposure and celebrity/athlete adoption (Lionel Messi, Tyler Joseph of Twenty One Pilots).",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "black_grey",
+      "name": "Black & Grey",
+      "category": "blackwork",
+      "description": "Shades of diluted black creating a softer, subtler tonal range than pure blackwork.",
+      "history": "Perfected in 1970s East LA using single needles and diluted ink ('jailhouse style' refined).",
+      "distinctFeatures": "Grey wash gradients, smoky softness, no color.",
+      "commonMotifs": [
+        "portraits",
+        "religious scenes",
+        "roses",
+        "clocks"
+      ],
+      "relatedTechniques": [
+        "black_and_grey_wash",
+        "soft_shading",
+        "single_needle"
+      ],
+      "relatedStyles": [
+        "chicano",
+        "realism_bg"
+      ],
+      "sourcePaper": "STY-03",
+      "fieldNote": "Diluted black across a full tonal range — the prison-born grammar that still reads as pure atmosphere.",
+      "keyFacts": [
+        {
+          "text": "Black & grey originated in 1960s–70s California prisons among Chicano inmates, using diluted black ink and homemade single-needle machines, and was professionalized at Good Time Charlie's Tattooland (East LA, 1975).",
+          "evidence": "direct"
+        },
+        {
+          "text": "Black & grey's traditional (non-photorealistic) subject matter includes religious scenes, roses, clocks, and script lettering, distinct from but technically continuous with the photorealistic realism_bg specialization.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "etching",
+      "name": "Etching / Engraving (Woodcut)",
+      "category": "illustrative",
+      "description": "Mimics old engravings, woodcuts and linocuts with parallel-line shading.",
+      "history": "Inspired by medieval and Renaissance printmaking (Dürer, Doré); modern wave from the 2010s.",
+      "distinctFeatures": "Cross-hatching, parallel whip lines, antique-book aesthetic, black only.",
+      "commonMotifs": [
+        "medieval scenes",
+        "botanical plates",
+        "skeletons",
+        "banners"
+      ],
+      "relatedTechniques": [
+        "etching_technique",
+        "whip_shading",
+        "fine_line",
+        "crosshatching"
+      ],
+      "relatedStyles": [
+        "blackwork_style",
+        "illustrative",
+        "sketch"
+      ],
+      "sourcePaper": "STY-06",
+      "fieldNote": "The look of a Dürer engraving — hatched line pretending to be a printing plate on living skin.",
+      "keyFacts": [
+        {
+          "text": "Etching-style tattooing references named Renaissance/early-modern printmakers (Dürer, Schongauer, Rembrandt, Goya, Doré) and dates its tattoo-specific practice to roughly the 2010s.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Yvonne (Blut & Eisen, Berlin) and Duncan X (Into You, London) are credited as early practitioners bringing art-historical print references into tattooing.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "illustrative",
+      "name": "Illustrative",
+      "category": "illustrative",
+      "description": "Combines traditional illustration with tattoo art for a storybook-like appearance.",
+      "history": "Broad contemporary style drawing on drawing, printmaking and animation.",
+      "distinctFeatures": "Visible line art plus painterly or flat color, stylized rather than photographic.",
+      "commonMotifs": [
+        "fairy-tale scenes",
+        "animals",
+        "botanical art"
+      ],
+      "relatedTechniques": [
+        "fine_line",
+        "bold_line",
+        "color_shading",
+        "whip_shading"
+      ],
+      "relatedStyles": [
+        "neo_traditional",
+        "sketch",
+        "watercolor_style"
+      ],
+      "sourcePaper": "STY-06",
+      "fieldNote": "The broad hand of the illustrator — line and gesture chosen over photographic fidelity.",
+      "keyFacts": [
+        {
+          "text": "Illustrative tattooing functions as a broad umbrella spanning etching/engraving, sketch-like gestures, Old Masters preliminary outlines, and other art-historical currents.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Leonardo da Vinci's Vitruvian Man sketch and Mexican muralist/illustrator traditions (Kahlo, Rivera, Helguera, Izquierdo, Siqueiros) are cited as reference points for illustrative-style artists.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "sketch",
+      "name": "Sketch Style",
+      "category": "illustrative",
+      "description": "Looks like a hand-drawn pencil sketch with raw, loose lines and unfinished edges.",
+      "history": "Emerged in the 2000s, inspired by artists' preliminary drawings.",
+      "distinctFeatures": "Overlapping construction lines, hatching, deliberate 'unfinished' rawness.",
+      "commonMotifs": [
+        "animals in motion",
+        "figures",
+        "architectural sketches"
+      ],
+      "relatedTechniques": [
+        "broken_line",
+        "whip_shading",
+        "crosshatching",
+        "fine_line"
+      ],
+      "relatedStyles": [
+        "illustrative",
+        "trash_polka",
+        "abstract"
+      ],
+      "sourcePaper": "STY-06",
+      "fieldNote": "The unfinished pencil, deliberately left open — the construction lines kept as the beauty.",
+      "keyFacts": [
+        {
+          "text": "Sketch style tattoos mimic hand-drawn pencil/charcoal sketches with deliberately loose, unfinished lines and visible construction lines.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Sources disagree on dating: one describes an \"early 20th century\" emergence while also describing a \"last two decades\" popularity arc, an internal inconsistency this paper flags.",
+          "evidence": "contested"
+        }
+      ]
+    },
+    {
+      "id": "watercolor_style",
+      "name": "Watercolor",
+      "category": "illustrative",
+      "description": "Mimics watercolor paintings with soft, flowing color splashes and no hard borders.",
+      "history": "Popularized in the 21st century, inspired by contemporary painting.",
+      "distinctFeatures": "Color bleeds, splatters, gradient washes, minimal or absent outlines.",
+      "commonMotifs": [
+        "flowers",
+        "birds",
+        "abstract splashes",
+        "landscapes"
+      ],
+      "relatedTechniques": [
+        "watercolor_technique",
+        "color_blending",
+        "brush_stroke"
+      ],
+      "relatedStyles": [
+        "abstract",
+        "illustrative",
+        "sketch"
+      ],
+      "sourcePaper": "STY-06",
+      "fieldNote": "Wachob's washes and splatters, floating free of the outline; lovely, and honest about how soft edges age.",
+      "keyFacts": [
+        {
+          "text": "Amanda Wachob pioneered watercolor-style tattooing in 2008, incorporating brushstrokes, washes, splatters, and spills inspired by modern painting.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Wachob's \"greylining\" technique dilutes black ink with water to render outlines nearly invisible, shifting emphasis to color.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "abstract",
+      "name": "Abstract",
+      "category": "illustrative",
+      "description": "Non-representational compositions of shape, color and texture.",
+      "history": "Parallels 20th-century abstract art movements; grows with avant-garde tattooing.",
+      "distinctFeatures": "Free composition, expressive marks, no literal subject.",
+      "commonMotifs": [
+        "brush marks",
+        "color fields",
+        "geometric fragments"
+      ],
+      "relatedTechniques": [
+        "brush_stroke",
+        "watercolor_technique",
+        "negative_space"
+      ],
+      "relatedStyles": [
+        "watercolor_style",
+        "trash_polka",
+        "ignorant"
+      ],
+      "sourcePaper": "STY-06",
+      "fieldNote": "Kandinsky's freedom on skin — mark and color answering only to feeling.",
+      "keyFacts": [
+        {
+          "text": "Abstract tattooing draws on early-20th-century fine-art abstraction (Kandinsky, Mondrian, Pollock) while developing its own tattoo-specific visual language.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Amanda Wachob's abstract work is directly inspired by Hans Hofmann's Abstract Expressionism, developed alongside her watercolor technique.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "pop_art",
+      "name": "Pop Art / Comic",
+      "category": "illustrative",
+      "description": "Bold comic-book aesthetics: halftone dots, primary colors, thick outlines.",
+      "history": "Inspired by Lichtenstein, Warhol and vintage comics.",
+      "distinctFeatures": "Ben-Day dots, speech bubbles, flat saturated color, heavy keylines.",
+      "commonMotifs": [
+        "comic panels",
+        "onomatopoeia",
+        "retro ads"
+      ],
+      "relatedTechniques": [
+        "bold_line",
+        "color_packing",
+        "dotwork_technique"
+      ],
+      "relatedStyles": [
+        "new_school",
+        "cartoon",
+        "anime"
+      ],
+      "sourcePaper": "STY-06",
+      "fieldNote": "Ben-Day dots and flat primaries — the comic panel worn as a wink.",
+      "keyFacts": [
+        {
+          "text": "Pop Art tattooing replicates the visual codes (Ben-Day dots, flat primary color, heavy keylines) of the mid-20th-century Pop Art movement (Lichtenstein, Warhol, Haring).",
+          "evidence": "direct"
+        },
+        {
+          "text": "Roy Lichtenstein's use of Ben-Day dots and comic-derived imagery has been criticized within art history as under-crediting original comic illustrators.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Tattoo-specific dating is contested: one source places pop-art-influenced tattooing's emergence in the 1970s–1980s as a New School substyle, another in \"the early 2000s.\"",
+          "evidence": "contested"
+        }
+      ]
+    },
+    {
+      "id": "cartoon",
+      "name": "Cartoon",
+      "category": "illustrative",
+      "description": "Recreations of animated characters or original designs in cartoon language.",
+      "history": "Longstanding niche boosted by nostalgia waves and streaming-era fandoms.",
+      "distinctFeatures": "Simple shapes, flat colors, expressive faces, clean outlines.",
+      "commonMotifs": [
+        "classic cartoon characters",
+        "mascots"
+      ],
+      "relatedTechniques": [
+        "bold_line",
+        "color_packing"
+      ],
+      "relatedStyles": [
+        "new_school",
+        "anime",
+        "pop_art"
+      ],
+      "sourcePaper": "STY-06",
+      "fieldNote": "Popeye and Betty Boop in ink — the animated line, bold enough to keep smiling for decades.",
+      "keyFacts": [
+        {
+          "text": "Popeye and Betty Boop (Fleischer Studios) and Looney Tunes characters (Warner Bros., debuted 1930) are cited as among the earliest cartoon characters tattooed.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Cartoon tattoos are executable across any base rendering technique (traditional, new-school, realism, blackwork) rather than constituting a single fixed visual grammar.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "sticker_patchwork",
+      "name": "Sticker / Patchwork",
+      "category": "modern",
+      "description": "Collections of small standalone designs scattered like stickers or sewn patches, no background.",
+      "history": "2020s trend ('patchwork sleeves') driven by Gen-Z clients and social media.",
+      "distinctFeatures": "Independent mini-designs, white keyline 'sticker' borders, gap-filled sleeves.",
+      "commonMotifs": [
+        "mini icons",
+        "flash pieces",
+        "pop-culture stickers"
+      ],
+      "relatedTechniques": [
+        "fine_line",
+        "bold_line",
+        "color_packing",
+        "white_ink_technique"
+      ],
+      "relatedStyles": [
+        "cartoon",
+        "fineline_style",
+        "embroidery"
+      ],
+      "sourcePaper": "STY-07",
+      "fieldNote": "A body collected like a suitcase of stickers — small, separate, and deliberately unplanned.",
+      "keyFacts": [
+        {
+          "text": "Sticker/patchwork tattooing is a 2020s, Gen-Z-associated trend of collecting small, independent tattoos with deliberate negative-space separation, rejecting single-cohesive-sleeve planning.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Multiple 2024–2026 industry trend-forecasters (Painful Pleasures, Temporalis, Anomalie Tattoo Co.) independently identify sticker-style patchwork as a top tattoo trend of the mid-2020s.",
+          "evidence": "direct"
+        },
+        {
+          "text": "No single credited originating artist or studio is identified in sources reviewed; the trend is best characterized as diffuse and platform-driven.",
+          "evidence": "hypothesis"
+        }
+      ]
+    },
+    {
+      "id": "embroidery",
+      "name": "Embroidery / Patch",
+      "category": "modern",
+      "description": "Trompe-l'œil imitation of embroidered patches with visible 'stitches' and thread texture.",
+      "history": "Viral 2010s–20s novelty style from Latin American artists.",
+      "distinctFeatures": "Thread-like strokes, highlight sheen, patch borders, hyper-textured color.",
+      "commonMotifs": [
+        "cartoon patches",
+        "flowers",
+        "sports logos"
+      ],
+      "relatedTechniques": [
+        "color_packing",
+        "white_highlights",
+        "layering",
+        "optical_illusion_technique"
+      ],
+      "relatedStyles": [
+        "sticker_patchwork",
+        "3d_style"
+      ],
+      "sourcePaper": "STY-07",
+      "fieldNote": "Thread that isn't there — the raised-patch illusion, stitched in pigment, born in Latin America.",
+      "keyFacts": [
+        {
+          "text": "Embroidery/patch tattooing emerged in the mid-2010s (specifically cited as 2017) in Latin America.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Brazilian artist Eduardo \"Duda\" Lozano is most consistently credited as an early, highly influential practitioner, known for \"broken thread\" details.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "cyber_sigilism",
+      "name": "Cyber Sigilism",
+      "category": "modern",
+      "description": "Spiky, web-like abstract linework resembling futuristic sigils and neo-tribal circuitry.",
+      "history": "Emerged ~2020 from internet subcultures blending Y2K, goth and tribal revival.",
+      "distinctFeatures": "Thin sharp spikes, symmetrical webs, chrome or pure black, sternum/spine placements.",
+      "commonMotifs": [
+        "sigil webs",
+        "spiked hearts",
+        "chrome flourishes"
+      ],
+      "relatedTechniques": [
+        "fine_line",
+        "single_needle",
+        "whip_shading"
+      ],
+      "relatedStyles": [
+        "neotribal",
+        "blackwork_style",
+        "goth"
+      ],
+      "sourcePaper": "STY-07",
+      "fieldNote": "Spiked, glinting glyphs out of the Berlin club night — the sigil for a screen-lit generation.",
+      "keyFacts": [
+        {
+          "text": "Cyber sigilism emerged from the late-2010s Berlin club scene, associated with artist Aingelblood, moving into high fashion and celebrity adoption in the early 2020s.",
+          "evidence": "direct"
+        },
+        {
+          "text": "The style descends visually from 1990s neo-tribal (Leo Zulueta).",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "neotribal",
+      "name": "Neo-Tribal",
+      "category": "modern",
+      "description": "Revival of 90s tribal filtered through modern blackwork and cyber aesthetics.",
+      "history": "2020s revival wave reinterpreting tribal spikes with contemporary composition.",
+      "distinctFeatures": "Sharper, more aggressive spikes than classic tribal, asymmetry allowed, body-hugging flow.",
+      "commonMotifs": [
+        "spiked forms",
+        "flame shapes",
+        "spine pieces"
+      ],
+      "relatedTechniques": [
+        "color_packing",
+        "bold_line",
+        "tribal_blackfill"
+      ],
+      "relatedStyles": [
+        "tribal",
+        "cyber_sigilism",
+        "blackwork_style"
+      ],
+      "sourcePaper": "STY-07",
+      "fieldNote": "The 90s tribal returning sharper and stranger — asymmetry where there was once symmetry.",
+      "keyFacts": [
+        {
+          "text": "Neo-tribal is a 2020s revival of 1990s tribal blackwork with sharper spikes and greater asymmetry than the earlier movement.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "ignorant",
+      "name": "Ignorant Style",
+      "category": "modern",
+      "description": "Deliberately crude, childlike doodles with punk humor — anti-technique as aesthetic.",
+      "history": "Born from Parisian graffiti (Fuzi UVTPK) in the 2000s.",
+      "distinctFeatures": "Shaky single-weight lines, naive figures, ironic captions, no shading.",
+      "commonMotifs": [
+        "stick figures",
+        "sarcastic slogans",
+        "doodle animals"
+      ],
+      "relatedTechniques": [
+        "fine_line",
+        "hand_poke",
+        "broken_line"
+      ],
+      "relatedStyles": [
+        "graffiti",
+        "minimalist",
+        "abstract"
+      ],
+      "sourcePaper": "STY-07",
+      "fieldNote": "Fuzi's deliberately crude line — the joke, and the freedom, of drawing 'badly' on purpose.",
+      "keyFacts": [
+        {
+          "text": "French graffiti artist Fuzi Uvtpk pioneered \"Ignorant Style\" graffiti in the mid-1990s and applied it to tattooing from 2008.",
+          "evidence": "direct"
+        },
+        {
+          "text": "The style mainstreamed through 2010s celebrity adoption (Miley Cyrus, Pete Davidson, Machine Gun Kelly, Brooke Candy).",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "glitch",
+      "name": "Glitch / Pixel",
+      "category": "modern",
+      "description": "Digital-error aesthetics: RGB splits, scanlines, pixelation and vaporwave artifacts.",
+      "history": "2010s style importing digital glitch art onto skin.",
+      "distinctFeatures": "Offset color channels (cyan/red), pixel blocks, distortion of otherwise clean images.",
+      "commonMotifs": [
+        "glitched portraits",
+        "pixel hearts",
+        "loading bars"
+      ],
+      "relatedTechniques": [
+        "color_packing",
+        "fine_line",
+        "optical_illusion_technique"
+      ],
+      "relatedStyles": [
+        "3d_style",
+        "pop_art",
+        "abstract"
+      ],
+      "sourcePaper": "STY-07",
+      "fieldNote": "RGB split and scan-lines on skin — the error made ornament.",
+      "keyFacts": [
+        {
+          "text": "Glitch tattoos replicate RGB channel splitting, scan-line banding, and pixelation, most commonly applied to portraits.",
+          "evidence": "direct"
+        },
+        {
+          "text": "No specific named tattoo-world pioneer or precise founding date was identified in sources reviewed for this paper.",
+          "evidence": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "3d_style",
+      "name": "3D / Optical Illusion",
+      "category": "modern",
+      "description": "Creates an illusion of depth making the tattoo appear three-dimensional or the skin transformed.",
+      "history": "Modern style leveraging shading and perspective for lifelike trompe-l'œil effects.",
+      "distinctFeatures": "Cast shadows, perspective tricks, torn-skin and embossed effects.",
+      "commonMotifs": [
+        "torn skin",
+        "embossed symbols",
+        "insects that look real"
+      ],
+      "relatedTechniques": [
+        "depth_effects",
+        "optical_illusion_technique",
+        "soft_shading",
+        "white_highlights"
+      ],
+      "relatedStyles": [
+        "hyperrealism",
+        "biomechanical",
+        "embroidery"
+      ],
+      "sourcePaper": "STY-07",
+      "fieldNote": "Torn skin, lifted edges, objects that seem to sit above the arm — illusion that must respect the curve beneath.",
+      "keyFacts": [
+        {
+          "text": "3D/optical illusion tattoos use shading, perspective, and embossed/torn-skin effects, sometimes incorporating Escher-referencing impossible geometry.",
+          "evidence": "community_attested"
+        },
+        {
+          "text": "No specific named tattoo-world pioneer or precise founding date was identified in sources reviewed for this paper.",
+          "evidence": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "minimalist",
+      "name": "Minimalist",
+      "category": "fineline",
+      "description": "Simple, understated designs with clean lines and minimal detail.",
+      "history": "Gained popularity in the 21st century with minimalism in art and design.",
+      "distinctFeatures": "Economy of line, small scale, high negative space, restrained palette.",
+      "commonMotifs": [
+        "tiny symbols",
+        "single-word script",
+        "small outlines"
+      ],
+      "relatedTechniques": [
+        "fine_line",
+        "single_needle",
+        "negative_space"
+      ],
+      "relatedStyles": [
+        "fineline_style",
+        "linework_style",
+        "ignorant"
+      ],
+      "sourcePaper": "STY-08",
+      "fieldNote": "The fewest lines that still tell the truth — restraint you must earn, not fake.",
+      "keyFacts": [
+        {
+          "text": "Minimalist tattooing functions as an umbrella term for fine-line, linework, and single-line subcategories, unified by economy of line and high negative space.",
+          "evidence": "synthesized"
+        },
+        {
+          "text": "The contemporary mainstream minimalist/fine-line boom is closely associated with celebrity tattoo artists working in New York in the mid-2000s–2010s.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "fineline_style",
+      "name": "Fine Line",
+      "category": "fineline",
+      "description": "Delicate designs executed with the thinnest possible lines and subtle shading.",
+      "history": "Roots in Chicano single-needle work; mainstream boom in the 2010s (celebrity tattoos).",
+      "distinctFeatures": "Hair-thin lines, soft micro-shading, elegance and precision at small scale.",
+      "commonMotifs": [
+        "botanical stems",
+        "script",
+        "micro portraits",
+        "constellations"
+      ],
+      "relatedTechniques": [
+        "fine_line",
+        "single_needle",
+        "soft_shading"
+      ],
+      "relatedStyles": [
+        "micro_realism",
+        "minimalist",
+        "ornamental",
+        "chicano"
+      ],
+      "sourcePaper": "STY-08",
+      "fieldNote": "The thread-thin line Bang Bang put on the culture's radar in 2007 — delicate, and quietly at war with time.",
+      "keyFacts": [
+        {
+          "text": "Keith \"Bang Bang\" McCurdy (b. Nov. 28, 1985) tattooed a fine-line Sanskrit script on Rihanna's hip in 2007, an event credited with launching his career and the style's celebrity visibility.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Jonathan \"JonBoy\" Valena, a former Hillsong Church youth minister, is credited as \"the pioneer of the 'tiny tattoo' movement,\" tattooing minimalist designs on numerous high-profile celebrities.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "linework_style",
+      "name": "Linework",
+      "category": "fineline",
+      "description": "Design created entirely through lines — from single continuous contours to dense pattern fields.",
+      "history": "Fundamental to tattooing; popularized as a standalone minimalist aesthetic recently.",
+      "distinctFeatures": "No shading fills; rhythm, weight and spacing of lines carry the whole design.",
+      "commonMotifs": [
+        "one-line figures",
+        "line portraits",
+        "op-art fields"
+      ],
+      "relatedTechniques": [
+        "continuous_line",
+        "fine_line",
+        "bold_line",
+        "broken_line"
+      ],
+      "relatedStyles": [
+        "minimalist",
+        "geometric",
+        "abstract"
+      ],
+      "sourcePaper": "STY-08",
+      "fieldNote": "Pure line, no fill — the drawing reduced to its own skeleton.",
+      "keyFacts": [
+        {
+          "text": "Linework tattooing is built entirely from lines with no shading fills, distinguished from fine-line specifically by not requiring thin/delicate line weight.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "single_line",
+      "name": "Single / Continuous Line",
+      "category": "fineline",
+      "description": "Whole image drawn with one unbroken line, Picasso-style.",
+      "history": "Inspired by one-line drawing exercises of modernist artists.",
+      "distinctFeatures": "One flowing uninterrupted contour forming a complete figure.",
+      "commonMotifs": [
+        "faces",
+        "animals",
+        "hands",
+        "hearts"
+      ],
+      "relatedTechniques": [
+        "continuous_line",
+        "fine_line"
+      ],
+      "relatedStyles": [
+        "linework_style",
+        "minimalist"
+      ],
+      "sourcePaper": "STY-08",
+      "fieldNote": "Picasso's one unbroken stroke, laid into skin without lifting the needle — economy as elegance.",
+      "keyFacts": [
+        {
+          "text": "Pablo Picasso produced a celebrated series of single-line animal drawings in the 1940s–1950s, reducing complex forms to one unbroken stroke.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Henri Matisse and Jean Cocteau are cited as having pursued comparable single-line drawing practices in the same period.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "lettering_script",
+      "name": "Lettering / Script",
+      "category": "lettering",
+      "description": "The art of tattooed typography, from elegant calligraphy to bold graffiti fonts.",
+      "history": "As old as tattooing itself; elevated by Chicano script and graffiti hand-styles.",
+      "distinctFeatures": "Letterform craftsmanship, flow matched to body curves, flourishes and swashes.",
+      "commonMotifs": [
+        "names",
+        "quotes",
+        "dates",
+        "ambigrams"
+      ],
+      "relatedTechniques": [
+        "script_lettering",
+        "fine_line",
+        "bold_line",
+        "single_needle"
+      ],
+      "relatedStyles": [
+        "chicano",
+        "graffiti",
+        "calligraphy"
+      ],
+      "sourcePaper": "STY-08",
+      "fieldNote": "Cholo and blackletter script from the streets of L.A. — every swash weighted to stay legible for years.",
+      "keyFacts": [
+        {
+          "text": "Contemporary Los Angeles Chicano artist Big Sleeps grew up immersed in blackletter, Old English, and Cholo scripts passed down through barrio murals and prison tattoos before becoming a leading calligraffiti figure.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "calligraphy",
+      "name": "Calligraphy / Calligraffiti",
+      "category": "lettering",
+      "description": "Expressive brush-and-nib letter art, including abstract unreadable calligraffiti.",
+      "history": "Fusion of classical calligraphy with graffiti energy (2010s).",
+      "distinctFeatures": "Dynamic stroke contrast, ink-splatter energy, letterforms as abstract texture.",
+      "commonMotifs": [
+        "Arabic/Gothic scripts",
+        "abstract strokes"
+      ],
+      "relatedTechniques": [
+        "brush_stroke",
+        "script_lettering",
+        "whip_shading"
+      ],
+      "relatedStyles": [
+        "lettering_script",
+        "abstract",
+        "graffiti"
+      ],
+      "sourcePaper": "STY-08",
+      "fieldNote": "Meulman's calligraffiti — the brushstroke's swell and taper, translated by a patient hand.",
+      "keyFacts": [
+        {
+          "text": "Dutch artist Niels \"Shoe\" Meulman (b. 1967) coined the term \"Calligraffiti\" in 2007, blending wildstyle graffiti lettering with Gothic blackletter, Roman capitals, and Asian brushwork.",
+          "evidence": "direct"
+        },
+        {
+          "text": "A separate Middle Eastern lineage (the Hurufiyya movement, mid-20th century, associated with Hassan Massoudy, Hossein Zenderoudi, Parviz Tanavoli) fused calligraphic scripts with modern abstraction.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "horror",
+      "name": "Horror",
+      "category": "dark",
+      "description": "Dark and macabre imagery inspired by horror films, literature and nightmares.",
+      "history": "Rooted in Gothic aesthetics; boomed with horror realism in the late 20th century.",
+      "distinctFeatures": "High-contrast black and grey (or blood-red accents), gore textures, cinematic lighting.",
+      "commonMotifs": [
+        "movie monsters",
+        "skulls",
+        "demons",
+        "haunted scenes"
+      ],
+      "relatedTechniques": [
+        "soft_shading",
+        "black_and_grey_wash",
+        "smoke_effect",
+        "layering"
+      ],
+      "relatedStyles": [
+        "realism_bg",
+        "dark_art",
+        "surrealism"
+      ],
+      "sourcePaper": "STY-09",
+      "fieldNote": "Booth's theatre of the macabre — fear rendered convincingly enough to make you look twice.",
+      "keyFacts": [
+        {
+          "text": "Paul Booth opened Last Rites Tattoo Theatre in New Jersey in 1998, later relocating to New York City, operating until its 2020 pandemic-driven closure.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Booth received significant mainstream press coverage (Rolling Stone, 2002) tied to his popularity with heavy-metal musicians.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dark_art",
+      "name": "Dark Art / Occult",
+      "category": "dark",
+      "description": "Esoteric, satanic and witchcraft-adjacent blackwork: sigils, goats, moons and rituals.",
+      "history": "Contemporary blackwork current drawing on occult illustration and etching.",
+      "distinctFeatures": "Dense black, etching textures, symmetry, symbolic composition.",
+      "commonMotifs": [
+        "baphomet",
+        "sigils",
+        "moth",
+        "third eye",
+        "moons"
+      ],
+      "relatedTechniques": [
+        "whip_shading",
+        "dotwork_technique",
+        "etching_technique",
+        "color_packing"
+      ],
+      "relatedStyles": [
+        "blackwork_style",
+        "etching",
+        "horror",
+        "goth"
+      ],
+      "sourcePaper": "STY-09",
+      "fieldNote": "The occult and the surreal-dark, held between horror and devotion — beauty that unsettles.",
+      "keyFacts": [
+        {
+          "text": "Paul Booth's dark surrealist style spans both horror and occult/esoteric subject matter, described by Booth as focusing on \"the macabre and the darker sides of human nature.\"",
+          "evidence": "direct"
+        },
+        {
+          "text": "Booth's technique proceeds through distinct \"packing\" (solid black saturation) and \"blending\" (feathered dilution) stages to build depth and atmosphere.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "goth",
+      "name": "Gothic",
+      "category": "dark",
+      "description": "Gothic architecture, blackletter and romantic-dark imagery.",
+      "history": "Draws on medieval gothic art and modern goth subculture.",
+      "distinctFeatures": "Blackletter type, cathedral windows, thorns, monochrome.",
+      "commonMotifs": [
+        "blackletter words",
+        "crosses",
+        "roses with thorns",
+        "bats"
+      ],
+      "relatedTechniques": [
+        "bold_line",
+        "whip_shading",
+        "script_lettering"
+      ],
+      "relatedStyles": [
+        "dark_art",
+        "lettering_script",
+        "blackwork_style"
+      ],
+      "sourcePaper": "STY-09",
+      "fieldNote": "Blackletter and the gothic mood — centuries of European script worn as atmosphere.",
+      "keyFacts": [
+        {
+          "text": "Blackletter (Textura, Rotunda, Schwabacher, Fraktur) was the dominant Western European script for roughly four centuries, developed by monastic scribes from the 12th century.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Blackletter's specific tattoo-cultural entry point is documented as 1940s–50s East Los Angeles Chicano/Pachuco culture (\"placas\"), using makeshift implements, predating its separate adoption by biker/metal subcultures.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "religious",
+      "name": "Religious / Spiritual",
+      "category": "dark",
+      "description": "Sacred imagery across faiths: Christ, Madonna, Buddha, deities and prayer scenes.",
+      "history": "Among the oldest tattoo motifs — pilgrimage tattoos date back centuries (Coptic, Jerusalem).",
+      "distinctFeatures": "Reverent black-and-grey realism or iconographic styling, light rays, drapery.",
+      "commonMotifs": [
+        "praying hands",
+        "crosses",
+        "saints",
+        "Buddha",
+        "Ganesha"
+      ],
+      "relatedTechniques": [
+        "black_and_grey_wash",
+        "soft_shading",
+        "single_needle"
+      ],
+      "relatedStyles": [
+        "chicano",
+        "realism_bg",
+        "black_grey"
+      ],
+      "sourcePaper": "STY-09",
+      "fieldNote": "Devotion carried since the Razzouk needles of Coptic Egypt — the oldest continuous pilgrimage in ink.",
+      "keyFacts": [
+        {
+          "text": "The Razzouk family, Coptic Christians, began tattooing in Egypt in the 14th century (c. 1300) and relocated the tradition to Jerusalem around 1750.",
+          "evidence": "direct"
+        },
+        {
+          "text": "The tradition of Christian pilgrims receiving tattoos in the Holy Land is documented since the 8th century.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "uv_style",
+      "name": "UV / Blacklight",
+      "category": "special",
+      "description": "Tattoos with UV-reactive ink, invisible or subtle in daylight and glowing under blacklight.",
+      "history": "Emerged in the 1990s rave culture; inks remain a niche due to safety debate.",
+      "distinctFeatures": "Glow under UV, often paired with normal ink as hidden layer.",
+      "commonMotifs": [
+        "hidden messages",
+        "cosmic accents",
+        "circuit lines"
+      ],
+      "relatedTechniques": [
+        "uv_ink",
+        "fine_line"
+      ],
+      "relatedStyles": [
+        "glitch",
+        "minimalist"
+      ],
+      "sourcePaper": "STY-10",
+      "fieldNote": "Ink that glows under blacklight and hides in daylight — thrilling, and unapproved for skin, so I name the risk first.",
+      "keyFacts": [
+        {
+          "text": "The FDA does not approve any tattoo ink, including UV ink, for injection into human skin.",
+          "evidence": "direct"
+        },
+        {
+          "text": "UV ink's fluorescent compounds have historically been approved by the FDA only for non-human (agricultural/fishing-industry) uses.",
+          "evidence": "community_attested"
+        }
+      ]
+    },
+    {
+      "id": "white_ink_style",
+      "name": "White Ink",
+      "category": "special",
+      "description": "Subtle tattoos in white ink only, resembling scarification or embossing.",
+      "history": "2000s niche trend for discreet tattoos.",
+      "distinctFeatures": "Ghostly low-contrast marks, works best on light untanned skin, ages fast.",
+      "commonMotifs": [
+        "lace",
+        "script",
+        "snowflakes"
+      ],
+      "relatedTechniques": [
+        "white_ink_technique",
+        "fine_line"
+      ],
+      "relatedStyles": [
+        "minimalist",
+        "ornamental"
+      ],
+      "sourcePaper": "STY-10",
+      "fieldNote": "Pigment like a scar of light — beautiful fresh, but honest artists warn it fades fast and unevenly.",
+      "keyFacts": [
+        {
+          "text": "White ink tattoos fade significantly faster than other pigment colors, often showing significant fading within 1–3 years and oxidizing toward yellow/cream/grey tones.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Titanium dioxide (the common white-ink pigment) reacts more strongly to UV light than black ink, accelerating fading/yellowing.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Sources conflict on white ink's visibility by skin tone: some describe it as striking on darker skin, while most describe poor contrast/chalky appearance on darker skin and better performance on fair skin.",
+          "evidence": "contested"
+        }
+      ]
+    },
+    {
+      "id": "negative_space_style",
+      "name": "Negative Space",
+      "category": "special",
+      "description": "The untouched skin forms the image while ink provides the background.",
+      "history": "Design principle elevated to a style within modern blackwork.",
+      "distinctFeatures": "Figure-ground reversal, bold black fields defining bright skin shapes.",
+      "commonMotifs": [
+        "patterns in black bands",
+        "silhouettes cut from black"
+      ],
+      "relatedTechniques": [
+        "negative_space",
+        "color_packing",
+        "blackout_technique"
+      ],
+      "relatedStyles": [
+        "blackwork_style",
+        "blackout_style",
+        "geometric"
+      ],
+      "sourcePaper": "STY-10",
+      "fieldNote": "The image is the skin you leave untouched — a decision that demands flawless edges.",
+      "keyFacts": [
+        {
+          "text": "Negative space tattooing is a design principle (untouched skin as image) elevated to a standalone style within the blackwork/blackout movement.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "silhouette_style",
+      "name": "Silhouette",
+      "category": "special",
+      "description": "Solid single-tone shapes of figures, often filled with scenes or galaxies.",
+      "history": "Classic graphic device adapted to tattooing.",
+      "distinctFeatures": "Hard-edged solid figures, optional double-exposure interior scenes.",
+      "commonMotifs": [
+        "wolf silhouettes",
+        "forests inside figures",
+        "birds"
+      ],
+      "relatedTechniques": [
+        "silhouette_technique",
+        "color_packing",
+        "negative_space"
+      ],
+      "relatedStyles": [
+        "blackwork_style",
+        "minimalist"
+      ],
+      "sourcePaper": "STY-10",
+      "fieldNote": "The figure as a single solid shadow — bold, graphic, and built to hold.",
+      "keyFacts": [
+        {
+          "text": "Silhouette tattooing uses solid, hard-edged single-tone figure fills, sometimes with interior \"double-exposure\" scene detail.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "handpoke_style",
+      "name": "Handpoke / Stick-and-Poke",
+      "category": "special",
+      "description": "Machine-free tattoos with a distinct soft, dotted, DIY-craft character.",
+      "history": "The original tattoo method worldwide; modern revival as a slow-craft movement.",
+      "distinctFeatures": "Dot-built lines, softer healing, intimate small-scale designs.",
+      "commonMotifs": [
+        "folk symbols",
+        "small doodles",
+        "dotwork ornaments"
+      ],
+      "relatedTechniques": [
+        "hand_poke",
+        "dotwork_technique",
+        "stippling"
+      ],
+      "relatedStyles": [
+        "ignorant",
+        "dotwork_style",
+        "minimalist"
+      ],
+      "sourcePaper": "STY-10",
+      "fieldNote": "The oldest method, worn on Ötzi himself — a slower, quieter mark made point by point.",
+      "keyFacts": [
+        {
+          "text": "The oldest known tattoos, on the 5,300-year-old mummy Ötzi the Iceman, were created by hand-poke-adjacent incision-and-charcoal methods.",
+          "evidence": "direct"
+        },
+        {
+          "text": "The specific contemporary Western \"stick-and-poke\" revival is dated to 1970s–1980s punk/hardcore DIY subculture, functioning as anti-establishment rejection of commercial tattoo-parlor culture.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "cosmetic",
+      "name": "Cosmetic / Paramedical",
+      "category": "special",
+      "description": "Functional tattooing: permanent makeup, scar camouflage, areola restoration, scalp micropigmentation.",
+      "history": "Medical-adjacent branch professionalized since the 1980s.",
+      "distinctFeatures": "Skin-tone pigments, natural-effect micro-strokes, medical hygiene protocols.",
+      "commonMotifs": [
+        "brows (microblading)",
+        "areola 3D",
+        "scar camouflage",
+        "hair follicle dots"
+      ],
+      "relatedTechniques": [
+        "single_needle",
+        "stippling",
+        "layering"
+      ],
+      "relatedStyles": [
+        "realism_color"
+      ],
+      "sourcePaper": "STY-10",
+      "fieldNote": "Ink as healing — areola and scar restoration; here I defer to the paramedical hand and the doctor, always.",
+      "keyFacts": [
+        {
+          "text": "Paramedical/cosmetic tattooing covers areola/nipple restoration, scar and stretch-mark camouflage, vitiligo/skin-discoloration camouflage, and scalp micropigmentation, practiced by professionals holding specific certifications (e.g., CPCP, CPTP).",
+          "evidence": "direct"
+        },
+        {
+          "text": "No specific named originating pioneer, studio, or founding date for paramedical tattooing as a professionalized field was identified in sources reviewed.",
+          "evidence": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "vintage_americana",
+      "name": "Vintage / Flash Revival",
+      "category": "traditional",
+      "description": "Faithful recreation of antique flash sheets, including aged 'faded' looks.",
+      "history": "Revival movement honoring pre-war flash artists (Cap Coleman, Bert Grimm).",
+      "distinctFeatures": "Deliberately aged palettes, historical motifs, classic placements.",
+      "commonMotifs": [
+        "circus ladies",
+        "panthers",
+        "gypsy heads"
+      ],
+      "relatedTechniques": [
+        "bold_line",
+        "color_packing",
+        "whip_shading"
+      ],
+      "relatedStyles": [
+        "american_traditional",
+        "old_school"
+      ],
+      "sourcePaper": "STY-01",
+      "fieldNote": "A deliberate return to the old flash, painted with a historian's care — nostalgia made permanent.",
+      "keyFacts": [
+        {
+          "text": "A contemporary (c. 1990s–present) revival reproducing the early American Traditional idiom with historical accuracy.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Theorized by Matt Lodder as the \"new old style,\" simultaneously old and new.",
+          "evidence": "direct"
+        }
+      ]
+    }
+  ],
+  "techniqueCategories": [
+    {
+      "id": "shading",
+      "name": "Shading",
+      "description": "Methods of building tone, gradient, and dimension in skin — soft and hard shading, whip and pepper texture, black-and-grey wash, crosshatching, and large-area gradient blending. Each is a different conversation between needle motion, ink dilution, and how the trauma will heal into value."
+    },
+    {
+      "id": "linework",
+      "name": "Linework",
+      "description": "Methods of constructing lines of different weight and character — fine, bold, broken, continuous, single-needle, script, and tapered. Needle grouping and pressure decide not only how a line looks fresh but how it holds or spreads over a decade; 'bold will hold' is the governing rule."
+    },
+    {
+      "id": "coloring",
+      "name": "Coloring",
+      "description": "Methods of placing, packing, and blending pigment — flat saturated fills, single-hue shading, wet-in-wet blends, white highlights, and watercolor effects. Every color negotiates with the skin tone beneath it and with the fading the years will bring."
+    },
+    {
+      "id": "dotwork",
+      "name": "Dotwork & Pointillism",
+      "description": "Building image and tone from individual points of contact — structured dotwork, soft line-free stippling, and engineered dot-gradients. Patience is the medium: density, spacing, and scale decide whether the field reads as shadow or dissolves as it heals."
+    },
+    {
+      "id": "dimensional",
+      "name": "3D & Optical",
+      "description": "Techniques that create depth, realism, and illusion — full realist rendering, cast-shadow and embossed depth effects, and optical trompe-l'œil. Their test is durability: the impact that stuns in fresh ink must still read once contrast softens with age."
+    },
+    {
+      "id": "manual",
+      "name": "Manual (Machine-free)",
+      "description": "Hand methods that predate or bypass the machine — hand poke, Japanese tebori, hand-tapped Pacific tatau, and Arctic skin stitching. These are not interchangeable: each carries its own tools, gestures, apprenticeship, and, in living traditions, its own lines of cultural authority."
+    },
+    {
+      "id": "specialized",
+      "name": "Specialized & Effects",
+      "description": "Special inks, effects, and signature textures — blackout fill, negative-space reversal, precise geometry, silhouette, tribal blackfill, etching, UV, smoke, and fire. Several depend on materials or scale whose long-term behavior and safety must be weighed honestly, not just admired fresh."
+    },
+    {
+      "id": "process",
+      "name": "Process & Craft",
+      "description": "Workflow techniques rather than looks — freehand composition drawn straight onto anatomy, multi-session layering, and remedial work (cover-up and blast-over). This is the craft of sequencing and judgment, including the discipline to assess old ink and, when needed, to refuse."
+    }
+  ],
+  "techniques": [
+    {
+      "id": "soft_shading",
+      "name": "Soft Shading",
+      "category": "shading",
+      "description": "Gentle gradients for subtle tonal transitions; needle moved lightly in overlapping passes.",
+      "usedInStyles": [
+        "realism_bg",
+        "realism_color",
+        "portrait",
+        "black_grey",
+        "horror"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-02",
+      "fieldNote": "Overlapping passes that melt one tone into the next — the shadow that breathes rather than steps.",
+      "keyFacts": [
+        {
+          "text": "Soft shading and gradient blending achieve tonal transition through needle-pass overlap/layering rather than ink dilution, distinct from black_and_grey_wash's dilution-based mechanism.",
+          "evidence": "synthesized"
+        },
+        {
+          "text": "Hard shading is characterized by abrupt tonal boundaries rather than smooth gradient, foundational to American Traditional's visual grammar.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "hard_shading",
+      "name": "Hard Shading",
+      "category": "shading",
+      "description": "Bold, high-contrast shading with abrupt tonal edges.",
+      "usedInStyles": [
+        "american_traditional",
+        "old_school",
+        "irezumi"
+      ],
+      "difficulty": "intermediate",
+      "sourcePaper": "TEC-02",
+      "fieldNote": "The opposite of soft: abrupt black against light, the backbone of traditional contrast and irezumi backgrounds.",
+      "keyFacts": [
+        {
+          "text": "Abrupt-contrast shading without smooth gradient, foundational to American Traditional/Old School and Irezumi background rendering; the technical opposite of soft_shading.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "whip_shading",
+      "name": "Whip Shading",
+      "category": "shading",
+      "description": "Flicking 'whip' motion leaving tapered dotted-line gradients; signature dynamic texture.",
+      "usedInStyles": [
+        "etching",
+        "sketch",
+        "dark_art",
+        "american_traditional"
+      ],
+      "difficulty": "intermediate",
+      "sourcePaper": "TEC-02",
+      "fieldNote": "A flick of the needle off the skin — texture that fades to nothing at its tail.",
+      "keyFacts": [
+        {
+          "text": "Whip shading, pepper shading, and crosshatching are three technically distinct needle-motion/mark-pattern techniques frequently conflated in casual trade usage.",
+          "evidence": "hypothesis"
+        },
+        {
+          "text": "Crosshatching directly translates Renaissance/early-modern print-hatching technique into tattoo form, credited to artists including Yvonne and Duncan X.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "pepper_shading",
+      "name": "Pepper Shading",
+      "category": "shading",
+      "description": "Fast scattered speckle shading producing a grainy, 'peppered' tone.",
+      "usedInStyles": [
+        "american_traditional",
+        "sketch",
+        "etching"
+      ],
+      "difficulty": "intermediate",
+      "sourcePaper": "TEC-02",
+      "fieldNote": "Scattered specks like grain — grit and atmosphere, best kept coarse enough to survive healing.",
+      "keyFacts": [
+        {
+          "text": "Fast, scattered speckle-shading technique producing grainy texture; associated with American Traditional, Sketch, and Etching, distinguished from both whip_shading (directional taper) and dotwork.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "black_and_grey_wash",
+      "name": "Black & Grey Wash",
+      "category": "shading",
+      "description": "Diluted black ink applied in layers for smooth monochromatic gradients.",
+      "usedInStyles": [
+        "black_grey",
+        "realism_bg",
+        "chicano",
+        "religious",
+        "portrait"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-02",
+      "fieldNote": "Carbon black, diluted like watercolor — a whole grey range from one honest pigment.",
+      "keyFacts": [
+        {
+          "text": "Black & grey wash depends on diluting carbon-black ink to produce a controllable grey range, originating in 1960s–70s East LA Chicano prison culture.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "crosshatching",
+      "name": "Crosshatching",
+      "category": "shading",
+      "description": "Intersecting line sets that build tone like pen-and-ink drawing.",
+      "usedInStyles": [
+        "etching",
+        "sketch",
+        "illustrative"
+      ],
+      "difficulty": "intermediate",
+      "sourcePaper": "TEC-02",
+      "fieldNote": "Renaissance print-hatching brought to skin — tone built from crossed lines, not a smoothed gradient.",
+      "keyFacts": [
+        {
+          "text": "Intersecting-line tonal-building technique translating Renaissance/early-modern print-hatching into tattoo form, foundational to Etching and Sketch styles.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "gradient_blending",
+      "name": "Gradient Blending",
+      "category": "shading",
+      "description": "Seamless transition between tonal values across large areas.",
+      "usedInStyles": [
+        "realism_bg",
+        "realism_color",
+        "3d_style"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-02",
+      "fieldNote": "The long, layered fade across a large field — earned over sessions, never in one pass.",
+      "keyFacts": [
+        {
+          "text": "Seamless large-area tonal-transition technique dependent on multi-session layering, foundational to large-scale color realism and hyperrealism.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "fine_line",
+      "name": "Fine Line",
+      "category": "linework",
+      "description": "Delicate thin lines for fragile detail; small needle groupings (1RL–3RL).",
+      "usedInStyles": [
+        "fineline_style",
+        "micro_realism",
+        "minimalist",
+        "ornamental",
+        "chicano"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-01",
+      "fieldNote": "The thinnest mark the needle can hold — precise, delicate, and the first to blur, so choose its placement with care.",
+      "keyFacts": [
+        {
+          "text": "Needle grouping (RL, RS, bugpin gauge) and voltage/depth settings determine line weight and, correspondingly, long-term pigment retention.",
+          "evidence": "synthesized"
+        },
+        {
+          "text": "Fine-line/single-needle technique carries materially higher blur/migration risk than bold-line technique, consistent with documented \"tattoo blowout\" and immune-mediated fading mechanisms.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "bold_line",
+      "name": "Bold Line",
+      "category": "linework",
+      "description": "Thick, confident outlines built with large liners; backbone of traditional styles.",
+      "usedInStyles": [
+        "american_traditional",
+        "irezumi",
+        "tribal",
+        "new_school",
+        "goth"
+      ],
+      "difficulty": "intermediate",
+      "sourcePaper": "TEC-01",
+      "fieldNote": "The two-to-four-millimetre line that outlasts everything — when longevity matters, this is where we begin.",
+      "keyFacts": [
+        {
+          "text": "Thick (2–4mm), uniform-weight line executed with larger needle groupings and liner machines at higher voltage/depth, the structural backbone of American Traditional, Old School, Vintage/Flash Revival, and most Blackwork-family styles.",
+          "evidence": "synthesized"
+        },
+        {
+          "text": "The most durable line-weight technique documented in this corpus.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "broken_line",
+      "name": "Broken Line",
+      "category": "linework",
+      "description": "Deliberately interrupted strokes for a sketchy, artistic effect.",
+      "usedInStyles": [
+        "sketch",
+        "ignorant",
+        "abstract"
+      ],
+      "difficulty": "basic",
+      "sourcePaper": "TEC-01",
+      "fieldNote": "The line that starts and stops on purpose — sketch and 'ignorant' work embrace the interruption.",
+      "keyFacts": [
+        {
+          "text": "Broken-line and continuous-line techniques are stroke-continuity choices independent of needle gauge, each serving a distinct aesthetic goal (sketchy incompleteness vs. singular unbroken form).",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "continuous_line",
+      "name": "Continuous Line",
+      "category": "linework",
+      "description": "One flowing uninterrupted line forming a complete design.",
+      "usedInStyles": [
+        "single_line",
+        "linework_style",
+        "minimalist"
+      ],
+      "difficulty": "intermediate",
+      "sourcePaper": "TEC-01",
+      "fieldNote": "One stroke, needle never lifted — the discipline of drawing a thing without a single pause.",
+      "keyFacts": [
+        {
+          "text": "Single unbroken-line execution for an entire design element, the technical foundation of Single/Continuous Line tattooing, directly descended from the early-20th-century fine-art single-line drawing tradition (Picasso, Matisse, Cocteau).",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "single_needle",
+      "name": "Single Needle",
+      "category": "linework",
+      "description": "Tattooing with one needle (1RL) for the finest possible marks and micro-shading.",
+      "usedInStyles": [
+        "chicano",
+        "fineline_style",
+        "micro_realism",
+        "cosmetic"
+      ],
+      "difficulty": "expert",
+      "sourcePaper": "TEC-01",
+      "fieldNote": "A lone 1RL — the hardware Chicano artists were forced into, then chose for its whisper of detail.",
+      "keyFacts": [
+        {
+          "text": "The specific 1RL hardware configuration, historically forced by the physical limits of homemade Chicano prison machines and subsequently adopted deliberately by professional artists (Good Time Charlie's Tattooland) for controlled fine detail and grey-wash shading precision.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "script_lettering",
+      "name": "Script Lettering",
+      "category": "linework",
+      "description": "Precise letterform construction: consistent weight, spacing and flourish control.",
+      "usedInStyles": [
+        "lettering_script",
+        "chicano",
+        "calligraphy",
+        "goth"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-01",
+      "fieldNote": "Letterforms as their own craft — consistent weight and controlled flourish so the words stay readable for years.",
+      "keyFacts": [
+        {
+          "text": "Script lettering spans Chicano Old English, global calligraffiti, and gothic blackletter traditions, each with documented distinct historical origins.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Tapered-line technique has no independently documented named pioneer distinct from the broader illustrative/calligraphic current.",
+          "evidence": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "tapered_lines",
+      "name": "Tapered Lines",
+      "category": "linework",
+      "description": "Lines that swell and thin like brush strokes, controlled by speed and hand pressure.",
+      "usedInStyles": [
+        "calligraphy",
+        "illustrative",
+        "neo_traditional"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-01",
+      "fieldNote": "A line that swells and thins within a single stroke — the loaded brush, faked through speed and pressure.",
+      "keyFacts": [
+        {
+          "text": "Dynamic swelling/thinning line weight within a single stroke, mimicking loaded-brush or calligraphy-pen marks, controlled via needle speed and hand pressure; foundational to Calligraphy/Calligraffiti's Arabic and Latin brush-stroke traditions and to Illustrative styles generally.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "color_packing",
+      "name": "Color Packing",
+      "category": "coloring",
+      "description": "Dense, even saturation of solid color (or black) with magnum needles in tight circles.",
+      "usedInStyles": [
+        "american_traditional",
+        "new_school",
+        "irezumi",
+        "blackwork_style",
+        "anime"
+      ],
+      "difficulty": "intermediate",
+      "sourcePaper": "TEC-03",
+      "fieldNote": "Dense, flat, saturated fill — the traditional and irezumi way of making color truly solid.",
+      "keyFacts": [
+        {
+          "text": "Color packing (flat, dense, magnum-applied) is foundational to American Traditional and Irezumi; color shading (single-hue gradient) distinguishes Neo-Traditional; color blending (multi-hue transition) is foundational to Color Realism.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "color_shading",
+      "name": "Color Shading",
+      "category": "coloring",
+      "description": "Gradients and transitions within color: light-to-dark of one hue.",
+      "usedInStyles": [
+        "neo_traditional",
+        "irezumi",
+        "illustrative"
+      ],
+      "difficulty": "intermediate",
+      "sourcePaper": "TEC-03",
+      "fieldNote": "One hue pulled light to dark — the dimension that lifts neo-traditional color off the skin.",
+      "keyFacts": [
+        {
+          "text": "Light-to-dark single-hue gradient technique distinguishing Neo-Traditional's dimensional color rendering from flat color_packing.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "color_blending",
+      "name": "Color Blending",
+      "category": "coloring",
+      "description": "Merging multiple hues seamlessly, wet-in-wet painting logic on skin.",
+      "usedInStyles": [
+        "realism_color",
+        "watercolor_style",
+        "neo_japanese"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-03",
+      "fieldNote": "Wet-in-wet hues melting together — the painterly heart of color realism.",
+      "keyFacts": [
+        {
+          "text": "Multi-hue seamless-transition technique using wet-in-wet painting logic, foundational to Color Realism and Watercolor.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "white_highlights",
+      "name": "White Highlights",
+      "category": "coloring",
+      "description": "Final white accents creating gloss, moisture and pop.",
+      "usedInStyles": [
+        "realism_color",
+        "portrait",
+        "embroidery",
+        "hyperrealism",
+        "anime"
+      ],
+      "difficulty": "intermediate",
+      "sourcePaper": "TEC-03",
+      "fieldNote": "The final spark of white that makes an eye wet and a chrome edge shine — used last, and sparingly.",
+      "keyFacts": [
+        {
+          "text": "White highlights function as a finishing accent technique across Color Realism, Portrait, Embroidery, Hyperrealism, and Anime, distinct from white_ink_technique's full-design application.",
+          "evidence": "synthesized"
+        },
+        {
+          "text": "White ink work carries documented, disputed skin-tone-visibility characteristics and unusually rapid fading.",
+          "evidence": "contested"
+        }
+      ]
+    },
+    {
+      "id": "white_ink_technique",
+      "name": "White Ink Work",
+      "category": "coloring",
+      "description": "Designs executed entirely or mostly in white ink.",
+      "usedInStyles": [
+        "white_ink_style",
+        "sticker_patchwork"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-03",
+      "fieldNote": "Whole designs in white pigment — I use it knowing the record on its fading, and I tell you that record.",
+      "keyFacts": [
+        {
+          "text": "Full-design, entirely-white-pigment application technique underlying White Ink style, carrying documented, disputed skin-tone-visibility characteristics and unusually rapid fading (1–3 years to significant visible change per Functional & Material Exceptions, Section 3).",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "watercolor_technique",
+      "name": "Watercolor Technique",
+      "category": "coloring",
+      "description": "Loose washes, bleeds and splatter mimicking wet paint; low or no outline.",
+      "usedInStyles": [
+        "watercolor_style",
+        "abstract",
+        "illustrative"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-03",
+      "fieldNote": "Wachob's washes and greylining — brush behavior coaxed out of a needle.",
+      "keyFacts": [
+        {
+          "text": "Watercolor technique, including \"greylining,\" was pioneered by Amanda Wachob from 2008.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dotwork_technique",
+      "name": "Dotwork",
+      "category": "dotwork",
+      "description": "Composing tone and texture from individual dots of varied density.",
+      "usedInStyles": [
+        "dotwork_style",
+        "geometric",
+        "mandala",
+        "sacred_geometry",
+        "dark_art"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-04",
+      "fieldNote": "Image built from deliberate dots — the modern craft the Dotfather opened around 1980.",
+      "keyFacts": [
+        {
+          "text": "Dotwork's modern named-style origin is credited to Xed LeHead (c. 1980 onward), developed further by the Into You London studio scene.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "stippling",
+      "name": "Stippling",
+      "category": "dotwork",
+      "description": "Fine speckled dot shading for soft gradients without lines.",
+      "usedInStyles": [
+        "dotwork_style",
+        "handpoke_style",
+        "cosmetic",
+        "mandala"
+      ],
+      "difficulty": "intermediate",
+      "sourcePaper": "TEC-04",
+      "fieldNote": "Fine, line-free dots for the softest gradient — patience measured in thousands of taps.",
+      "keyFacts": [
+        {
+          "text": "Stippling denotes fine, line-free dot application producing soft gradients, applied both in machine dotwork and the deeper hand-poke tradition predating the electric machine.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "dot_gradients",
+      "name": "Dot Gradients",
+      "category": "dotwork",
+      "description": "Systematic dot-density transitions from dark to light.",
+      "usedInStyles": [
+        "dotwork_style",
+        "geometric",
+        "sacred_geometry"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-04",
+      "fieldNote": "Engineered density, dark to light — a gradient you can count, not just feel.",
+      "keyFacts": [
+        {
+          "text": "Dot gradients denote systematic, engineered dark-to-light density transitions distinct from stippling's uniform soft tone, used in geometric and sacred-geometric compositions requiring precise directional value control.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "realism_rendering",
+      "name": "Realistic Rendering",
+      "category": "dimensional",
+      "description": "Full realist workflow: reference mapping, value structure, texture passes.",
+      "usedInStyles": [
+        "realism_bg",
+        "realism_color",
+        "portrait",
+        "hyperrealism"
+      ],
+      "difficulty": "expert",
+      "sourcePaper": "TEC-05",
+      "fieldNote": "The full realist workflow — reference mapped to value to texture, layer by patient layer.",
+      "keyFacts": [
+        {
+          "text": "Realistic rendering is the full realist workflow (reference mapping, value structure, texture passes) underlying the entire realism style family.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "depth_effects",
+      "name": "Depth Effects",
+      "category": "dimensional",
+      "description": "Cast shadows, perspective and atmospheric fade producing three-dimensional appearance.",
+      "usedInStyles": [
+        "3d_style",
+        "biomechanical",
+        "hyperrealism",
+        "embroidery"
+      ],
+      "difficulty": "expert",
+      "sourcePaper": "TEC-05",
+      "fieldNote": "Cast shadow and lifted edge — the tricks that make ink seem to sit above or below the skin.",
+      "keyFacts": [
+        {
+          "text": "Depth effects technique is credited to H.R. Giger's fine-art source material and Guy Aitchison's/Aaron Cain's late-1980s–early-1990s tattoo-specific adaptation for Biomechanical tattooing.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "optical_illusion_technique",
+      "name": "Optical Illusion",
+      "category": "dimensional",
+      "description": "Trompe-l'œil, impossible figures and figure-ground tricks.",
+      "usedInStyles": [
+        "3d_style",
+        "glitch",
+        "geometric",
+        "embroidery"
+      ],
+      "difficulty": "expert",
+      "sourcePaper": "TEC-05",
+      "fieldNote": "Perspective and shadow bending the eye — no single founder, just the craft of fooling it well.",
+      "keyFacts": [
+        {
+          "text": "No specific named tattoo-world pioneer or precise founding date was identified for optical illusion technique's application in 3D/Optical Illusion or Glitch styles.",
+          "evidence": "unknown"
+        },
+        {
+          "text": "Glitch's RGB-splitting effect is executed via deliberately offset color-channel layering using standard color-blending technique directed toward a digital-error reference.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "hand_poke",
+      "name": "Hand Poke (Stick & Poke)",
+      "category": "manual",
+      "description": "Manual dot-by-dot application with a hand-held needle; no machine.",
+      "usedInStyles": [
+        "handpoke_style",
+        "ignorant",
+        "dotwork_style"
+      ],
+      "difficulty": "intermediate",
+      "sourcePaper": "TEC-06",
+      "fieldNote": "Point by point, by hand — the method older than the machine, worn by Ötzi five thousand years ago.",
+      "keyFacts": [
+        {
+          "text": "Hand poke is the technologically prior universal tattoo method, evidenced on Ötzi the Iceman, predating the electric machine.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "tebori_technique",
+      "name": "Tebori",
+      "category": "manual",
+      "description": "Japanese hand-carving with needles mounted on a rod (nomi); renowned for soft gradation.",
+      "usedInStyles": [
+        "tebori_style",
+        "irezumi"
+      ],
+      "difficulty": "expert",
+      "sourcePaper": "TEC-06",
+      "fieldNote": "A needle-bundle on a rod, worked by hand — the Japanese pace that no motor reproduces.",
+      "keyFacts": [
+        {
+          "text": "Tebori uses a bundle of needles on a rod, worked by hand; Horiyoshi III adopted hybrid machine/tebori technique from the late 1990s.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "hand_tapped",
+      "name": "Hand-Tapped (Tatau)",
+      "category": "manual",
+      "description": "Polynesian method: ink tapped in with a comb (au) struck by a mallet.",
+      "usedInStyles": [
+        "samoan",
+        "polynesian",
+        "maori",
+        "marquesan"
+      ],
+      "difficulty": "expert",
+      "sourcePaper": "TEC-06",
+      "fieldNote": "The au tapped by a tufuga — Sāmoan tatau applied under hereditary authority, never casually.",
+      "keyFacts": [
+        {
+          "text": "Samoan tatau is applied via hand-tapped au technique under hereditary tufuga authority, documented with unbroken continuity since before European contact.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "skin_stitching",
+      "name": "Skin Stitching",
+      "category": "manual",
+      "description": "Inuit/Arctic method pulling soot-coated thread through skin; revived in cultural reclamation.",
+      "usedInStyles": [
+        "tribal"
+      ],
+      "difficulty": "expert",
+      "sourcePaper": "TEC-06",
+      "fieldNote": "Sinew drawn beneath the skin with a bone needle — the Arctic method, carrying its own lineage.",
+      "keyFacts": [
+        {
+          "text": "Skin stitching uses a bone/ivory/bird-bone needle threaded with soot-pigmented sinew, drawn beneath the skin to deposit continuous pigment lines.",
+          "evidence": "direct"
+        },
+        {
+          "text": "The practice is documented by some accounts as dating back at least 10,000 years among Inuit peoples.",
+          "evidence": "community_attested"
+        }
+      ]
+    },
+    {
+      "id": "blackout_technique",
+      "name": "Blackout",
+      "category": "specialized",
+      "description": "Saturating large areas in uniform solid black.",
+      "usedInStyles": [
+        "blackout_style",
+        "blackwork_style",
+        "negative_space_style"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-07",
+      "fieldNote": "Large magnums and dedicated black — saturating whole zones evenly is harder than it looks, and permanent.",
+      "keyFacts": [
+        {
+          "text": "Blackout technique requires large magnum needle groupings and specialized non-shading black ink, credited to Chester Lee from c. 2011.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Negative space depends on precise edge control since the ink/skin boundary carries the entire representational content.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "negative_space",
+      "name": "Negative Space",
+      "category": "specialized",
+      "description": "Using untouched skin as the design element against inked ground.",
+      "usedInStyles": [
+        "negative_space_style",
+        "blackwork_style",
+        "geometric",
+        "minimalist"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-07",
+      "fieldNote": "Leaving skin as the image — figure-ground reversal that lives or dies on edge control.",
+      "keyFacts": [
+        {
+          "text": "Figure-ground-reversal technique using untouched skin as the image-bearing element, depending on exceptionally precise edge control since the entire representational content is carried by the ink/skin boundary.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "geometric_technique",
+      "name": "Geometric Precision",
+      "category": "specialized",
+      "description": "Ruler/stencil-precise shapes, repeating patterns and symmetry control on curved skin.",
+      "usedInStyles": [
+        "geometric",
+        "sacred_geometry",
+        "mandala",
+        "ornamental"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-07",
+      "fieldNote": "Precision mapped to the body's curve — the line that must meet itself exactly, as Machlev showed.",
+      "keyFacts": [
+        {
+          "text": "Geometric precision technique is credited significantly to Chaim Machlev's contemporary practice (from 2012), requiring adaptation of flat-pattern symmetry to curved body surfaces.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Silhouette technique uses solid color-packing to produce hard-edged figures, sometimes with double-exposure interior detail.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "brush_stroke",
+      "name": "Brush Stroke",
+      "category": "specialized",
+      "description": "Strokes imitating loaded paintbrush marks, including dry-brush texture.",
+      "usedInStyles": [
+        "calligraphy",
+        "trash_polka",
+        "abstract",
+        "watercolor_style"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-08",
+      "fieldNote": "The gesture of a loaded brush, faked in ink — texture that reads as paint.",
+      "keyFacts": [
+        {
+          "text": "Etching technique is credited to Yvonne (Blut & Eisen, Berlin) and Duncan X (Into You, London) from the 2010s.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Brush stroke technique underlies Calligraphy/Calligraffiti's Latin and Arabic-script traditions and Trash Polka's collage aesthetic.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "etching_technique",
+      "name": "Etching / Engraving",
+      "category": "specialized",
+      "description": "Parallel-line and hatch systems recreating printmaking's carved look.",
+      "usedInStyles": [
+        "etching",
+        "dark_art",
+        "illustrative"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-08",
+      "fieldNote": "Parallel lines and cross-hatch imitating a printing plate — Yvonne and Duncan X's revival of the engraved look.",
+      "keyFacts": [
+        {
+          "text": "Parallel-line/cross-hatch printmaking-imitating technique, credited to Yvonne and Duncan X's 2010s revival, foundational to Etching, Dark Art, and Illustrative styles.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "silhouette_technique",
+      "name": "Silhouette",
+      "category": "specialized",
+      "description": "Solid hard-edged figure fills, often with interior negative scenes.",
+      "usedInStyles": [
+        "silhouette_style",
+        "blackwork_style",
+        "minimalist"
+      ],
+      "difficulty": "basic",
+      "sourcePaper": "TEC-07",
+      "fieldNote": "A single solid tone as the whole figure — sometimes hiding a second scene inside its shadow.",
+      "keyFacts": [
+        {
+          "text": "Solid, hard-edged single-tone figure-fill technique, sometimes incorporating interior double-exposure scene detail; a comparatively technically accessible (\"basic\" difficulty per this corpus's foundational technical catalog) but precision-demanding edge-control technique.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "tribal_blackfill",
+      "name": "Tribal Blackfill",
+      "category": "specialized",
+      "description": "Even solid black in traditional pattern vocabularies, flowing with anatomy.",
+      "usedInStyles": [
+        "tribal",
+        "polynesian",
+        "maori",
+        "neotribal"
+      ],
+      "difficulty": "intermediate",
+      "sourcePaper": "TEC-07",
+      "fieldNote": "The solid fill of living Pacific and Māori pattern — technique inseparable from cultural authority.",
+      "keyFacts": [
+        {
+          "text": "Tribal blackfill executes pattern vocabularies specific to living Polynesian, Māori, and related Indigenous traditions carrying sacred, gendered, and/or hereditary-practitioner restrictions.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "uv_ink",
+      "name": "UV Ink",
+      "category": "specialized",
+      "description": "UV-reactive pigments visible under blacklight.",
+      "usedInStyles": [
+        "uv_style"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-08",
+      "fieldNote": "Pigment that answers only to blacklight — and carries a regulatory gap I will always disclose before you commit.",
+      "keyFacts": [
+        {
+          "text": "UV ink carries a documented, unresolved FDA regulatory gap and historical phosphorus-related safety concerns.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "smoke_effect",
+      "name": "Smoke Effect",
+      "category": "specialized",
+      "description": "Soft billowing greywash forms for a smoky, ethereal look.",
+      "usedInStyles": [
+        "horror",
+        "realism_bg",
+        "surrealism",
+        "black_grey"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-08",
+      "fieldNote": "Soft grey drifting into negative space — atmosphere rendered as if it could move.",
+      "keyFacts": [
+        {
+          "text": "Smoke effect and fire effect are specialized rendering techniques within the broader realism/traditional-tattoo shading vocabulary; no independently documented named pioneers were identified.",
+          "evidence": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "fire_effect",
+      "name": "Fire Effect",
+      "category": "specialized",
+      "description": "Dynamic flame rendering with layered oranges, yellows and negative-space glow.",
+      "usedInStyles": [
+        "realism_color",
+        "new_school",
+        "irezumi"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-08",
+      "fieldNote": "Layered oranges and yellows around a negative-space glow — flame that seems lit from within.",
+      "keyFacts": [
+        {
+          "text": "Layered-color flame-rendering technique using oranges, yellows, and negative-space glow, used across Color Realism, New School, and Irezumi.",
+          "evidence": "synthesized"
+        }
+      ]
+    },
+    {
+      "id": "freehand",
+      "name": "Freehand",
+      "category": "process",
+      "description": "Drawing directly on skin with markers instead of a stencil, fitting design to anatomy live.",
+      "usedInStyles": [
+        "tribal",
+        "abstract",
+        "biomechanical",
+        "calligraphy"
+      ],
+      "difficulty": "expert",
+      "sourcePaper": "TEC-09",
+      "fieldNote": "Drawn straight onto the body — letting the anatomy, not the paper, decide where the line goes.",
+      "keyFacts": [
+        {
+          "text": "Freehand technique is foundational to Tribal, Abstract, and Biomechanical composition, and is Paul Booth's signature no-outline method for Horror/Dark Art.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "cover_up",
+      "name": "Cover-Up",
+      "category": "process",
+      "description": "Designing over an existing tattoo to conceal it using value mapping and strategic density.",
+      "usedInStyles": [
+        "blackout_style",
+        "irezumi",
+        "blackwork_style",
+        "realism_bg"
+      ],
+      "difficulty": "expert",
+      "sourcePaper": "TEC-10",
+      "fieldNote": "New design absorbing old ink — Dietzel hid scars under rosebuds a century ago; the judgment is the craft.",
+      "keyFacts": [
+        {
+          "text": "Amund Dietzel is documented covering vaccination marks and scars with rosebuds or butterflies, an early cosmetic cover-work function.",
+          "evidence": "direct"
+        },
+        {
+          "text": "Blackout technique represents the concealment-maximal case of cover-up logic, guaranteeing full concealment via total solid-black saturation.",
+          "evidence": "direct"
+        }
+      ]
+    },
+    {
+      "id": "blast_over",
+      "name": "Blast-Over",
+      "category": "process",
+      "description": "Bold new design tattooed directly over an old one, letting both remain visible in layers.",
+      "usedInStyles": [
+        "blackwork_style",
+        "ignorant",
+        "tribal"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-10",
+      "fieldNote": "Bold new work laid over old on purpose — coexistence, not concealment.",
+      "keyFacts": [
+        {
+          "text": "Blast-over deliberately layers new bold work over old ink without concealment intent, associated with Blackwork, Ignorant, and Tribal styles; no specific named pioneer was identified.",
+          "evidence": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "layering",
+      "name": "Layering",
+      "category": "process",
+      "description": "Building color/value in multiple passes and sessions for depth and durability.",
+      "usedInStyles": [
+        "realism_color",
+        "hyperrealism",
+        "portrait",
+        "embroidery"
+      ],
+      "difficulty": "advanced",
+      "sourcePaper": "TEC-09",
+      "fieldNote": "Value and color accumulated across sittings — the slow build realism and dark art both depend on.",
+      "keyFacts": [
+        {
+          "text": "Layering is foundational to Color Realism/Hyperrealism's multi-session buildup and is Paul Booth's specific packing-and-blending method.",
+          "evidence": "direct"
+        }
+      ]
+    }
+  ],
+  "mixedStyles": {
+    "description": "Any style or technique may be combined. Common proven fusions:",
+    "examples": [
+      {
+        "combination": [
+          "realism_bg",
+          "geometric"
+        ],
+        "name": "Geometric Realism"
+      },
+      {
+        "combination": [
+          "watercolor_style",
+          "fineline_style"
+        ],
+        "name": "Watercolor Fine Line"
+      },
+      {
+        "combination": [
+          "irezumi",
+          "realism_color"
+        ],
+        "name": "Japanese Realism"
+      },
+      {
+        "combination": [
+          "trash_polka",
+          "lettering_script"
+        ],
+        "name": "Graphic Trash Lettering"
+      },
+      {
+        "combination": [
+          "dotwork_style",
+          "ornamental"
+        ],
+        "name": "Ornamental Dotwork"
+      },
+      {
+        "combination": [
+          "blackwork_style",
+          "negative_space_style"
+        ],
+        "name": "Negative Blackwork"
+      }
+    ]
+  },
+  "history": {
+    "periods": [
+      {
+        "id": "otzi_copper_age",
+        "displayOrder": 1,
+        "dateLabel": "c. 3300 BCE",
+        "title": "Marks before written history",
+        "summary": "Ötzi’s preserved skin carries 61 tattoos. Their placement and making are still debated, reminding us that early tattooing may have been therapeutic, social, symbolic — or several things at once.",
+        "sourceLabel": "Smithsonian: Ötzi’s tattoos",
+        "sourceUrl": "https://www.smithsonianmag.com/smart-news/how-did-otzi-the-iceman-get-his-tattoos-archaeologists-and-tattoo-artists-unravel-the-mystery-180984194/",
+        "styleIds": []
+      },
+      {
+        "id": "ancient_worlds",
+        "displayOrder": 2,
+        "dateLabel": "Ancient worlds",
+        "title": "Many origins, many meanings",
+        "summary": "Tattooing appears across ancient Egypt and Nubia, the Pazyryk culture, the Americas, Arctic communities, and Asia. The evidence does not support one birthplace or one universal meaning.",
+        "sourceLabel": "Smithsonian: worldwide history",
+        "sourceUrl": "https://www.smithsonianmag.com/history/tattoos-worldwide-history-144038580/",
+        "styleIds": []
+      },
+      {
+        "id": "pacific_continuity",
+        "displayOrder": 3,
+        "dateLabel": "Over 3,000 years",
+        "title": "Sāmoan continuity, Pacific diversity",
+        "summary": "Sāmoan tatau carries a history spanning three millennia, while tattooing across Oceania developed as distinct living systems of genealogy, rank, protection, service, and belonging. Tā moko, tatau, and other Pacific traditions are not interchangeable motifs.",
+        "sourceLabel": "Te Papa: Sāmoan tatau",
+        "sourceUrl": "https://www.tepapa.govt.nz/about/te-papa-press/tatau-history-samoan-tattooing",
+        "styleIds": [
+          "samoan",
+          "maori",
+          "polynesian"
+        ]
+      },
+      {
+        "id": "edo_japan",
+        "displayOrder": 4,
+        "dateLabel": "Edo period · 1603–1868",
+        "title": "The Japanese body as a field",
+        "summary": "Large, flowing Japanese compositions grew in conversation with popular visual culture, especially the narrative drama and bold movement of ukiyo-e. Body placement became part of the image’s grammar.",
+        "sourceLabel": "The Met: ukiyo-e visual culture",
+        "sourceUrl": "https://www.metmuseum.org/essays/art-of-the-pleasure-quarters-and-the-ukiyo-e-style",
+        "styleIds": [
+          "irezumi",
+          "tebori_style"
+        ]
+      },
+      {
+        "id": "electric_machine",
+        "displayOrder": 5,
+        "dateLabel": "1891",
+        "title": "Electric speed changes the craft",
+        "summary": "Samuel O’Reilly patented an electric tattooing machine in New York. Faster repetition helped reshape studio practice, while hand methods continued as skilled traditions in many communities.",
+        "sourceLabel": "Smithsonian: a revolution in tattooing",
+        "sourceUrl": "https://www.si.edu/collections/snapshot/revolution-tattooing",
+        "styleIds": [
+          "american_traditional",
+          "old_school"
+        ]
+      },
+      {
+        "id": "global_medium",
+        "displayOrder": 6,
+        "dateLabel": "20th century → now",
+        "title": "Subculture becomes a global medium",
+        "summary": "Maritime flash, circus culture, Chicano fine-line, Japanese revival, punk, queer self-fashioning, fine art, and digital aesthetics expanded tattooing into a global medium with local histories.",
+        "sourceLabel": null,
+        "sourceUrl": null,
+        "styleIds": [
+          "american_traditional",
+          "chicano",
+          "blackwork_style",
+          "cyber_sigilism"
+        ]
+      }
+    ],
+    "anthropologyLenses": [
+      {
+        "id": "identity_belonging",
+        "displayOrder": 1,
+        "title": "Identity & belonging",
+        "description": "Skin can record kinship, status, community, profession, resistance, or chosen family. Meaning is made through relationships, not shape alone.",
+        "icon": "landmark"
+      },
+      {
+        "id": "ritual_protection",
+        "displayOrder": 2,
+        "title": "Ritual & protection",
+        "description": "Pain, endurance, healing, prayer, and transformation may be part of the work. A tattoo can be an event as much as an image.",
+        "icon": "sparkles"
+      },
+      {
+        "id": "power_stigma",
+        "displayOrder": 3,
+        "title": "Power & stigma",
+        "description": "The same mark can signal prestige in one setting and punishment or exclusion in another. Institutions have repeatedly controlled who may mark the body.",
+        "icon": "skull"
+      },
+      {
+        "id": "memory_authorship",
+        "displayOrder": 4,
+        "title": "Memory & self-authorship",
+        "description": "Contemporary tattoos often hold grief, survival, pleasure, transition, and authorship of the body — meanings with deep historical echoes.",
+        "icon": "flower"
+      }
+    ]
+  },
+  "articles": [
+    {
+      "id": "STY-01",
+      "slug": "from-sailor-flash-to-neo-traditional",
+      "module": "styles",
+      "order": 1,
+      "title": "From Sailor Flash to Neo-Traditional",
+      "paperTitle": "From Sailor Flash to Neo-Traditional: The Genealogy of Western Traditional Tattooing",
+      "dek": "How maritime folk marks became a codified American idiom — then split into faithful revival and illustrative reinvention.",
+      "curatorNote": "This is where the bold line learned to hold. Read it to feel why a swallow still means coming home.",
+      "tags": [
+        "Traditional",
+        "Old School",
+        "Neo-Traditional",
+        "Americana"
+      ],
+      "file": "from-sailor-flash-to-neo-traditional.md",
+      "wordCount": 5245,
+      "readingMinutes": 26,
+      "publishedAt": "2026-07-20",
+      "catalogIds": [
+        "american_traditional",
+        "old_school",
+        "neo_traditional",
+        "new_school",
+        "vintage_americana"
+      ]
+    },
+    {
+      "id": "STY-02",
+      "slug": "skin-as-image-realism-to-surreal-transformation",
+      "module": "styles",
+      "order": 2,
+      "title": "Skin as Image: Realism to Surreal Transformation",
+      "paperTitle": "Skin as Image: Realism, Portraiture, Miniaturization, Hyperrealism, and Surreal Transformation",
+      "dek": "Photography, portraiture, and impossible depth pressed into living dermis — and how micro-detail ages.",
+      "curatorNote": "Realism is a promise to time. The face you carve today must still be that face in twenty years.",
+      "tags": [
+        "Realism",
+        "Portrait",
+        "Hyperrealism",
+        "Surrealism"
+      ],
+      "file": "skin-as-image-realism-to-surreal-transformation.md",
+      "wordCount": 5826,
+      "readingMinutes": 29,
+      "publishedAt": "2026-07-20",
+      "catalogIds": [
+        "realism_bg",
+        "realism_color",
+        "portrait",
+        "micro_realism",
+        "hyperrealism",
+        "surrealism"
+      ]
+    },
+    {
+      "id": "STY-03",
+      "slug": "black-as-structure",
+      "module": "styles",
+      "order": 3,
+      "title": "Black as Structure",
+      "paperTitle": "Black as Structure: Blackwork, Dotwork, Geometry, Ornament, Blackout, and Black-and-Grey",
+      "dek": "Blackwork, dotwork, geometry, ornament, and blackout — where black ink becomes architecture.",
+      "curatorNote": "Black is not the absence of color. On skin it is structure, gravity, and the longest-lasting truth we own.",
+      "tags": [
+        "Blackwork",
+        "Dotwork",
+        "Geometry",
+        "Mandala"
+      ],
+      "file": "black-as-structure.md",
+      "wordCount": 5593,
+      "readingMinutes": 28,
+      "publishedAt": "2026-07-20",
+      "catalogIds": [
+        "blackwork_style",
+        "dotwork_style",
+        "geometric",
+        "sacred_geometry",
+        "mandala",
+        "ornamental",
+        "blackout_style",
+        "black_grey"
+      ]
+    },
+    {
+      "id": "STY-04",
+      "slug": "living-lineages-indigenous-and-heritage-systems",
+      "module": "styles",
+      "order": 4,
+      "title": "Living Lineages: Indigenous & Heritage Systems",
+      "paperTitle": "Living Lineages: Indigenous and Heritage Tattoo Systems, Colonial Disruption, Revival, and Cultural Authority",
+      "dek": "Māori, Sāmoan, Marquesan, Haida, Celtic, and Mesoamerican marks — and why 'tribal' is not one thing.",
+      "curatorNote": "Some marks ask for consent and lineage I cannot grant here. This paper teaches the difference between honoring and taking.",
+      "tags": [
+        "Cultural",
+        "Tā moko",
+        "Tatau",
+        "Authority"
+      ],
+      "file": "living-lineages-indigenous-and-heritage-systems.md",
+      "wordCount": 7247,
+      "readingMinutes": 36,
+      "publishedAt": "2026-07-20",
+      "catalogIds": [
+        "tribal",
+        "maori",
+        "polynesian",
+        "samoan",
+        "marquesan",
+        "celtic",
+        "aztec_maya",
+        "haida"
+      ]
+    },
+    {
+      "id": "STY-05",
+      "slug": "the-japanese-tattoo-continuum",
+      "module": "styles",
+      "order": 5,
+      "title": "The Japanese Tattoo Continuum",
+      "paperTitle": "The Japanese Tattoo Continuum: Irezumi, Tebori, Neo-Japanese, and Anime/Manga Translation",
+      "dek": "Irezumi, tebori, neo-Japanese, and anime — from Edo penal marks to global fandom.",
+      "curatorNote": "Tebori taught me patience. A body-suit is a river of myth; you do not rush a river.",
+      "tags": [
+        "Irezumi",
+        "Tebori",
+        "Neo-Japanese",
+        "Anime"
+      ],
+      "file": "the-japanese-tattoo-continuum.md",
+      "wordCount": 5276,
+      "readingMinutes": 26,
+      "publishedAt": "2026-07-20",
+      "catalogIds": [
+        "irezumi",
+        "tebori_style",
+        "neo_japanese",
+        "anime"
+      ]
+    },
+    {
+      "id": "STY-06",
+      "slug": "paper-canvas-and-screen-translated-to-skin",
+      "module": "styles",
+      "order": 6,
+      "title": "Paper, Canvas & Screen, Translated to Skin",
+      "paperTitle": "Paper, Canvas, and Screen Translated to Skin: Illustrative Tattoo Languages",
+      "dek": "Etching, sketch, watercolor, abstraction, and Pop Art — marks born in other media, rebuilt in dermis.",
+      "curatorNote": "A brushstroke is not a needle. This is the art of translation — and of what survives the crossing.",
+      "tags": [
+        "Illustrative",
+        "Watercolor",
+        "Sketch",
+        "Pop Art"
+      ],
+      "file": "paper-canvas-and-screen-translated-to-skin.md",
+      "wordCount": 5814,
+      "readingMinutes": 29,
+      "publishedAt": "2026-07-20",
+      "catalogIds": [
+        "etching",
+        "illustrative",
+        "sketch",
+        "watercolor_style",
+        "abstract",
+        "pop_art",
+        "cartoon"
+      ]
+    },
+    {
+      "id": "STY-07",
+      "slug": "the-experimental-body",
+      "module": "styles",
+      "order": 7,
+      "title": "The Experimental Body",
+      "paperTitle": "The Experimental Body: Late-Modern, Post-Digital, Hybrid, and Anti-Canonical Tattoo Styles",
+      "dek": "Trash Polka, biomechanical, cyber sigilism, embroidery, glitch — post-digital, anti-canonical styles.",
+      "curatorNote": "The newest dialects of ink are being named as we speak. Here is where the future keeps arriving.",
+      "tags": [
+        "Experimental",
+        "Cyber Sigilism",
+        "Trash Polka",
+        "Biomechanical"
+      ],
+      "file": "the-experimental-body.md",
+      "wordCount": 5655,
+      "readingMinutes": 28,
+      "publishedAt": "2026-07-20",
+      "catalogIds": [
+        "trash_polka",
+        "biomechanical",
+        "bioorganic",
+        "sticker_patchwork",
+        "embroidery",
+        "cyber_sigilism",
+        "neotribal",
+        "ignorant",
+        "glitch",
+        "3d_style"
+      ]
+    },
+    {
+      "id": "STY-08",
+      "slug": "economy-of-the-line-and-the-urban-letter",
+      "module": "styles",
+      "order": 8,
+      "title": "Economy of the Line & the Urban Letter",
+      "paperTitle": "Economy of the Line and the Urban Letter: Fine-Line, Minimalism, Lettering, Chicano, and Graffiti",
+      "dek": "Fine-line, minimalism, single-line, lettering, Chicano, and graffiti — reduction and the street.",
+      "curatorNote": "Paris showed me elegance is subtraction. But the thinnest line pays the highest tax to time — know that before you choose it.",
+      "tags": [
+        "Fine Line",
+        "Minimalism",
+        "Lettering",
+        "Chicano"
+      ],
+      "file": "economy-of-the-line-and-the-urban-letter.md",
+      "wordCount": 5233,
+      "readingMinutes": 26,
+      "publishedAt": "2026-07-20",
+      "catalogIds": [
+        "minimalist",
+        "fineline_style",
+        "linework_style",
+        "single_line",
+        "lettering_script",
+        "calligraphy",
+        "chicano",
+        "graffiti"
+      ]
+    },
+    {
+      "id": "STY-09",
+      "slug": "darkness-devotion-and-the-sublime",
+      "module": "styles",
+      "order": 9,
+      "title": "Darkness, Devotion & the Sublime",
+      "paperTitle": "Darkness, Devotion, and the Sublime: Horror, Occult, Gothic, and Religious Tattooing",
+      "dek": "Horror, occult, gothic, and religious tattooing — fear, mortality, and the sacred on skin.",
+      "curatorNote": "The dark and the devotional are closer than people think. Both are ways of holding what frightens us.",
+      "tags": [
+        "Horror",
+        "Occult",
+        "Gothic",
+        "Religious"
+      ],
+      "file": "darkness-devotion-and-the-sublime.md",
+      "wordCount": 4717,
+      "readingMinutes": 24,
+      "publishedAt": "2026-07-20",
+      "catalogIds": [
+        "horror",
+        "dark_art",
+        "goth",
+        "religious"
+      ]
+    },
+    {
+      "id": "STY-10",
+      "slug": "functional-and-material-exceptions",
+      "module": "styles",
+      "order": 10,
+      "title": "Functional & Material Exceptions",
+      "paperTitle": "Functional and Material Exceptions: UV, White Ink, Negative Space, Silhouette, Handpoke, and Paramedical Tattooing",
+      "dek": "UV, white ink, negative space, silhouette, handpoke, and paramedical work — styles defined by material, not motif.",
+      "curatorNote": "Some of these are art, some are healing, some are risk. I will always tell you honestly which is which.",
+      "tags": [
+        "UV",
+        "White Ink",
+        "Handpoke",
+        "Paramedical"
+      ],
+      "file": "functional-and-material-exceptions.md",
+      "wordCount": 5197,
+      "readingMinutes": 26,
+      "publishedAt": "2026-07-20",
+      "catalogIds": [
+        "uv_style",
+        "white_ink_style",
+        "negative_space_style",
+        "silhouette_style",
+        "handpoke_style",
+        "cosmetic"
+      ]
+    },
+    {
+      "id": "TEC-01",
+      "slug": "the-constructed-line",
+      "module": "techniques",
+      "order": 11,
+      "title": "The Constructed Line",
+      "paperTitle": "The Constructed Line: Needle Grouping, Motion, Pressure, and Seven Linework Systems",
+      "dek": "Seven linework systems — needle grouping, motion, pressure — and why bold holds and fine fades.",
+      "curatorNote": "A line has a lifespan the moment it enters skin. This is how we choose it with the future in mind.",
+      "tags": [
+        "Linework",
+        "Fine Line",
+        "Bold Line",
+        "Longevity"
+      ],
+      "file": "the-constructed-line.md",
+      "wordCount": 3099,
+      "readingMinutes": 15,
+      "publishedAt": "2026-07-20",
+      "catalogIds": [
+        "fine_line",
+        "bold_line",
+        "broken_line",
+        "continuous_line",
+        "single_needle",
+        "script_lettering",
+        "tapered_lines"
+      ]
+    },
+    {
+      "id": "TEC-02",
+      "slug": "building-value-in-skin",
+      "module": "techniques",
+      "order": 12,
+      "title": "Building Value in Skin",
+      "paperTitle": "Building Value in Skin: Seven Shading Systems from Soft Gradients to Crosshatching",
+      "dek": "Seven shading systems, from soft gradients to crosshatching — how tone is built and how it heals.",
+      "curatorNote": "Shadow is where a tattoo breathes. Point by point, pass by pass, we teach the skin to hold light.",
+      "tags": [
+        "Shading",
+        "Black & Grey",
+        "Whip",
+        "Gradient"
+      ],
+      "file": "building-value-in-skin.md",
+      "wordCount": 2228,
+      "readingMinutes": 11,
+      "publishedAt": "2026-07-20",
+      "catalogIds": [
+        "soft_shading",
+        "hard_shading",
+        "whip_shading",
+        "pepper_shading",
+        "black_and_grey_wash",
+        "crosshatching",
+        "gradient_blending"
+      ]
+    },
+    {
+      "id": "TEC-03",
+      "slug": "chromatic-practice",
+      "module": "techniques",
+      "order": 13,
+      "title": "Chromatic Practice",
+      "paperTitle": "Chromatic Practice: Packing, Shading, Blending, Highlights, White Ink, and Watercolor Effects",
+      "dek": "Packing, shading, blending, highlights, white, and watercolor — how color lives, and fades, in skin.",
+      "curatorNote": "Color in Brazil laughs louder — but every hue negotiates with the skin beneath it. This is that negotiation.",
+      "tags": [
+        "Color",
+        "Packing",
+        "Blending",
+        "Watercolor"
+      ],
+      "file": "chromatic-practice.md",
+      "wordCount": 2127,
+      "readingMinutes": 11,
+      "publishedAt": "2026-07-20",
+      "catalogIds": [
+        "color_packing",
+        "color_shading",
+        "color_blending",
+        "white_highlights",
+        "white_ink_technique",
+        "watercolor_technique"
+      ]
+    },
+    {
+      "id": "TEC-04",
+      "slug": "point-by-point",
+      "module": "techniques",
+      "order": 14,
+      "title": "Point by Point",
+      "paperTitle": "Point by Point: Dotwork, Stippling, and Dot-Gradient Construction",
+      "dek": "Dotwork, stippling, and dot-gradients — three related systems built from single points of contact.",
+      "curatorNote": "Dotwork is meditation. Point by point, breath by breath, a shadow assembles itself.",
+      "tags": [
+        "Dotwork",
+        "Stippling",
+        "Gradient"
+      ],
+      "file": "point-by-point.md",
+      "wordCount": 1485,
+      "readingMinutes": 7,
+      "publishedAt": "2026-07-20",
+      "catalogIds": [
+        "dotwork_technique",
+        "stippling",
+        "dot_gradients"
+      ]
+    },
+    {
+      "id": "TEC-05",
+      "slug": "constructing-illusion",
+      "module": "techniques",
+      "order": 15,
+      "title": "Constructing Illusion",
+      "paperTitle": "Constructing Illusion: Realistic Rendering, Depth Effects, and Optical Tattoo Techniques",
+      "dek": "Realistic rendering, depth effects, and optical technique — and the gap between fresh impact and durable read.",
+      "curatorNote": "Illusion is honest work when it respects the body's curve. Here is how depth is made without lying to the skin.",
+      "tags": [
+        "Realism",
+        "Depth",
+        "Optical",
+        "3D"
+      ],
+      "file": "constructing-illusion.md",
+      "wordCount": 1486,
+      "readingMinutes": 7,
+      "publishedAt": "2026-07-20",
+      "catalogIds": [
+        "realism_rendering",
+        "depth_effects",
+        "optical_illusion_technique"
+      ]
+    },
+    {
+      "id": "TEC-06",
+      "slug": "before-and-beyond-the-machine",
+      "module": "techniques",
+      "order": 16,
+      "title": "Before & Beyond the Machine",
+      "paperTitle": "Before and Beyond the Machine: Hand Poke, Tebori, Hand-Tapped Tatau, and Skin Stitching",
+      "dek": "Hand poke, tebori, hand-tapped tatau, and skin stitching — living manual technologies, never interchangeable.",
+      "curatorNote": "The hand knows things the machine forgets. But these methods carry authority and lineage — respect that, or leave them alone.",
+      "tags": [
+        "Handpoke",
+        "Tebori",
+        "Tatau",
+        "Manual"
+      ],
+      "file": "before-and-beyond-the-machine.md",
+      "wordCount": 3344,
+      "readingMinutes": 17,
+      "publishedAt": "2026-07-20",
+      "catalogIds": [
+        "hand_poke",
+        "tebori_technique",
+        "hand_tapped",
+        "skin_stitching"
+      ]
+    },
+    {
+      "id": "TEC-07",
+      "slug": "black-skin-and-precision",
+      "module": "techniques",
+      "order": 17,
+      "title": "Black, Skin & Precision",
+      "paperTitle": "Black, Skin, and Precision: Large Fill, Negative Space, Geometry, Silhouette, and Tribal Blackfill",
+      "dek": "Large fill, negative space, geometry, silhouette, and tribal blackfill — precision at the scale of the whole limb.",
+      "curatorNote": "At this scale the skin itself becomes the drawing tool. Negative space is a decision, not a leftover.",
+      "tags": [
+        "Blackout",
+        "Negative Space",
+        "Geometry",
+        "Silhouette"
+      ],
+      "file": "black-skin-and-precision.md",
+      "wordCount": 2151,
+      "readingMinutes": 11,
+      "publishedAt": "2026-07-20",
+      "catalogIds": [
+        "blackout_technique",
+        "negative_space",
+        "geometric_technique",
+        "silhouette_technique",
+        "tribal_blackfill"
+      ]
+    },
+    {
+      "id": "TEC-08",
+      "slug": "simulated-media-and-special-effects",
+      "module": "techniques",
+      "order": 18,
+      "title": "Simulated Media & Special Effects",
+      "paperTitle": "Simulated Media and Special Effects: Brush, Etching, UV, Smoke, and Fire",
+      "dek": "Brush, etching, UV, smoke, and fire — how texture and atmosphere are built, and where safety ends the fun.",
+      "curatorNote": "Effects dazzle in the chair. I will always weigh the spectacle against what your skin must carry for decades.",
+      "tags": [
+        "Etching",
+        "UV",
+        "Smoke",
+        "Fire"
+      ],
+      "file": "simulated-media-and-special-effects.md",
+      "wordCount": 1972,
+      "readingMinutes": 10,
+      "publishedAt": "2026-07-20",
+      "catalogIds": [
+        "brush_stroke",
+        "etching_technique",
+        "uv_ink",
+        "smoke_effect",
+        "fire_effect"
+      ]
+    },
+    {
+      "id": "TEC-09",
+      "slug": "drawing-with-the-body",
+      "module": "techniques",
+      "order": 19,
+      "title": "Drawing with the Body",
+      "paperTitle": "Drawing with the Body: Freehand Composition and Layered Execution",
+      "dek": "Freehand composition and layered execution — designing directly on anatomy, across many sittings.",
+      "curatorNote": "The best compositions are drawn on the body, not on paper. The body tells you where the line wants to go.",
+      "tags": [
+        "Freehand",
+        "Layering",
+        "Composition"
+      ],
+      "file": "drawing-with-the-body.md",
+      "wordCount": 1456,
+      "readingMinutes": 7,
+      "publishedAt": "2026-07-20",
+      "catalogIds": [
+        "freehand",
+        "layering"
+      ]
+    },
+    {
+      "id": "TEC-10",
+      "slug": "working-with-existing-ink",
+      "module": "techniques",
+      "order": 20,
+      "title": "Working with Existing Ink",
+      "paperTitle": "Working with Existing Ink: Cover-Up and Blast-Over as Remedial Design Systems",
+      "dek": "Cover-up and blast-over — concealment versus deliberate coexistence, and the honesty to refuse.",
+      "curatorNote": "Old ink is a fact, not an enemy. Sometimes we hide it; sometimes we let it live beneath the new. Sometimes I say no.",
+      "tags": [
+        "Cover-Up",
+        "Blast-Over",
+        "Remedial"
+      ],
+      "file": "working-with-existing-ink.md",
+      "wordCount": 2337,
+      "readingMinutes": 12,
+      "publishedAt": "2026-07-20",
+      "catalogIds": [
+        "cover_up",
+        "blast_over"
+      ]
+    },
+    {
+      "id": "HIS-01",
+      "slug": "reading-marks-that-rarely-survive",
+      "module": "history",
+      "order": 21,
+      "title": "Reading Marks That Rarely Survive",
+      "paperTitle": "Reading Marks That Rarely Survive: Methods and Limits in the Archaeology of Tattooing",
+      "dek": "The archaeology of tattooing — evidence classes, imaging, and the discipline of not overclaiming.",
+      "curatorNote": "History humbles us. What survives is chance; what it meant is often a question we must leave open.",
+      "tags": [
+        "Archaeology",
+        "Ötzi",
+        "Evidence",
+        "Method"
+      ],
+      "file": "reading-marks-that-rarely-survive.md",
+      "wordCount": 2380,
+      "readingMinutes": 12,
+      "publishedAt": "2026-07-20",
+      "catalogIds": []
+    },
+    {
+      "id": "HIS-02",
+      "slug": "ancient-tattooing-as-multiple-histories",
+      "module": "history",
+      "order": 22,
+      "title": "Ancient Tattooing as Multiple Histories",
+      "paperTitle": "Ancient Tattooing as Multiple Histories: Europe, North Africa, Eurasia, the Americas, Arctic Regions, and Asia",
+      "dek": "Europe, North Africa, Eurasia, the Americas, and the Arctic — many origins, no single birthplace.",
+      "curatorNote": "There is no first tattoo, only the first that survived. The body has always wanted to speak.",
+      "tags": [
+        "Ancient",
+        "Comparative",
+        "Origins"
+      ],
+      "file": "ancient-tattooing-as-multiple-histories.md",
+      "wordCount": 3039,
+      "readingMinutes": 15,
+      "publishedAt": "2026-07-20",
+      "catalogIds": []
+    },
+    {
+      "id": "HIS-03",
+      "slug": "pacific-tattoo-knowledge-systems",
+      "module": "history",
+      "order": 23,
+      "title": "Pacific Tattoo Knowledge Systems",
+      "paperTitle": "Pacific Tattoo Knowledge Systems: Continuity, Genealogy, Service, Rank, Gender, and Revival",
+      "dek": "Sāmoan tatau, Māori tā moko, and Marquesan marks as distinct systems of genealogy, rank, and revival.",
+      "curatorNote": "In the Pacific, a tattoo is a genealogy you wear. It is given by authority, not bought.",
+      "tags": [
+        "Pacific",
+        "Tatau",
+        "Tā moko",
+        "Revival"
+      ],
+      "file": "pacific-tattoo-knowledge-systems.md",
+      "wordCount": 1520,
+      "readingMinutes": 8,
+      "publishedAt": "2026-07-20",
+      "catalogIds": []
+    },
+    {
+      "id": "HIS-04",
+      "slug": "tattooing-in-japan-from-edo-to-now",
+      "module": "history",
+      "order": 24,
+      "title": "Tattooing in Japan, from Edo to Now",
+      "paperTitle": "Tattooing in Japan from Edo Visual Culture to Contemporary Practice",
+      "dek": "Woodblock imagery, body-suit composition, criminalization, and the long shadow of stigma.",
+      "curatorNote": "Japan taught the body-suit, and taught me patience. It also carries a stigma the West rarely sees.",
+      "tags": [
+        "Japan",
+        "Edo",
+        "Irezumi",
+        "Stigma"
+      ],
+      "file": "tattooing-in-japan-from-edo-to-now.md",
+      "wordCount": 1189,
+      "readingMinutes": 6,
+      "publishedAt": "2026-07-20",
+      "catalogIds": []
+    },
+    {
+      "id": "HIS-05",
+      "slug": "encounter-naming-and-colonial-power",
+      "module": "history",
+      "order": 25,
+      "title": "Encounter, Naming & Colonial Power",
+      "paperTitle": "Encounter, Naming, Collecting, and Colonial Power in the Global Tattoo Archive",
+      "dek": "How the word 'tattoo' traveled, and how colonial collecting shaped — and distorted — the global archive.",
+      "curatorNote": "Even the word we use is a souvenir of encounter. Knowing that changes how we hold the whole story.",
+      "tags": [
+        "Colonial",
+        "Archive",
+        "Ethics",
+        "Language"
+      ],
+      "file": "encounter-naming-and-colonial-power.md",
+      "wordCount": 2376,
+      "readingMinutes": 12,
+      "publishedAt": "2026-07-20",
+      "catalogIds": []
+    },
+    {
+      "id": "HIS-06",
+      "slug": "electricity-flash-and-the-professional-studio",
+      "module": "history",
+      "order": 26,
+      "title": "Electricity, Flash & the Professional Studio",
+      "paperTitle": "Electricity, Flash, and the Professional Tattoo Studio, 1870–1950",
+      "dek": "The machine patent, flash sheets, port networks, and the birth of the commercial tattoo shop, 1870–1950.",
+      "curatorNote": "The machine made the trade fast and cheap — and a whole profession grew around fifty punctures a second.",
+      "tags": [
+        "Machine",
+        "Flash",
+        "Studio",
+        "Profession"
+      ],
+      "file": "electricity-flash-and-the-professional-studio.md",
+      "wordCount": 2148,
+      "readingMinutes": 11,
+      "publishedAt": "2026-07-20",
+      "catalogIds": []
+    },
+    {
+      "id": "HIS-07",
+      "slug": "subculture-and-counterpublic",
+      "module": "history",
+      "order": 27,
+      "title": "Subculture & Counterpublic",
+      "paperTitle": "Subculture and Counterpublic: Tattooing in Military, Prison, Chicano, Biker, Punk, Queer, and Feminist Histories",
+      "dek": "Military, prison, Chicano, biker, punk, queer, and feminist histories — marks of belonging and resistance.",
+      "curatorNote": "Ink has always drawn a line between us and them. Who wears it, and who is policed for it, is never neutral.",
+      "tags": [
+        "Subculture",
+        "Prison",
+        "Punk",
+        "Identity"
+      ],
+      "file": "subculture-and-counterpublic.md",
+      "wordCount": 2394,
+      "readingMinutes": 12,
+      "publishedAt": "2026-07-20",
+      "catalogIds": []
+    },
+    {
+      "id": "HIS-08",
+      "slug": "from-revival-to-platform-culture",
+      "module": "history",
+      "order": 28,
+      "title": "From Revival to Platform Culture",
+      "paperTitle": "From Revival to Platform Culture: Globalization, Conventions, Social Media, and Hybrid Styles",
+      "dek": "Conventions, artist mobility, and social media — how microstyles are named, copied, and spread overnight.",
+      "curatorNote": "The feed names a new style each month. Speed is exciting, but authorship and origin still deserve our care.",
+      "tags": [
+        "Revival",
+        "Conventions",
+        "Social Media",
+        "Authorship"
+      ],
+      "file": "from-revival-to-platform-culture.md",
+      "wordCount": 1807,
+      "readingMinutes": 9,
+      "publishedAt": "2026-07-20",
+      "catalogIds": []
+    },
+    {
+      "id": "HIS-09",
+      "slug": "the-marked-body",
+      "module": "history",
+      "order": 29,
+      "title": "The Marked Body",
+      "paperTitle": "The Marked Body: Identity, Ritual, Power, Stigma, Memory, and Self-Authorship",
+      "dek": "Identity, ritual, power, stigma, memory, and self-authorship — the framework behind all four lenses.",
+      "curatorNote": "Every mark does one of a few things: it protects, remembers, releases, or declares. This is the map I read by.",
+      "tags": [
+        "Anthropology",
+        "Ritual",
+        "Memory",
+        "Identity"
+      ],
+      "file": "the-marked-body.md",
+      "wordCount": 1692,
+      "readingMinutes": 8,
+      "publishedAt": "2026-07-20",
+      "catalogIds": []
+    },
+    {
+      "id": "HIS-10",
+      "slug": "material-and-governed-skin",
+      "module": "history",
+      "order": 30,
+      "title": "Material & Governed Skin",
+      "paperTitle": "Material and Governed Skin: Pigments, Hygiene, Regulation, Medicine, Cosmetics, and Risk",
+      "dek": "Pigments, hygiene, regulation, and risk — the public-health history of putting color under skin.",
+      "curatorNote": "Ritual begins with a clean space. What we inject, and how we heal, is where art meets responsibility.",
+      "tags": [
+        "Pigments",
+        "Hygiene",
+        "Regulation",
+        "Safety"
+      ],
+      "file": "material-and-governed-skin.md",
+      "wordCount": 2558,
+      "readingMinutes": 13,
+      "publishedAt": "2026-07-20",
+      "catalogIds": []
+    }
+  ]
+}

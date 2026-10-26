@@ -4,6 +4,9 @@ import { z } from "zod";
 import { buildAlexeiInstructions, getAlexeiRuntime } from "@/lib/alexei";
 import { buildRelevantContext, getCompendium } from "@/lib/compendium";
 import { getDbPool } from "@/lib/db";
+import { getOwnerSession } from "@/lib/auth";
+import { CulturalHoldError, buildPrompts } from "@/lib/prompt";
+import { parseDesignSpecBlock } from "@/lib/prompt/parse";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -17,16 +20,17 @@ const requestSchema = z.object({
 });
 
 export async function POST(request: Request) {
+  if (!await getOwnerSession()) return NextResponse.json({ error: "Owner authentication required." }, { status: 401 });
   if (!process.env.OPENAI_API_KEY) {
     return NextResponse.json(
-      { error: "Brak OPENAI_API_KEY po stronie serwera. Dodaj klucz do .env.local i uruchom aplikację ponownie." },
+      { error: "OPENAI_API_KEY is missing on the server. Add it to .env.local and restart the application." },
       { status: 503 },
     );
   }
 
   const parsed = requestSchema.safeParse(await request.json().catch(() => null));
   if (!parsed.success) {
-    return NextResponse.json({ error: "Nieprawidłowa wiadomość.", details: z.treeifyError(parsed.error) }, { status: 400 });
+    return NextResponse.json({ error: "Invalid message.", details: z.treeifyError(parsed.error) }, { status: 400 });
   }
 
   const { messages, sessionId } = parsed.data;
@@ -35,7 +39,7 @@ export async function POST(request: Request) {
   try {
     const [compendium, runtimeBundle] = await Promise.all([getCompendium(), getAlexeiRuntime()]);
     const relevantContext = buildRelevantContext(compendium, latestMessage);
-    const includeImageTemplate = /prompt|generator|midjourney|flux|sdxl|obraz|grafik/i.test(latestMessage);
+    const includeImageTemplate = /prompt|generator|midjourney|flux|sdxl|image|visual|artwork/i.test(latestMessage);
     const instructions = buildAlexeiInstructions(runtimeBundle, relevantContext, includeImageTemplate);
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     const response = await client.responses.create({
@@ -57,14 +61,32 @@ export async function POST(request: Request) {
       answer,
       requestId: response._request_id,
       sources: { compendium: compendium.source, persona: runtimeBundle.source },
+      promptBuild: await buildFromReply(answer, sessionId),
     });
   } catch (error) {
     console.error("[InkTelligence] Chat error", error);
     const status = error instanceof OpenAI.APIError ? error.status || 502 : 500;
     const message = status === 429
-      ? "Alexei potrzebuje chwili oddechu — limit API został chwilowo przekroczony. Spróbuj ponownie za moment."
-      : "Nie udało się teraz połączyć z Alexeiem. Sprawdź konfigurację API i spróbuj ponownie.";
+      ? "Alexei needs a moment — the API rate limit was reached. Please try again shortly."
+      : "Alexei could not be reached. Check the API configuration and try again.";
     return NextResponse.json({ error: message }, { status });
+  }
+}
+
+/**
+ * When a turn produces a Phase 5 spec, the generator prompts are built from it immediately.
+ * A missing spec is the normal case, and a build failure must never cost the client their
+ * reply — either way the conversation is returned untouched.
+ */
+async function buildFromReply(answer: string, sessionId?: string) {
+  const spec = parseDesignSpecBlock(answer);
+  if (!spec) return null;
+  try {
+    return await buildPrompts({ spec, sessionId });
+  } catch (error) {
+    if (error instanceof CulturalHoldError) return { culturalHold: true, reason: error.message };
+    console.warn("[InkTelligence] Prompt build skipped.", error instanceof Error ? error.message : error);
+    return null;
   }
 }
 
@@ -72,7 +94,7 @@ async function persistExchange(sessionId: string, userMessage: string, assistant
   const pool = getDbPool();
   await pool.execute(
     `INSERT IGNORE INTO consultation_sessions (session_id, agent_id, language_code, current_phase, status)
-     VALUES (?, 'alexei_inkseer', 'pl', 1, 'active')`,
+     VALUES (?, 'alexei_inkseer', 'en', 1, 'active')`,
     [sessionId],
   );
   await pool.execute(

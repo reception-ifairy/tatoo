@@ -6,8 +6,8 @@
   ],
   "settings": {
     "workbench.colorTheme": "Default High Contrast",
-    "git.enabled": true,
-    "git.autoRepositoryDetection": true,
+    "git.enabled": false,
+    "git.autoRepositoryDetection": false,
     "workbench.startupEditor": "none"
   },
   "extensions": {

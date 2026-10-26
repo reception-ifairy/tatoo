@@ -1,0 +1,452 @@
+{
+  "schemaVersion": "1.0",
+  "status": "delivered",
+  "nextUpdateEvidencePolicy": "uploaded_papers_only",
+  "personaPolicy": "Alexei shapes editorial questions and voice but is never a factual source.",
+  "papers": [
+    {
+      "id": "STY-01",
+      "module": "styles",
+      "title": "From Sailor Flash to Neo-Traditional: The Genealogy of Western Traditional Tattooing",
+      "catalogIds": [
+        "american_traditional",
+        "old_school",
+        "neo_traditional",
+        "new_school",
+        "vintage_americana"
+      ],
+      "file": "from-sailor-flash-to-neo-traditional.md",
+      "slug": "from-sailor-flash-to-neo-traditional"
+    },
+    {
+      "id": "STY-02",
+      "module": "styles",
+      "title": "Skin as Image: Realism, Portraiture, Miniaturization, Hyperrealism, and Surreal Transformation",
+      "catalogIds": [
+        "realism_bg",
+        "realism_color",
+        "portrait",
+        "micro_realism",
+        "hyperrealism",
+        "surrealism"
+      ],
+      "file": "skin-as-image-realism-to-surreal-transformation.md",
+      "slug": "skin-as-image-realism-to-surreal-transformation"
+    },
+    {
+      "id": "STY-03",
+      "module": "styles",
+      "title": "Black as Structure: Blackwork, Dotwork, Geometry, Ornament, Blackout, and Black-and-Grey",
+      "catalogIds": [
+        "blackwork_style",
+        "dotwork_style",
+        "geometric",
+        "sacred_geometry",
+        "mandala",
+        "ornamental",
+        "blackout_style",
+        "black_grey"
+      ],
+      "file": "black-as-structure.md",
+      "slug": "black-as-structure"
+    },
+    {
+      "id": "STY-04",
+      "module": "styles",
+      "title": "Living Lineages: Indigenous and Heritage Tattoo Systems, Colonial Disruption, Revival, and Cultural Authority",
+      "catalogIds": [
+        "tribal",
+        "maori",
+        "polynesian",
+        "samoan",
+        "marquesan",
+        "celtic",
+        "aztec_maya",
+        "haida"
+      ],
+      "file": "living-lineages-indigenous-and-heritage-systems.md",
+      "slug": "living-lineages-indigenous-and-heritage-systems"
+    },
+    {
+      "id": "STY-05",
+      "module": "styles",
+      "title": "The Japanese Tattoo Continuum: Irezumi, Tebori, Neo-Japanese, and Anime/Manga Translation",
+      "catalogIds": [
+        "irezumi",
+        "tebori_style",
+        "neo_japanese",
+        "anime"
+      ],
+      "file": "the-japanese-tattoo-continuum.md",
+      "slug": "the-japanese-tattoo-continuum"
+    },
+    {
+      "id": "STY-06",
+      "module": "styles",
+      "title": "Paper, Canvas, and Screen Translated to Skin: Illustrative Tattoo Languages",
+      "catalogIds": [
+        "etching",
+        "illustrative",
+        "sketch",
+        "watercolor_style",
+        "abstract",
+        "pop_art",
+        "cartoon"
+      ],
+      "file": "paper-canvas-and-screen-translated-to-skin.md",
+      "slug": "paper-canvas-and-screen-translated-to-skin"
+    },
+    {
+      "id": "STY-07",
+      "module": "styles",
+      "title": "The Experimental Body: Late-Modern, Post-Digital, Hybrid, and Anti-Canonical Tattoo Styles",
+      "catalogIds": [
+        "trash_polka",
+        "biomechanical",
+        "bioorganic",
+        "sticker_patchwork",
+        "embroidery",
+        "cyber_sigilism",
+        "neotribal",
+        "ignorant",
+        "glitch",
+        "3d_style"
+      ],
+      "file": "the-experimental-body.md",
+      "slug": "the-experimental-body"
+    },
+    {
+      "id": "STY-08",
+      "module": "styles",
+      "title": "Economy of the Line and the Urban Letter: Fine-Line, Minimalism, Lettering, Chicano, and Graffiti",
+      "catalogIds": [
+        "minimalist",
+        "fineline_style",
+        "linework_style",
+        "single_line",
+        "lettering_script",
+        "calligraphy",
+        "chicano",
+        "graffiti"
+      ],
+      "file": "economy-of-the-line-and-the-urban-letter.md",
+      "slug": "economy-of-the-line-and-the-urban-letter"
+    },
+    {
+      "id": "STY-09",
+      "module": "styles",
+      "title": "Darkness, Devotion, and the Sublime: Horror, Occult, Gothic, and Religious Tattooing",
+      "catalogIds": [
+        "horror",
+        "dark_art",
+        "goth",
+        "religious"
+      ],
+      "file": "darkness-devotion-and-the-sublime.md",
+      "slug": "darkness-devotion-and-the-sublime"
+    },
+    {
+      "id": "STY-10",
+      "module": "styles",
+      "title": "Functional and Material Exceptions: UV, White Ink, Negative Space, Silhouette, Handpoke, and Paramedical Tattooing",
+      "catalogIds": [
+        "uv_style",
+        "white_ink_style",
+        "negative_space_style",
+        "silhouette_style",
+        "handpoke_style",
+        "cosmetic"
+      ],
+      "file": "functional-and-material-exceptions.md",
+      "slug": "functional-and-material-exceptions"
+    },
+    {
+      "id": "TEC-01",
+      "module": "techniques",
+      "title": "The Constructed Line: Needle Grouping, Motion, Pressure, and Seven Linework Systems",
+      "catalogIds": [
+        "fine_line",
+        "bold_line",
+        "broken_line",
+        "continuous_line",
+        "single_needle",
+        "script_lettering",
+        "tapered_lines"
+      ],
+      "file": "the-constructed-line.md",
+      "slug": "the-constructed-line"
+    },
+    {
+      "id": "TEC-02",
+      "module": "techniques",
+      "title": "Building Value in Skin: Seven Shading Systems from Soft Gradients to Crosshatching",
+      "catalogIds": [
+        "soft_shading",
+        "hard_shading",
+        "whip_shading",
+        "pepper_shading",
+        "black_and_grey_wash",
+        "crosshatching",
+        "gradient_blending"
+      ],
+      "file": "building-value-in-skin.md",
+      "slug": "building-value-in-skin"
+    },
+    {
+      "id": "TEC-03",
+      "module": "techniques",
+      "title": "Chromatic Practice: Packing, Shading, Blending, Highlights, White Ink, and Watercolor Effects",
+      "catalogIds": [
+        "color_packing",
+        "color_shading",
+        "color_blending",
+        "white_highlights",
+        "white_ink_technique",
+        "watercolor_technique"
+      ],
+      "file": "chromatic-practice.md",
+      "slug": "chromatic-practice"
+    },
+    {
+      "id": "TEC-04",
+      "module": "techniques",
+      "title": "Point by Point: Dotwork, Stippling, and Dot-Gradient Construction",
+      "catalogIds": [
+        "dotwork_technique",
+        "stippling",
+        "dot_gradients"
+      ],
+      "file": "point-by-point.md",
+      "slug": "point-by-point"
+    },
+    {
+      "id": "TEC-05",
+      "module": "techniques",
+      "title": "Constructing Illusion: Realistic Rendering, Depth Effects, and Optical Tattoo Techniques",
+      "catalogIds": [
+        "realism_rendering",
+        "depth_effects",
+        "optical_illusion_technique"
+      ],
+      "file": "constructing-illusion.md",
+      "slug": "constructing-illusion"
+    },
+    {
+      "id": "TEC-06",
+      "module": "techniques",
+      "title": "Before and Beyond the Machine: Hand Poke, Tebori, Hand-Tapped Tatau, and Skin Stitching",
+      "catalogIds": [
+        "hand_poke",
+        "tebori_technique",
+        "hand_tapped",
+        "skin_stitching"
+      ],
+      "file": "before-and-beyond-the-machine.md",
+      "slug": "before-and-beyond-the-machine"
+    },
+    {
+      "id": "TEC-07",
+      "module": "techniques",
+      "title": "Black, Skin, and Precision: Large Fill, Negative Space, Geometry, Silhouette, and Tribal Blackfill",
+      "catalogIds": [
+        "blackout_technique",
+        "negative_space",
+        "geometric_technique",
+        "silhouette_technique",
+        "tribal_blackfill"
+      ],
+      "file": "black-skin-and-precision.md",
+      "slug": "black-skin-and-precision"
+    },
+    {
+      "id": "TEC-08",
+      "module": "techniques",
+      "title": "Simulated Media and Special Effects: Brush, Etching, UV, Smoke, and Fire",
+      "catalogIds": [
+        "brush_stroke",
+        "etching_technique",
+        "uv_ink",
+        "smoke_effect",
+        "fire_effect"
+      ],
+      "file": "simulated-media-and-special-effects.md",
+      "slug": "simulated-media-and-special-effects"
+    },
+    {
+      "id": "TEC-09",
+      "module": "techniques",
+      "title": "Drawing with the Body: Freehand Composition and Layered Execution",
+      "catalogIds": [
+        "freehand",
+        "layering"
+      ],
+      "file": "drawing-with-the-body.md",
+      "slug": "drawing-with-the-body"
+    },
+    {
+      "id": "TEC-10",
+      "module": "techniques",
+      "title": "Working with Existing Ink: Cover-Up and Blast-Over as Remedial Design Systems",
+      "catalogIds": [
+        "cover_up",
+        "blast_over"
+      ],
+      "file": "working-with-existing-ink.md",
+      "slug": "working-with-existing-ink"
+    },
+    {
+      "id": "HIS-01",
+      "module": "history",
+      "title": "Reading Marks That Rarely Survive: Methods and Limits in the Archaeology of Tattooing",
+      "periodIds": [
+        "otzi_copper_age",
+        "ancient_worlds"
+      ],
+      "lensIds": [],
+      "file": "reading-marks-that-rarely-survive.md",
+      "slug": "reading-marks-that-rarely-survive"
+    },
+    {
+      "id": "HIS-02",
+      "module": "history",
+      "title": "Ancient Tattooing as Multiple Histories: Europe, North Africa, Eurasia, the Americas, Arctic Regions, and Asia",
+      "periodIds": [
+        "ancient_worlds"
+      ],
+      "lensIds": [
+        "ritual_protection",
+        "identity_belonging"
+      ],
+      "file": "ancient-tattooing-as-multiple-histories.md",
+      "slug": "ancient-tattooing-as-multiple-histories"
+    },
+    {
+      "id": "HIS-03",
+      "module": "history",
+      "title": "Pacific Tattoo Knowledge Systems: Continuity, Genealogy, Service, Rank, Gender, and Revival",
+      "periodIds": [
+        "pacific_continuity"
+      ],
+      "lensIds": [
+        "identity_belonging",
+        "ritual_protection",
+        "power_stigma"
+      ],
+      "file": "pacific-tattoo-knowledge-systems.md",
+      "slug": "pacific-tattoo-knowledge-systems"
+    },
+    {
+      "id": "HIS-04",
+      "module": "history",
+      "title": "Tattooing in Japan from Edo Visual Culture to Contemporary Practice",
+      "periodIds": [
+        "edo_japan",
+        "global_medium"
+      ],
+      "lensIds": [
+        "identity_belonging",
+        "power_stigma"
+      ],
+      "file": "tattooing-in-japan-from-edo-to-now.md",
+      "slug": "tattooing-in-japan-from-edo-to-now"
+    },
+    {
+      "id": "HIS-05",
+      "module": "history",
+      "title": "Encounter, Naming, Collecting, and Colonial Power in the Global Tattoo Archive",
+      "periodIds": [
+        "pacific_continuity",
+        "global_medium"
+      ],
+      "lensIds": [
+        "power_stigma"
+      ],
+      "file": "encounter-naming-and-colonial-power.md",
+      "slug": "encounter-naming-and-colonial-power"
+    },
+    {
+      "id": "HIS-06",
+      "module": "history",
+      "title": "Electricity, Flash, and the Professional Tattoo Studio, 1870–1950",
+      "periodIds": [
+        "electric_machine",
+        "global_medium"
+      ],
+      "lensIds": [
+        "identity_belonging"
+      ],
+      "file": "electricity-flash-and-the-professional-studio.md",
+      "slug": "electricity-flash-and-the-professional-studio"
+    },
+    {
+      "id": "HIS-07",
+      "module": "history",
+      "title": "Subculture and Counterpublic: Tattooing in Military, Prison, Chicano, Biker, Punk, Queer, and Feminist Histories",
+      "periodIds": [
+        "global_medium"
+      ],
+      "lensIds": [
+        "identity_belonging",
+        "power_stigma",
+        "memory_authorship"
+      ],
+      "file": "subculture-and-counterpublic.md",
+      "slug": "subculture-and-counterpublic"
+    },
+    {
+      "id": "HIS-08",
+      "module": "history",
+      "title": "From Revival to Platform Culture: Globalization, Conventions, Social Media, and Hybrid Styles",
+      "periodIds": [
+        "pacific_continuity",
+        "edo_japan",
+        "global_medium"
+      ],
+      "lensIds": [
+        "identity_belonging",
+        "power_stigma"
+      ],
+      "file": "from-revival-to-platform-culture.md",
+      "slug": "from-revival-to-platform-culture"
+    },
+    {
+      "id": "HIS-09",
+      "module": "history",
+      "title": "The Marked Body: Identity, Ritual, Power, Stigma, Memory, and Self-Authorship",
+      "periodIds": [
+        "otzi_copper_age",
+        "ancient_worlds",
+        "pacific_continuity",
+        "edo_japan",
+        "electric_machine",
+        "global_medium"
+      ],
+      "lensIds": [
+        "identity_belonging",
+        "ritual_protection",
+        "power_stigma",
+        "memory_authorship"
+      ],
+      "file": "the-marked-body.md",
+      "slug": "the-marked-body"
+    },
+    {
+      "id": "HIS-10",
+      "module": "history",
+      "title": "Material and Governed Skin: Pigments, Hygiene, Regulation, Medicine, Cosmetics, and Risk",
+      "periodIds": [
+        "otzi_copper_age",
+        "electric_machine",
+        "global_medium"
+      ],
+      "lensIds": [
+        "power_stigma",
+        "memory_authorship"
+      ],
+      "file": "material-and-governed-skin.md",
+      "slug": "material-and-governed-skin"
+    }
+  ],
+  "deliveredAt": "2026-07-20",
+  "libraryDirectory": "data/library"
+}

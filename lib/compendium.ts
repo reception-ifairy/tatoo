@@ -1,14 +1,37 @@
 import type { RowDataPacket } from "mysql2";
-import sourceDatabase from "@/tattoo_database.json";
-import { getDbPool } from "@/lib/db";
+import sourceDatabase from "@/scripts/database/tattoo_database.backup.json";
+import { getDbPool, parseJson } from "@/lib/db";
 import type {
+  ArticleRef,
   Category,
   CompendiumData,
+  EvidenceLabel,
+  KeyFact,
   MixedStyle,
   ReferenceItem,
   TattooStyle,
   TattooTechnique,
 } from "@/lib/types";
+
+/** Enrichment carried in each entry's mirrored source payload. */
+interface EntryEnrichment {
+  sourcePaper?: string;
+  fieldNote?: string;
+  keyFacts?: Array<{ text: string; evidence: string }>;
+}
+
+const EVIDENCE_LABELS: ReadonlySet<string> = new Set<EvidenceLabel>([
+  "direct",
+  "synthesized",
+  "community_attested",
+  "contested",
+  "hypothesis",
+  "unknown",
+]);
+
+function asEvidenceLabel(value: string): EvidenceLabel {
+  return EVIDENCE_LABELS.has(value) ? (value as EvidenceLabel) : "unknown";
+}
 
 type JsonDatabase = typeof sourceDatabase;
 
@@ -21,6 +44,7 @@ interface StyleRow extends RowDataPacket {
   history: string;
   distinct_features: string;
   narrative_description: string;
+  source_payload: unknown;
 }
 
 interface TechniqueRow extends RowDataPacket {
@@ -31,6 +55,13 @@ interface TechniqueRow extends RowDataPacket {
   description: string;
   difficulty: string;
   narrative_description: string;
+  source_payload: unknown;
+}
+
+interface ArticleRefRow extends RowDataPacket {
+  article_id: string;
+  slug: string;
+  title: string;
 }
 
 interface RelationRow extends RowDataPacket {
@@ -62,6 +93,7 @@ async function getSqlCompendium(): Promise<CompendiumData> {
     [usageRows],
     [mixedRows],
     [componentRows],
+    [articleRefRows],
   ] = await Promise.all([
     pool.query<RowDataPacket[]>("SELECT source_version, source_date FROM import_manifest WHERE manifest_id = 1"),
     pool.query<RowDataPacket[]>("SELECT category_id, name, description FROM style_categories ORDER BY name"),
@@ -85,6 +117,7 @@ async function getSqlCompendium(): Promise<CompendiumData> {
       LEFT JOIN styles s ON s.style_id = msc.component_id
       LEFT JOIN techniques t ON t.technique_id = msc.component_id
       ORDER BY msc.mixed_style_id, msc.component_order`),
+    pool.query<ArticleRefRow[]>("SELECT article_id, slug, title FROM library_articles"),
   ]);
 
   const motifs = groupStrings(motifRows as Array<{ owner_id: string; item_name: string }>);
@@ -93,30 +126,42 @@ async function getSqlCompendium(): Promise<CompendiumData> {
   const usages = groupReferences(usageRows);
   const components = groupReferences(componentRows);
 
-  const styles: TattooStyle[] = styleRows.map((row) => ({
-    id: row.style_id,
-    name: row.name,
-    categoryId: row.category_id,
-    categoryName: row.category_name,
-    description: row.description,
-    history: row.history,
-    distinctFeatures: row.distinct_features,
-    narrativeDescription: row.narrative_description,
-    motifs: motifs.get(row.style_id) || [],
-    techniques: styleTechniques.get(row.style_id) || [],
-    relatedStyles: relatedStyles.get(row.style_id) || [],
-  }));
+  const articlesByPaper = new Map<string, ArticleRef>(
+    articleRefRows.map((row) => [row.article_id, { id: row.article_id, slug: row.slug, title: row.title }]),
+  );
 
-  const techniques: TattooTechnique[] = techniqueRows.map((row) => ({
-    id: row.technique_id,
-    name: row.name,
-    categoryId: row.category_id,
-    categoryName: row.category_name,
-    description: row.description,
-    difficulty: row.difficulty,
-    narrativeDescription: row.narrative_description,
-    usedInStyles: usages.get(row.technique_id) || [],
-  }));
+  const styles: TattooStyle[] = styleRows.map((row) => {
+    const enrichment = parseJson<EntryEnrichment>(row.source_payload, {});
+    return {
+      id: row.style_id,
+      name: row.name,
+      categoryId: row.category_id,
+      categoryName: row.category_name,
+      description: row.description,
+      history: row.history,
+      distinctFeatures: row.distinct_features,
+      narrativeDescription: englishStyleNarrative(row.name, row.category_name, row.description, row.history, row.distinct_features),
+      motifs: motifs.get(row.style_id) || [],
+      techniques: styleTechniques.get(row.style_id) || [],
+      relatedStyles: relatedStyles.get(row.style_id) || [],
+      ...entryEnrichment(enrichment, articlesByPaper),
+    };
+  });
+
+  const techniques: TattooTechnique[] = techniqueRows.map((row) => {
+    const enrichment = parseJson<EntryEnrichment>(row.source_payload, {});
+    return {
+      id: row.technique_id,
+      name: row.name,
+      categoryId: row.category_id,
+      categoryName: row.category_name,
+      description: row.description,
+      difficulty: row.difficulty,
+      narrativeDescription: englishTechniqueNarrative(row.name, row.category_name, row.difficulty, row.description),
+      usedInStyles: usages.get(row.technique_id) || [],
+      ...entryEnrichment(enrichment, articlesByPaper),
+    };
+  });
 
   const mixedStyles: MixedStyle[] = mixedRows.map((row) => ({
     id: String(row.mixed_style_id),
@@ -144,6 +189,10 @@ function getJsonCompendium(database: JsonDatabase): CompendiumData {
   const categoryById = new Map(database.styleCategories.map((item) => [item.id, item]));
   const techniqueCategoryById = new Map(database.techniqueCategories.map((item) => [item.id, item]));
 
+  const articlesByPaper = new Map<string, ArticleRef>(
+    database.articles.map((article) => [article.id, { id: article.id, slug: article.slug, title: article.title }]),
+  );
+
   const styles: TattooStyle[] = database.styles.map((item) => ({
     id: item.id,
     name: item.name,
@@ -156,6 +205,7 @@ function getJsonCompendium(database: JsonDatabase): CompendiumData {
     motifs: item.commonMotifs,
     techniques: item.relatedTechniques.map((id) => ({ id, name: techniqueById.get(id)?.name || id })),
     relatedStyles: item.relatedStyles.map((id) => ({ id, name: styleById.get(id)?.name || id })),
+    ...entryEnrichment(item, articlesByPaper),
   }));
 
   const techniques: TattooTechnique[] = database.techniques.map((item) => ({
@@ -167,13 +217,14 @@ function getJsonCompendium(database: JsonDatabase): CompendiumData {
     difficulty: item.difficulty,
     narrativeDescription: techniqueNarrative(item, techniqueCategoryById.get(item.category)?.name || item.category),
     usedInStyles: item.usedInStyles.map((id) => ({ id, name: styleById.get(id)?.name || id })),
+    ...entryEnrichment(item, articlesByPaper),
   }));
 
   const mixedStyles: MixedStyle[] = database.mixedStyles.examples.map((item) => ({
     id: slug(item.name),
     name: item.name,
     description: database.mixedStyles.description,
-    narrativeDescription: `${item.name} łączy ${item.combination.map((id) => styleById.get(id)?.name || id).join(" oraz ")}. Oba języki wizualne powinny tworzyć jedną kompozycję, zamiast konkurować ze sobą.`,
+    narrativeDescription: `${item.name} combines ${item.combination.map((id) => styleById.get(id)?.name || id).join(" and ")}. Both visual languages should form one composition instead of competing with each other.`,
     components: item.combination.map((id) => ({ id, name: styleById.get(id)?.name || techniqueById.get(id)?.name || id })),
   }));
 
@@ -198,18 +249,18 @@ export function buildRelevantContext(data: CompendiumData, text: string): string
   };
 
   const styleMatches = data.styles
-    .map((item) => ({ item, score: score(`${item.description} ${item.history} ${item.distinctFeatures} ${item.motifs.join(" ")}`, item.name) }))
+    .map((item) => ({ item, score: score(`${item.description} ${item.history} ${item.distinctFeatures} ${item.motifs.join(" ")} ${factText(item.keyFacts)}`, item.name) }))
     .filter((entry) => entry.score > 0)
     .sort((a, b) => b.score - a.score)
     .slice(0, 5)
-    .map(({ item }) => `STYLE ${item.name}: ${item.description} History: ${item.history} Features: ${item.distinctFeatures} Motifs: ${item.motifs.join(", ")}. Techniques: ${item.techniques.map((technique) => technique.name).join(", ")}.`);
+    .map(({ item }) => `STYLE ${item.name}: ${item.description} History: ${item.history} Features: ${item.distinctFeatures} Motifs: ${item.motifs.join(", ")}. Techniques: ${item.techniques.map((technique) => technique.name).join(", ")}.${sourcedFacts(item.keyFacts, item.sourceArticle?.id)}`);
 
   const techniqueMatches = data.techniques
-    .map((item) => ({ item, score: score(`${item.description} ${item.usedInStyles.map((style) => style.name).join(" ")}`, item.name) }))
+    .map((item) => ({ item, score: score(`${item.description} ${item.usedInStyles.map((style) => style.name).join(" ")} ${factText(item.keyFacts)}`, item.name) }))
     .filter((entry) => entry.score > 0)
     .sort((a, b) => b.score - a.score)
     .slice(0, 4)
-    .map(({ item }) => `TECHNIQUE ${item.name} (${item.difficulty}): ${item.description} Used in: ${item.usedInStyles.map((style) => style.name).join(", ")}.`);
+    .map(({ item }) => `TECHNIQUE ${item.name} (${item.difficulty}): ${item.description} Used in: ${item.usedInStyles.map((style) => style.name).join(", ")}.${sourcedFacts(item.keyFacts, item.sourceArticle?.id)}`);
 
   const fusionMatches = data.mixedStyles
     .filter((item) => score(`${item.description} ${item.components.map((part) => part.name).join(" ")}`, item.name) > 0)
@@ -218,6 +269,29 @@ export function buildRelevantContext(data: CompendiumData, text: string): string
 
   const matches = [...styleMatches, ...techniqueMatches, ...fusionMatches];
   return matches.length ? matches.join("\n") : "No exact entry matched. Ask one focused question before recommending a style.";
+}
+
+function factText(facts: KeyFact[]): string {
+  return facts.map((fact) => fact.text).join(" ");
+}
+
+/** Renders paper-grounded claims with their evidence label so Alexei can cite honestly. */
+function sourcedFacts(facts: KeyFact[], paperId?: string): string {
+  if (!facts.length) return "";
+  const claims = facts.map((fact) => `${fact.text} [${fact.evidence}]`).join(" ");
+  return ` Documented${paperId ? ` in ${paperId}` : ""}: ${claims}`;
+}
+
+/** Shared shape for the paper-grounded enrichment carried by every catalog entry. */
+function entryEnrichment(
+  item: EntryEnrichment,
+  articlesByPaper: Map<string, ArticleRef>,
+): Pick<TattooStyle, "fieldNote" | "keyFacts" | "sourceArticle"> {
+  return {
+    fieldNote: item.fieldNote || null,
+    keyFacts: (item.keyFacts || []).map((fact) => ({ text: fact.text, evidence: asEvidenceLabel(fact.evidence) })),
+    sourceArticle: (item.sourcePaper && articlesByPaper.get(item.sourcePaper)) || null,
+  };
 }
 
 function categoryFromRow(row: RowDataPacket): Category {
@@ -244,11 +318,19 @@ function dateValue(value: unknown): string {
 }
 
 function styleNarrative(item: JsonDatabase["styles"][number], category: string): string {
-  return `${item.name} należy do rodziny ${category}. ${item.description} ${item.history} Na skórze rozpoznasz go po takich cechach: ${item.distinctFeatures}`;
+  return englishStyleNarrative(item.name, category, item.description, item.history, item.distinctFeatures);
 }
 
 function techniqueNarrative(item: JsonDatabase["techniques"][number], category: string): string {
-  return `${item.name} to technika z grupy ${category}, na poziomie ${item.difficulty}. ${item.description} Jej jakość zależy od świadomego prowadzenia narzędzia, anatomii miejsca i zapasu przestrzeni potrzebnego do dobrego starzenia się wzoru.`;
+  return englishTechniqueNarrative(item.name, category, item.difficulty, item.description);
+}
+
+function englishStyleNarrative(name: string, category: string, description: string, history: string, features: string): string {
+  return `${name} belongs to the ${category} family. ${description} ${history} On skin, it is recognized by these defining traits: ${features}`;
+}
+
+function englishTechniqueNarrative(name: string, category: string, difficulty: string, description: string): string {
+  return `${name} is a ${difficulty}-level method in the ${category} group. ${description} Its quality depends on deliberate execution, anatomical placement, and enough breathing room for the tattoo to age clearly.`;
 }
 
 function slug(value: string): string {

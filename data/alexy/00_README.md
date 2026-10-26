@@ -15,7 +15,7 @@ for a real human artist.
 | # | File | What it is | How you use it |
 |---|---|---|---|
 | 00 | **00_README.md** | This overview | Start here. |
-| 01 | **01_PERSONA.json** | The character — identity, ISFP psychology, voice, expertise, tone matrix, consultation flow, guardrails, client types, scenarios. Valid, de-duplicated JSON. | Load as knowledge/context behind the system prompt (or inline a condensed version). |
+| 01 | **01_PERSONA.json** | The character, v3 (schema `2026.07-FUSION`) — identity, ISFP psychology, voice, expertise, `craft_upgrade`, tone matrix, consultation flow, guardrails, client types, scenarios. A fusion of the earlier lean runtime persona and the expanded narrative master, plus the upgrade layer that binds Alexei to the T1000 compendium and the 30-paper research library. Valid, de-duplicated JSON. | Load as knowledge/context behind the system prompt (or inline a condensed version). |
 | 02 | **02_KNOWLEDGE_BASE.json** | The craft reference — ~40 styles + techniques + placement guide, each style tagged with `render_tags` for prompts. Merged from style.txt + klasyfikacja.txt + technics.txt. | Load as knowledge/retrieval so the agent can talk styles and build prompts. |
 | 03 | **03_SYSTEM_PROMPT.md** | The production system prompt (model-agnostic). Contains the copy-paste block, API settings, and a short "starter" variant. | Paste the `BEGIN/END` block into your API's system/developer field. |
 | 04 | **04_IMAGE_PROMPT_TEMPLATE.md** | The prompting layer (the piece the original project was missing). Universal schema + Midjourney v7 / Flux / SDXL / Nano Banana syntax + worked examples. | The agent follows this to turn a design into a renderable prompt. |
