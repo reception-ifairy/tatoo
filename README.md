@@ -1,20 +1,28 @@
-# Ink Master — archive
+# Ötzi Signal
 
-Ink Master (InkTelligence) is an AI tattoo design consultant built around the Alexei "Inkseer" Novak persona. It includes a SQL-backed tattoo style and technique compendium, a research library published at `/blog`, a studio, and a model-independent prompt builder.
+An AI tattoo design studio. Clients talk their idea through with **Ötzi**, an AI design guide, and turn it into a design: a black-line **stencil** (transparent PNG), a finished **colour design** and a **preview on a neutral grey mannequin**. A private, anonymous **scar cover-up** service draws a cover-up over a cropped photo of a healed scar. Everything comes with a studio brief for a real, licensed tattoo artist.
 
-**Status: archived on 2026-10-26 for future work.** It is not deployed. `test.galczynski.guru` now serves an empty placeholder page.
+- **Consultation** — six phases from feeling to design, with cultural and safety guardrails; facts come only from the built-in compendium.
+- **Generator** — style and technique from the compendium (66 styles, 44 techniques), placement, size, line weight, palette, composition and mood, chosen in a thumbnail window.
+- **Style atlas** and **History & library** — the compendium and 30 research articles.
+- **Accounts** — one studio admin and client accounts with packages (how many stencils, colour designs, mannequin previews and scar cover-ups each client gets).
+- The interface is English; the studio admin can switch it to Polish.
 
-## Removed from the server on archiving
+## Run it locally
 
-- The app files, `node_modules`, the `.next` build and `.env.local` (OpenAI key, owner password, session secret). No backup was kept.
-- The project's 32 tables and 5 views in the shared `t1000` database. The `gr_*`, `office_vertex_*`, `panel_*` and `tc_*` tables belong to other tools and were left untouched. Consultation sessions and prompt builds stored there were not kept.
-- The T1000 project card (`/var/www/admin-panel/projects/tatoo`) and the T1001 workspace bridge (`/var/www/tatoo`).
+Windows: double-click `start.cmd` (installs Node.js dependencies, asks for the admin login and password, builds and starts the app).
 
-## Resuming work
+Any system:
 
-1. Clone this repository and run `npm install`.
-2. Copy `.env.example` to `.env.local` and set a new OpenAI key, owner password and `AUTH_SECRET`.
-3. Run `npm run db:apply` to recreate the schema and seed data in `t1000` from `scripts/database/t1000.sql`, then `npm run db:validate`.
-4. Run `npm run build` and `npm start`. `ecosystem.config.cjs` holds the earlier PM2 setup (port 3019).
+```bash
+npm install
+cp .env.example .env    # set OWNER_LOGIN, OWNER_PASSWORD, SESSION_SECRET
+npm run build
+npm start               # http://localhost:3000
+```
 
-`AGENTS.md` describes the data rules the project was built under.
+Sign in as the admin, open **Settings** to add API keys (Claude, GPT or Gemini for the consultation; Gemini/OpenAI/FLUX/Stability for pictures), then create client accounts in **Clients & packages**.
+
+## For developers
+
+See `CLAUDE.md` (architecture and rules) and `HANDOFF.md` (state of the project). This repository was the Ink Master archive (Next.js) until November 2026; its history keeps the old app, SQL schema and source files.
